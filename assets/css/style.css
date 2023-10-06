@@ -1,6 +1,80 @@
+@font-face {
+    font-family: 'Baloo 2 Bold';
+    src: url('../fonts/fonts-Baloo2/Baloo2-Bold.eot');
+    src: url('../fonts/fonts-Baloo2/Baloo2-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fonts-Baloo2/Baloo2-Bold.woff2') format('woff2'),
+        url('../fonts/fonts-Baloo2/Baloo2-Bold.woff') format('woff'),
+        url('../fonts/fonts-Baloo2/Baloo2-Bold.ttf') format('truetype'),
+        url('../fonts/fonts-Baloo2/Baloo2-Bold.svg#Baloo2-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baloo 2 Medium';
+    src: url('../fonts/fonts-Baloo2/Baloo2-Medium.eot');
+    src: url('../fonts/fonts-Baloo2/Baloo2-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fonts-Baloo2/Baloo2-Medium.woff2') format('woff2'),
+        url('../fonts/fonts-Baloo2/Baloo2-Medium.woff') format('woff'),
+        url('../fonts/fonts-Baloo2/Baloo2-Medium.ttf') format('truetype'),
+        url('../fonts/fonts-Baloo2/Baloo2-Medium.svg#Baloo2-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baloo 2 ExtraBold';
+    src: url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.eot');
+    src: url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.woff2') format('woff2'),
+        url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.woff') format('woff'),
+        url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.ttf') format('truetype'),
+        url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.svg#Baloo2-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baloo 2 SemiBold';
+    src: url('../fonts/fonts-Baloo2/Baloo2-SemiBold.eot');
+    src: url('../fonts/fonts-Baloo2/Baloo2-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fonts-Baloo2/Baloo2-SemiBold.woff2') format('woff2'),
+        url('../fonts/fonts-Baloo2/Baloo2-SemiBold.woff') format('woff'),
+        url('../fonts/fonts-Baloo2/Baloo2-SemiBold.ttf') format('truetype'),
+        url('../fonts/fonts-Baloo2/Baloo2-SemiBold.svg#Baloo2-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baloo 2 Regular';
+    src: url('../fonts/fonts-Baloo2/Baloo2-Regular.eot');
+    src: url('../fonts/fonts-Baloo2/Baloo2-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/fonts-Baloo2/Baloo2-Regular.woff2') format('woff2'),
+        url('../fonts/fonts-Baloo2/Baloo2-Regular.woff') format('woff'),
+        url('../fonts/fonts-Baloo2/Baloo2-Regular.ttf') format('truetype'),
+        url('../fonts/fonts-Baloo2/Baloo2-Regular.svg#Baloo2-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --brown-s: #FFF6E8;
+    --brown-m: #D6BD97;
+    --brown-l: #9F713C;
+    --brown-xl: #744B0D;
+    --text-color-header: #fff;
+}
+
 * {
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     border: none;
     font-family: Helvetica, sans-serif;
 }
@@ -20,3 +94,101 @@ body {
     width: 200px;
     color:aquamarine;
 }
+=======
+}
+
+body {
+    font-family: 'Baloo 2 Regular', sans-serif;
+}
+
+
+
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: #4d4d4d9c;
+    position: fixed;
+}
+
+.header .home-page {
+    line-height: 60px;
+    text-decoration: none;
+    color: var(--text-color-header);
+    font-family: 'Baloo 2 ExtraBold';
+    font-size: 16px;
+    margin: 0 40px;
+}
+
+.header .navigation{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.header .navigation li {
+    padding: 0 10px;
+}
+
+.header .navigation li a{
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color-header);
+}
+
+.header .navigation li:hover a {
+    color: var(--brown-l);
+}
+
+.header .sign-in {
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--text-color-header);
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+.header .sign-now {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--text-color-header);
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+.header .sign-in a,
+.header .sign-now a {
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--text-color-header);
+}
+
+.header .sign-in:hover a,
+.header .sign-now:hover a {
+    color: var(--brown-l);
+}
+
+.header .sign-in:hover,
+.header .sign-now:hover {
+    border-color: var(--brown-l);
+}
+
+
+.main-content{
+
+}
+
+.image-1 {
+    width: 100%;
+}
+
+.footer{
+
+}
+>>>>>>> 4abacc3f5dd62b638df87f06d90a1f75a77c2043
