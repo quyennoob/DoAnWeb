@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Baloo 2';
+    font-family: 'Baloo 2 Bold';
     src: url('Baloo2-Bold.eot');
     src: url('Baloo2-Bold.eot?#iefix') format('embedded-opentype'),
         url('Baloo2-Bold.woff2') format('woff2'),
@@ -12,7 +12,7 @@
 }
 
 @font-face {
-    font-family: 'Baloo 2';
+    font-family: 'Baloo 2 Medium';
     src: url('Baloo2-Medium.eot');
     src: url('Baloo2-Medium.eot?#iefix') format('embedded-opentype'),
         url('Baloo2-Medium.woff2') format('woff2'),
@@ -25,7 +25,7 @@
 }
 
 @font-face {
-    font-family: 'Baloo 2';
+    font-family: 'Baloo 2 ExtraBold';
     src: url('Baloo2-ExtraBold.eot');
     src: url('Baloo2-ExtraBold.eot?#iefix') format('embedded-opentype'),
         url('Baloo2-ExtraBold.woff2') format('woff2'),
@@ -38,7 +38,7 @@
 }
 
 @font-face {
-    font-family: 'Baloo 2';
+    font-family: 'Baloo 2 SemiBold';
     src: url('Baloo2-SemiBold.eot');
     src: url('Baloo2-SemiBold.eot?#iefix') format('embedded-opentype'),
         url('Baloo2-SemiBold.woff2') format('woff2'),
@@ -51,7 +51,7 @@
 }
 
 @font-face {
-    font-family: 'Baloo 2';
+    font-family: 'Baloo 2 Regular';
     src: url('Baloo2-Regular.eot');
     src: url('Baloo2-Regular.eot?#iefix') format('embedded-opentype'),
         url('Baloo2-Regular.woff2') format('woff2'),
