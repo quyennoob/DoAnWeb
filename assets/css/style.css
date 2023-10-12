@@ -74,34 +74,11 @@
 * {
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
-    border: none;
-    font-family: Helvetica, sans-serif;
-}
-
-body {
-    background-color: azure;
-}
-.header {
-    height: 100px;
-    background-color: #210604;
-    display: block;
-}
-
-.menu-sum{
-    display: block;
-    height: 100px;
-    width: 200px;
-    color:aquamarine;
-}
-=======
 }
 
 body {
     font-family: 'Baloo 2 Regular', sans-serif;
 }
-
-
 
 .header{
     width: 100%;
@@ -191,4 +168,3 @@ body {
 .footer{
 
 }
->>>>>>> 4abacc3f5dd62b638df87f06d90a1f75a77c2043
