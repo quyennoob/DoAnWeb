@@ -1,67 +1,10 @@
-@font-face {
-    font-family: 'Baloo 2 Bold';
-    src: url('../fonts/fonts-Baloo2/Baloo2-Bold.eot');
-    src: url('../fonts/fonts-Baloo2/Baloo2-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fonts-Baloo2/Baloo2-Bold.woff2') format('woff2'),
-        url('../fonts/fonts-Baloo2/Baloo2-Bold.woff') format('woff'),
-        url('../fonts/fonts-Baloo2/Baloo2-Bold.ttf') format('truetype'),
-        url('../fonts/fonts-Baloo2/Baloo2-Bold.svg#Baloo2-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Baloo 2 Medium';
-    src: url('../fonts/fonts-Baloo2/Baloo2-Medium.eot');
-    src: url('../fonts/fonts-Baloo2/Baloo2-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fonts-Baloo2/Baloo2-Medium.woff2') format('woff2'),
-        url('../fonts/fonts-Baloo2/Baloo2-Medium.woff') format('woff'),
-        url('../fonts/fonts-Baloo2/Baloo2-Medium.ttf') format('truetype'),
-        url('../fonts/fonts-Baloo2/Baloo2-Medium.svg#Baloo2-Medium') format('svg');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Baloo 2 ExtraBold';
-    src: url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.eot');
-    src: url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.woff2') format('woff2'),
-        url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.woff') format('woff'),
-        url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.ttf') format('truetype'),
-        url('../fonts/fonts-Baloo2/Baloo2-ExtraBold.svg#Baloo2-ExtraBold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Baloo 2 SemiBold';
-    src: url('../fonts/fonts-Baloo2/Baloo2-SemiBold.eot');
-    src: url('../fonts/fonts-Baloo2/Baloo2-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fonts-Baloo2/Baloo2-SemiBold.woff2') format('woff2'),
-        url('../fonts/fonts-Baloo2/Baloo2-SemiBold.woff') format('woff'),
-        url('../fonts/fonts-Baloo2/Baloo2-SemiBold.ttf') format('truetype'),
-        url('../fonts/fonts-Baloo2/Baloo2-SemiBold.svg#Baloo2-SemiBold') format('svg');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Baloo 2 Regular';
-    src: url('../fonts/fonts-Baloo2/Baloo2-Regular.eot');
-    src: url('../fonts/fonts-Baloo2/Baloo2-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/fonts-Baloo2/Baloo2-Regular.woff2') format('woff2'),
-        url('../fonts/fonts-Baloo2/Baloo2-Regular.woff') format('woff'),
-        url('../fonts/fonts-Baloo2/Baloo2-Regular.ttf') format('truetype'),
-        url('../fonts/fonts-Baloo2/Baloo2-Regular.svg#Baloo2-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+/*  Các kiểu font-family:
+    Baloo 2 Regular 
+    Baloo 2 SemiBold
+    Baloo 2 ExtraBold
+    Baloo 2 Medium
+    Baloo 2 Bold 
+*/
 
 :root {
     --brown-s: #FFF6E8;
@@ -129,7 +72,7 @@ body {
     padding: 2px 10px;
 }
 
-.header .sign-now {
+.header .sign-up {
     position: absolute;
     right: 50px;
     top: 50%;
@@ -140,19 +83,19 @@ body {
 }
 
 .header .sign-in a,
-.header .sign-now a {
+.header .sign-up a {
     text-decoration: none;
     font-weight: 800;
     color: var(--text-color-header);
 }
 
 .header .sign-in:hover a,
-.header .sign-now:hover a {
+.header .sign-up:hover a {
     color: var(--brown-l);
 }
 
 .header .sign-in:hover,
-.header .sign-now:hover {
+.header .sign-up:hover {
     border-color: var(--brown-l);
 }
 
