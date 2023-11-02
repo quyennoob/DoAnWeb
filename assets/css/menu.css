@@ -1,0 +1,20 @@
+:root {
+    --brown-s: #FFF6E8;
+    --brown-m: #D6BD97;
+    --brown-l: #9F713C;
+    --brown-xl: #744B0D;
+    --text-color-header: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Baloo 2', sans-serif;
+}
+
+header {
+    background-color: var(--brown-s);
+}
