@@ -183,8 +183,15 @@ body {
 .list-product-relate{
     display: flex;
     text-decoration: none;
+    list-style: none;
+    justify-content: flex-start;
 }
-
+.image-product-relate img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+/* footer */
 footer {
     background-color: #424242;
 }
