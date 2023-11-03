@@ -183,7 +183,7 @@ body {
     max-width: 1400px;
     height: 48vw;
     margin: 20px auto;
-    background-image: url(./assets/img/Thu-Ngay/back-ground.jpg);
+    background-image: url(/assets/img/Thu-Ngay/back-ground.jpg);
     background-repeat: no-repeat;
     background-size: auto;
     display: flex;
