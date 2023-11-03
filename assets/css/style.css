@@ -24,7 +24,7 @@
     --brown-l: #c59660;
     --brown-xl: #9F713C;
     --brown-xxl: #744B0D;
-    --text-color-header: #fff;
+    --text-color: #fff;
 }
 
 * {
@@ -82,15 +82,15 @@ body {
     overflow: hidden;
     -webkit-line-clamp: 3; /* số dòng bạn muốn hiển thị */
     -webkit-box-orient: vertical;
-  }
-  
+}
 
 /* Begin Header */
 .header{
     width: 100%;
     height: 60px;
     display: flex;
-    background-color: #383838c7;
+    background-color: #383838d6;
+    backdrop-filter: blur(20px);
     position: fixed;
     top: 0;
     left: 0;
@@ -99,10 +99,14 @@ body {
     
 }
 
+.header.active {
+    opacity: 1;
+}
+
 .header .home-page {
     line-height: 60px;
     text-decoration: none;
-    color: var(--text-color-header);
+    color: var(--text-color);
     font-family: 'Baron Neue';
     font-size: 22px;
     margin: 0 40px;
@@ -119,15 +123,16 @@ body {
     padding: 0 10px;
 }
 
-.header .navigation li a{
+.header .navigation li>a{
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
-    color: var(--text-color-header);
+    color: var(--text-color);
 }
 
 .header .navigation li:hover a {
     color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
 }
 
 .header .sign-in {
@@ -135,7 +140,7 @@ body {
     right: 150px;
     top: 50%;
     transform: translateY(-50%);
-    border: 2px solid var(--text-color-header);
+    border: 2px solid var(--text-color);
     border-radius: 20px;
     padding: 2px 10px;
 }
@@ -145,7 +150,7 @@ body {
     right: 50px;
     top: 50%;
     transform: translateY(-50%);
-    border: 2px solid var(--text-color-header);
+    border: 2px solid var(--text-color);
     border-radius: 20px;
     padding: 2px 10px;
 }
@@ -155,17 +160,19 @@ body {
     font-size: 16px;
     text-decoration: none;
     font-weight: 800;
-    color: var(--text-color-header);
+    color: var(--text-color);
 }
 
 .header .sign-in:hover a,
 .header .sign-up:hover a {
     color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
 }
 
 .header .sign-in:hover,
 .header .sign-up:hover {
     border-color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
 }
 /* End Header */
 
@@ -183,7 +190,7 @@ body {
     max-width: 1400px;
     height: 48vw;
     margin: 20px auto;
-    background-image: url(/assets/img/Thu-Ngay/back-ground.jpg);
+    background-image: url('/assets/img/Thu-Ngay/back-ground.jpg');
     background-repeat: no-repeat;
     background-size: auto;
     display: flex;

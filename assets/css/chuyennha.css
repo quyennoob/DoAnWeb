@@ -96,13 +96,18 @@ html {
     width: 100%;
     height: 60px;
     display: flex;
-    background-color: #585858;
-    position: relative;
+    background-color: #383838d6;
+    backdrop-filter: blur(20px);
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
     
+}
+
+.header.active {
+    opacity: 1;
 }
 
 .header .home-page {
@@ -132,12 +137,9 @@ html {
     color: var(--text-color);
 }
 
-.header .navigation li a.page-select{
-    color: var(--brown-l);
-}
-
 .header .navigation li:hover a {
     color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
 }
 
 .header .sign-in {
@@ -171,16 +173,19 @@ html {
 .header .sign-in:hover a,
 .header .sign-up:hover a {
     color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
 }
 
 .header .sign-in:hover,
 .header .sign-up:hover {
     border-color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
 }
 /* End Header */
 
 /* Begin page-header chuyen nha */
 .chuyen-nha {
+    margin-top: 60px;
     padding-top: 30px;
     background-image: url('/assets/img/repeat-background.png');
     background-size: 700px;

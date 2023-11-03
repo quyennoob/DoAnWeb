@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*  Các kiểu font-family:
+    Baloo 2 Regular 
+    Baloo 2 Medium
+    Baloo 2 SemiBold
+    Baloo 2 Bold 
+    Baloo 2 ExtraBold
+*/
+
+:root {
+    --Baloo-2-Regular: 'Baloo 2 Regular'; 
+    --Baloo-2-Medium: 'Baloo 2 Medium'; 
+    --Baloo-2-SemiBold: 'Baloo 2 Semibold'; 
+    --Baloo-2-Bold: 'Baloo 2 Bold'; 
+    --Baloo-2-ExtraBold: 'Baloo 2 Extrabold'; 
+}
+
+:root {
+    --brown-s: #FFF6E8;
+    --brown-m: #D6BD97;
+    --brown-l: #c59660;
+    --brown-xl: #9F713C;
+    --brown-xxl: #744B0D;
+    --text-color-header: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+html {
+    font-family: var(--Baloo-2-Regular), sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('https://github.com/quyennoob/DoAnWeb/blob/main/assets/img/repeat-background.png');
+    background-size: 700px;
+    background-color: rgba(255, 255, 255, 0.95);
+    background-blend-mode: overlay;
+}
+
+.col {
+    margin: 0 20px;
+}
+
+.col-third {
+    width: 33.33333%;
+    box-sizing: border-box;
+}
+
+.col-half {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.col-full {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.col-fourth {
+    width: 25%;
+}
+
+/* hiển thị văn bản trên một dòng */
+.ellipsis {
+    text-overflow: ellipsis; /* kích hoạt dấu ba chấm */
+    white-space: nowrap; /* giữ văn bản trên một dòng */
+    overflow: hidden; /* giữ phần tử không tràn ra khỏi phần tử cha */
+    width: 100%; /* phần tử cần có chiều rộng cố định (px, em, %, etc) */
+}
+
+/* hiển thị văn bản trên 3 dòng */
+.truncate-3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3; /* số dòng bạn muốn hiển thị */
+    -webkit-box-orient: vertical;
+}
+/* Coffee holic */
+.coffeeholic-section {
+    display: flex;
+    margin: 0 50px;
+}
+
+.coffeeholic-section .col {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.coffeeholic-section .col .content-list .item{
+    display: flex;
+    margin: 3vw 0;
+    align-items: center;
+}
+
+.coffeeholic-section .col .content-list .item .image{
+    width: 40%;
+    margin-right: 24px;
+}
+
+.coffeeholic-section .col .content-list .item img{
+    width: 100%;
+    height: 12vw;
+    border-radius: 8px;
+    object-fit: cover;
+
+}
+
+.coffeeholic-section .col .content-list .item .content{
+    width: 60%;
+}
+
+.coffeeholic-section .col .content-list .item a{
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+.coffeeholic-section .col .content-list .item a:hover{
+    color: var(--brown-l);
+}
+
+.coffeeholic-section .col .content-list .item .date{
+    color: #8c8c8c;
+    font-size: 14px;
+}
