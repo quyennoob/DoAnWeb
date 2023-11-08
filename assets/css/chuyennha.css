@@ -1,0 +1,763 @@
+/*  Các kiểu font-family:
+    Baloo 2 Regular 
+    Baloo 2 Medium
+    Baloo 2 SemiBold
+    Baloo 2 Bold 
+    Baloo 2 ExtraBold
+*/
+
+:root {
+    --Baloo-2-Regular: 'Baloo 2 Regular'; 
+    --Baloo-2-Medium: 'Baloo 2 Medium'; 
+    --Baloo-2-SemiBold: 'Baloo 2 Semibold'; 
+    --Baloo-2-Bold: 'Baloo 2 Bold'; 
+    --Baloo-2-ExtraBold: 'Baloo 2 Extrabold'; 
+}
+
+:root {
+    --brown-s: #FFF6E8;
+    --brown-m: #D6BD97;
+    --brown-l: #ca893f;
+    --brown-xl: #9F713C;
+    --brown-xxl: #744B0D;
+    --yellow: #febf3e;
+    --text-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--Baloo-2-Regular), sans-serif;
+    scroll-behavior: smooth;
+}
+
+.row {
+    width: 100%;
+}
+
+.col {
+    margin: 0 20px;
+}
+
+.col-third {
+    width: 33.33333%;
+    box-sizing: border-box;
+}
+
+.col-half {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.col-full {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.col-fourth {
+    width: 25%;
+}
+
+/* hiển thị văn bản trên một dòng */
+.ellipsis {
+    text-overflow: ellipsis; /* kích hoạt dấu ba chấm */
+    white-space: nowrap; /* giữ văn bản trên một dòng */
+    overflow: hidden; /* giữ phần tử không tràn ra khỏi phần tử cha */
+    width: 100%; /* phần tử cần có chiều rộng cố định (px, em, %, etc) */
+}
+
+/* hiển thị văn bản trên 2 dòng */
+.truncate-2 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2; /* số dòng bạn muốn hiển thị */
+    -webkit-box-orient: vertical;
+}
+
+/* hiển thị văn bản trên 3 dòng */
+.truncate-3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3; /* số dòng bạn muốn hiển thị */
+    -webkit-box-orient: vertical;
+}
+
+/* Chữ in đậm */
+.text-bold {
+    font-weight: bold;
+}
+
+/* Begin Header */
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: #383838d6;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    
+}
+
+.header.active {
+    opacity: 1;
+}
+
+.header .home-page {
+    line-height: 60px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Baron Neue';
+    font-size: 22px;
+    margin: 0 40px;
+}
+
+.header .navigation{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.header .navigation li {
+    padding: 0 10px;
+}
+
+.header .navigation li a{
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header .navigation li:hover a {
+    color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
+}
+
+.header .sign-in {
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+.header .sign-up {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+.header .sign-in a,
+.header .sign-up a {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.header .sign-in:hover a,
+.header .sign-up:hover a {
+    color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
+}
+
+.header .sign-in:hover,
+.header .sign-up:hover {
+    border-color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
+}
+/* End Header */
+
+/* Begin page-header chuyen nha */
+.chuyen-nha {
+    margin-top: 60px;
+    padding-top: 30px;
+    background-image: url('/assets/img/repeat-background.png');
+    background-size: 700px;
+    background-color: rgba(255, 255, 255, 0.95);
+    background-blend-mode: overlay;
+}
+
+.page-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-header h2 {
+    text-align: center;
+    padding-bottom: 8px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.page-header h2::after {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background: var(--brown-l);
+}
+
+.page-header-content  {
+    font-size: 16px;
+    text-align: center;
+    width: 56%;
+    margin-bottom: 10px;
+}
+
+.page-header .page-tabs {
+    display: flex;
+    margin-bottom: 40px;
+}
+.page-header .page-tabs li {
+    list-style: none;
+    padding: 7px 15px;
+    margin: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.page-header .page-tabs li a {
+    display: block;
+    color: #777777;
+    width: 80px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
+
+.page-header .page-tabs li a:hover {
+    color: var(--brown-l);
+}
+
+.page-header .page-tabs .selection {
+    background-color: var(--brown-s);
+    border: none;
+
+}
+
+.page-header .page-tabs .selection a {
+    color: var(--brown-l);
+}
+/* End page-header chuyen nha */
+
+/* Begin cloudfee chuyen nha */
+.cloudfee {
+    background-image: linear-gradient( 0, #8b8b8b8d, #1e1e1eaf);
+}
+
+.cloudfee .creamy {
+    display: flex;
+    align-items: center;
+    margin: 0 100px;
+}
+
+.cloudfee .cream img{
+    width: 100%;
+    background-color: #58585882;
+
+}
+
+.cloudfee .creamy h3 {
+    font-family: 'Baron Neue';
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--yellow);
+}
+
+.cloudfee .creamy h1 {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 80px;
+    color: var(--yellow);
+}
+
+.cloudfee .creamy p {
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.cloudfee .creamy a,
+.cloudfee .creamy i {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 48px;
+    padding-left: 5px;
+    color: var(--yellow);
+}
+
+.cloudfee .creamy a:hover{
+    color: #ffae0d;
+}
+
+.cloudfee .hieu,
+.cloudfee .thinh {
+    display: flex;
+    align-items: center;
+    margin: -72px 100px 0;
+}
+
+.cloudfee .hieu h1,
+.cloudfee .thinh h1 {
+    font-size: 40px;
+    line-height: 48px;
+    color: var(--yellow);
+    font-weight: bolder;
+    font-family: 'Montserrat ExtraBold';
+}
+
+.cloudfee .hieu p,
+.cloudfee .thinh p {
+    color: #fff;
+    font-size: 18px;
+}
+
+.cloudfee .hieu a,
+.cloudfee .thinh a {
+    font-size: 18px;
+    color: #424242;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: #ffbe40;
+    padding: 8px 30px;
+    border-radius: 8px;
+}
+
+.cloudfee .hieu a:hover,
+.cloudfee .thinh a:hover {
+    color: #575757;
+    background-color: #ffc756;
+}
+
+.cloudfee .hieu img,
+.cloudfee .thinh img {
+    
+}
+
+
+/* End cloudfee chuyen nha */
+
+
+/* Begin all-content chuyen nha */
+.all-content {
+
+}
+
+.coffeeholic-section {
+    background-color: var(--brown-s);
+    display: flex;
+}
+
+.coffeeholic-section .col-left {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.coffeeholic-section .col-left img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.coffeeholic-section .col-right {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.coffeeholic-section .col-right>h2 {
+    position: relative;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.coffeeholic-section .col-right>h2::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 100%;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 0;
+    background: var(--brown-l);
+}
+
+.coffeeholic-section .col-right .content-list .item{
+    display: flex;
+    margin: 3vw 0;
+    align-items: center;
+}
+
+.coffeeholic-section .col-right .content-list .item .image{
+    width: 40%;
+    margin-right: 24px;
+}
+
+.coffeeholic-section .col-right .content-list .item img{
+    width: 100%;
+    height: 12vw;
+    border-radius: 8px;
+    object-fit: cover;
+
+}
+
+.coffeeholic-section .col-right .content-list .item .content{
+    width: 60%;
+}
+
+.coffeeholic-section .col-right .content-list .item a{
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+.coffeeholic-section .col-right .content-list .item a:hover{
+    color: var(--brown-l);
+}
+
+.coffeeholic-section .col-right .content-list .item .date{
+    color: #8c8c8c;
+    font-size: 14px;
+}
+
+.coffeeholic-section .col-right .content-list .btn{
+    display: flex;
+    justify-content: center;
+}
+
+.coffeeholic-section .col-right .content-list .btn a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--Baloo-2-SemiBold);
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px 70px;
+}
+
+.coffeeholic-section .col-right .content-list .btn a:hover{
+    color: var(--brown-l);
+}
+
+.teaholic-section {
+
+}
+
+.teaholic-section {
+    display: flex;
+}
+
+.teaholic-section .col-left {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 30px 50px 0;
+}
+
+.teaholic-section .col-left img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.teaholic-section .col-right {
+    width: 65%;
+    margin: 0 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.teaholic-section .col-right>h2 {
+    position: relative;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.teaholic-section .col-right>h2::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 100%;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 0;
+    background: var(--brown-l);
+}
+
+.teaholic-section .col-right .content-list .item{
+    display: flex;
+    margin: 3vw 0;
+    align-items: center;
+}
+
+.teaholic-section .col-right .content-list .item .image{
+    width: 40%;
+    margin-right: 24px;
+}
+
+.teaholic-section .col-right .content-list .item img{
+    width: 100%;
+    height: 12vw;
+    border-radius: 8px;
+    object-fit: cover;
+
+}
+
+.teaholic-section .col-right .content-list .item .content{
+    width: 60%;
+}
+
+.teaholic-section .col-right .content-list .item a{
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+.teaholic-section .col-right .content-list .item a:hover{
+    color: var(--brown-l);
+}
+
+.teaholic-section .col-right .content-list .item .date{
+    color: #8c8c8c;
+    font-size: 14px;
+}
+
+.teaholic-section .col-right .content-list .btn{
+    display: flex;
+    justify-content: center;
+}
+
+.teaholic-section .col-right .content-list .btn a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--Baloo-2-SemiBold);
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px 70px;
+}
+
+.teaholic-section .col-right .content-list .btn a:hover{
+    color: var(--brown-l);
+}
+
+.blog-section {
+
+}
+
+.blog-section {
+    background-color: var(--brown-s);
+    display: flex;
+}
+
+.blog-section .col-left {
+    width: 44%;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.blog-section .col-left img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-section .col-right {
+    width: 56%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.blog-section .col-right>h2 {
+    position: relative;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.blog-section .col-right>h2::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 100%;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 0;
+    background: var(--brown-l);
+}
+
+.blog-section .col-right .content-list .item{
+    display: flex;
+    margin: 3vw 0;
+    align-items: center;
+}
+
+.blog-section .col-right .content-list .item .image{
+    width: 40%;
+    margin-right: 24px;
+
+}
+
+.blog-section .col-right .content-list .item img{
+    width: 100%;
+    height: 12vw;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.blog-section .col-right .content-list .item .content{
+    width: 60%;
+}
+
+.blog-section .col-right .content-list .item a{
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+.blog-section .col-right .content-list .item a:hover{
+    color: var(--brown-l);
+}
+
+.blog-section .col-right .content-list .item .date{
+    color: #8c8c8c;
+    font-size: 14px;
+}
+
+.blog-section .col-right .content-list .btn{
+    display: flex;
+    justify-content: center;
+}
+
+.blog-section .col-right .content-list .btn a{
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--Baloo-2-SemiBold);
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 5px 70px;
+}
+
+.blog-section .col-right .content-list .btn a:hover{
+    color: var(--brown-l);
+}
+
+/* End all-content chuyen nha */
+
+/* Begin Footer */
+footer {
+    background-color: #424242;
+}
+
+footer .container {
+    margin: 0 50px;
+}
+
+footer .row-linklist {
+    display: flex;
+    line-height: 1.4;
+    /* align-items: center; */
+    padding: 30px 0;
+}
+
+footer .row-linklist h3 {
+    color: #fff;
+    padding: 8px 0;
+}
+
+footer .row-linklist ul {
+    list-style: none;
+}
+
+footer .row-linklist ul li {
+    padding: 8px 0;
+}
+
+footer .row-linklist ul a {
+    text-decoration: none;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+}
+
+footer .row-linklist ul a:hover {
+    color: #f0f0f0;
+}
+
+footer .row-linklist ul a i {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+footer .row-linklist .col-image {
+    display: flex;
+}
+
+footer .row-linklist img {
+    width: 100%;
+    height: 14vw;
+    border-radius: 8px;
+}
+
+footer .row-line {
+    width: 100%;
+    height: 0px;
+    border: 1px solid #ccc;
+}
+
+footer .row-link-contact {
+    padding: 30px 0;
+}
+
+footer .row-link-contact a {
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+footer .row-link-contact a i {
+    font-size: 25px;
+    color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+footer .row-link-contact a:hover i {
+    background-color: #585858;
+}
+/* End Footer */
