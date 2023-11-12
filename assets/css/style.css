@@ -1,18 +1,18 @@
 
 /*  Các kiểu font-family:
-    Baloo 2 Regular 
+    Baloo 2 Regular
     Baloo 2 Medium
     Baloo 2 SemiBold
-    Baloo 2 Bold 
+    Baloo 2 Bold
     Baloo 2 ExtraBold
 */
 
 :root {
-    --Baloo-2-Regular: 'Baloo 2 Regular'; 
-    --Baloo-2-Medium: 'Baloo 2 Medium'; 
-    --Baloo-2-SemiBold: 'Baloo 2 Semibold'; 
-    --Baloo-2-Bold: 'Baloo 2 Bold'; 
-    --Baloo-2-ExtraBold: 'Baloo 2 Extrabold'; 
+    --Baloo-2-Regular: 'Baloo 2 Regular';
+    --Baloo-2-Medium: 'Baloo 2 Medium';
+    --Baloo-2-SemiBold: 'Baloo 2 Semibold';
+    --Baloo-2-Bold: 'Baloo 2 Bold';
+    --Baloo-2-ExtraBold: 'Baloo 2 Extrabold';
 }
 
 :root {
@@ -65,7 +65,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 999;
 }
 
 .header .home-page {
@@ -191,12 +191,14 @@ body {
     background-color: #778b37;
     border: none;
     border-radius: 10px;
+    transition: all 0.2s ease-in-out;
 }
 
 .thu-ngay .col-right .btn-thu-ngay:hover 
 {
     background-color: #a0bb47;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .thu-ngay .col-right .btn-thu-ngay>p {
@@ -239,7 +241,7 @@ body {
     font-size: 18px;
 }
 
-.tim-hieu-them .col-left .btn-tim-hieu-them{
+.tim-hieu-them .content-tim-hieu-them .btn-tim-hieu-them{
     width: 280px;
     height: 40px;
     border-radius: 10px;
@@ -250,6 +252,7 @@ body {
     font-family: var(--Baloo-2-Medium);
     margin-top: 50px;
     margin-bottom: 15px;
+    transition: all 0.2s ease-in-out;
 }
 
 .tim-hieu-them .content-tim-hieu-them button:hover {
@@ -257,6 +260,7 @@ body {
     border: 1px solid #585858;
     color: #ed9243;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 .tim-hieu-them .col-left .btn-next {
@@ -268,10 +272,6 @@ body {
     font-weight: 600;
     padding-right: 20px;
     cursor: pointer;
-}
-
-.tim-hieu-them .container-fluid .col-right {
-
 }
 
 .tim-hieu-them .container-fluid .col-right img{
@@ -292,26 +292,22 @@ body {
 }
 
 .chuyen-nha .header-chuyen-nha {
+    padding-top: 40px;
     display: flex;
     justify-content: center;
-    padding-top: 40px;
 }
 
-.chuyen-nha .header-chuyen-nha i {
-    color: var(--brown-xl);
+.chuyen-nha .header-chuyen-nha>img {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+}
+
+.chuyen-nha .header-chuyen-nha>h2 {
+    font-size: 30px;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    font-size: 30px;
-    padding-right: 10px;
-}
-
-.chuyen-nha .header-chuyen-nha h2 {
-    font-size: 30px;
-}
-
-.chuyen-nha .content-chuyen-nha {
-
+    width: 220px;
+    margin: 0;
 }
 
 .chuyen-nha .content-chuyen-nha .coffeeholic {
@@ -334,7 +330,11 @@ body {
 .chuyen-nha .coffeeholic .content-list {
     display: flex;
     justify-content: space-around;
-    margin: 0 100px;
+    margin: 0 64px;
+}
+
+.chuyen-nha .coffeeholic .content-list .col {
+    padding: 0 16px;
 }
 
 .chuyen-nha .coffeeholic .content-list img{
@@ -343,12 +343,20 @@ body {
     object-position: center;
     border-radius: 10px;
     transform: scale(1,1);
+    box-shadow: 0 2px 15px #585858;
+    transition: all 0.4s ease-in-out;
 }
 
 .chuyen-nha .coffeeholic .content-list img:hover{
-    transform: scale(1.05,1.05);
-    transition: transform 0.4s ease-in-out;
+    box-shadow: 0 8px 30px #585858;
+    transform: scale(1.02,1.02);
+    transition: all 0.4s ease-in-out;
     cursor: pointer;
+}
+
+.chuyen-nha .coffeeholic .content-list .title {
+    font-size: 21px;
+    font-family: var(--Baloo-2-Medium);
 }
 
 .chuyen-nha .coffeeholic .content-list .date,
@@ -356,6 +364,7 @@ body {
 {
     color: #585858;
     text-align: justify;
+    margin: 12px 0;
 }
 
 .chuyen-nha .coffeeholic .content-list .title:hover{
@@ -372,7 +381,7 @@ footer {
 
 footer .row-linklist {
     line-height: 1.4;
-    padding: 30px 0;
+    padding: 30px 16px;
 }
 
 footer .row-linklist h5 {
@@ -396,6 +405,7 @@ footer .row-linklist ul a {
 
 footer .row-linklist ul a:hover {
     color: #f0f0f0;
+    transition: color 0.2s ease-in-out;
 }
 
 footer .row-linklist ul a i {
@@ -403,10 +413,19 @@ footer .row-linklist ul a i {
     margin-right: 8px;
 }
 
+footer .row-linklist .col-image {
+    padding: 0;
+    overflow: hidden;
+}
+
 footer .row-linklist img {
     width: 100%;
     height: 14vw;
     border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.07, 1.07);
+    }
 }
 
 footer .row-line {
@@ -417,6 +436,7 @@ footer .row-line {
 
 footer .row-link-contact {
     padding: 30px 0;
+    display: flex;
 }
 
 footer .row-link-contact a {
@@ -429,9 +449,12 @@ footer .row-link-contact a i {
     color: #fff;
     border-radius: 50%;
     padding: 8px;
+    display: flex;
+    height: 41px;
 }
 
 footer .row-link-contact a:hover i {
     background-color: #585858;
+    transition: background-color 0.2s ease-in-out;
 }
 /* End Footer */
