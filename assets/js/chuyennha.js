@@ -60,7 +60,7 @@ $(document).ready( function() {
     $("#js-blog-content").hide();
 });
 // Chuyển sang tất cả nội dung
-$("#js-btn-tat-ca").click( function() {
+$("#js-btn-tat-ca").click(function() {
     $("#js-all-content").fadeIn();
     $("#js-coffeeholic-content").fadeOut();
     $("#js-teaholic-content").fadeOut();

@@ -1,4 +1,3 @@
-
 /*  Các kiểu font-family:
     Baloo 2 Regular
     Baloo 2 Medium
@@ -30,32 +29,29 @@
     font-family: var(--Baloo-2-Regular), sans-serif;
 }
 
-body {
-    scroll-behavior: smooth;
-    background-image: url('/assets/img/repeat-background.png');
-    background-size: 700px;
-    background-color: rgba(255, 255, 255, 0.95);
-    background-blend-mode: overlay;
-}
-
 /* hiển thị văn bản trên một dòng */
 .ellipsis {
-    text-overflow: ellipsis; /* kích hoạt dấu ba chấm */
-    white-space: nowrap; /* giữ văn bản trên một dòng */
-    overflow: hidden; /* giữ phần tử không tràn ra khỏi phần tử cha */
-    width: 100%; /* phần tử cần có chiều rộng cố định (px, em, %, etc) */
+    text-overflow: ellipsis;
+    /* kích hoạt dấu ba chấm */
+    white-space: nowrap;
+    /* giữ văn bản trên một dòng */
+    overflow: hidden;
+    /* giữ phần tử không tràn ra khỏi phần tử cha */
+    width: 100%;
+    /* phần tử cần có chiều rộng cố định (px, em, %, etc) */
 }
 
 /* hiển thị văn bản trên 3 dòng */
 .truncate {
     display: -webkit-box;
     overflow: hidden;
-    -webkit-line-clamp: 3; /* số dòng bạn muốn hiển thị */
+    -webkit-line-clamp: 3;
+    /* số dòng bạn muốn hiển thị */
     -webkit-box-orient: vertical;
 }
 
 /* Begin Header */
-.header{
+.header {
     width: 100%;
     height: 60px;
     display: flex;
@@ -68,6 +64,16 @@ body {
     z-index: 999;
 }
 
+.header .ti-close,
+.header .ti-menu {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
+    position: absolute;
+    display: none;
+}
+
 .header .home-page {
     line-height: 55px;
     text-decoration: none;
@@ -77,18 +83,24 @@ body {
     margin: 0 40px;
 }
 
-.header .navigation{
+.header .nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation {
     list-style: none;
     display: flex;
     align-items: center;
     margin: 0;
+    padding: 0;
 }
 
 .header .navigation li {
     padding: 0 10px;
 }
 
-.header .navigation li>a{
+.header .navigation li>a {
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
@@ -98,6 +110,11 @@ body {
 .header .navigation li:hover a {
     color: var(--brown-l);
     transition: color 0.2s ease-in-out;
+}
+
+.header .navigation li.sign-in-sm,
+.header .navigation li.sign-up-sm {
+    display: none;
 }
 
 .header .sign-in {
@@ -139,12 +156,14 @@ body {
     border-color: var(--brown-l);
     transition: color 0.2s ease-in-out;
 }
+
 /* End Header */
 
 /* Begin Slider */
 .slide {
     margin-top: 60px;
 }
+
 /* End Slider */
 
 
@@ -152,12 +171,12 @@ body {
 .thu-ngay {
     font-family: var(--Baloo-2-Regular);
     height: 60vw;
-    background-image: url('/assets/img/Thu-Ngay/back-ground.jpg');
     background-repeat: no-repeat;
     background-size: inherit;
     background-position: center;
     display: grid;
     align-items: center;
+    margin: 40px 0;
 }
 
 .thu-ngay .container-fluid {
@@ -181,8 +200,7 @@ body {
     margin-bottom: 40px;
 }
 
-.thu-ngay .col-right .btn-thu-ngay 
-{
+.thu-ngay .col-right .btn-thu-ngay {
     color: var(--text-color);
     font-size: 18px;
     font-family: var(--Baloo-2-Medium);
@@ -194,8 +212,7 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-.thu-ngay .col-right .btn-thu-ngay:hover 
-{
+.thu-ngay .col-right .btn-thu-ngay:hover {
     background-color: #a0bb47;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -210,6 +227,7 @@ body {
     font-size: 16px;
     text-align: justify;
 }
+
 /* End Thu ngay */
 
 
@@ -241,7 +259,7 @@ body {
     font-size: 18px;
 }
 
-.tim-hieu-them .content-tim-hieu-them .btn-tim-hieu-them{
+.tim-hieu-them .content-tim-hieu-them .btn-tim-hieu-them {
     width: 280px;
     height: 40px;
     border-radius: 10px;
@@ -274,10 +292,14 @@ body {
     cursor: pointer;
 }
 
-.tim-hieu-them .container-fluid .col-right img{
-    height: 36vw;
+.tim-hieu-them .container-fluid .col-right .carousel-inner {
     border-radius: 15px;
 }
+
+.tim-hieu-them .container-fluid .col-right img {
+    height: 36vw;
+}
+
 /* End Tim hieu them */
 
 /* Begin Chuyen nha */
@@ -337,19 +359,23 @@ body {
     padding: 0 16px;
 }
 
-.chuyen-nha .coffeeholic .content-list img{
+.chuyen-nha .coffeeholic .des-hidden {
+    display: none;
+}
+
+.chuyen-nha .coffeeholic .content-list img {
     width: 100%;
     height: 15vw;
     object-position: center;
     border-radius: 10px;
-    transform: scale(1,1);
+    transform: scale(1, 1);
     box-shadow: 0 2px 15px #585858;
     transition: all 0.4s ease-in-out;
 }
 
-.chuyen-nha .coffeeholic .content-list img:hover{
+.chuyen-nha .coffeeholic .content-list img:hover {
     box-shadow: 0 8px 30px #585858;
-    transform: scale(1.02,1.02);
+    transform: scale(1.02, 1.02);
     transition: all 0.4s ease-in-out;
     cursor: pointer;
 }
@@ -360,17 +386,17 @@ body {
 }
 
 .chuyen-nha .coffeeholic .content-list .date,
-.chuyen-nha .coffeeholic .content-list .text
-{
+.chuyen-nha .coffeeholic .content-list .text {
     color: #585858;
     text-align: justify;
     margin: 12px 0;
 }
 
-.chuyen-nha .coffeeholic .content-list .title:hover{
+.chuyen-nha .coffeeholic .content-list .title:hover {
     color: var(--brown-l);
     cursor: pointer;
 }
+
 /* End Chuyen nha */
 
 
@@ -423,6 +449,7 @@ footer .row-linklist img {
     height: 14vw;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
+
     &:hover {
         transform: scale(1.07, 1.07);
     }
@@ -457,4 +484,5 @@ footer .row-link-contact a:hover i {
     background-color: #585858;
     transition: background-color 0.2s ease-in-out;
 }
+
 /* End Footer */

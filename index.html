@@ -7,6 +7,7 @@
 
     <!-- link file css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style-responsive.css">
 
     <!-- link font chữ -->
     <link rel="stylesheet" href="./assets/fonts/fonts-Baloo2/stylesheet.css">
@@ -21,20 +22,28 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- link jQuery -->
-    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/jQuery/jquery-3.7.1.min.js"></script>
+
+    <!-- link file js -->
+    <script src="./assets/js/style.js"></script>
 
     <title>The Coffee House</title>
+
 </head>
 
 <body>
     <header>
         <div class="header">
+            <i class="ti-close js-close-menu"></i>
+            <i class="ti-menu js-open-menu"></i>
             <a href="#" class="home-page">THE COFFEE HOUSE</a>
-            <ul class="navigation">
+            <ul class="navigation js-navigation">
                 <li><a href="./assets/html/menu.html">Menu</a></li>
                 <li><a href="./chuyennha.html">Chuyện Cà Phê</a></li>
                 <li><a href="#">Giới Thiệu</a></li>
                 <li><a href="#">Liên Hệ</a></li>
+                <li class="sign-in-sm"><a href="#">Đăng nhập</a></li>
+                <li class="sign-up-sm"><a href="#">Đăng ký</a></li>
             </ul>
             <div class="sign-in">
                 <a href="#">Đăng nhập</a>
@@ -95,7 +104,7 @@
         <!-- End menu -->
 
         <!-- Begin thu ngay -->
-        <div class="thu-ngay">
+        <div class="thu-ngay" style="background-image: url(./assets/img/Thu-Ngay/back-ground.jpg);">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6 col-left"></div>
@@ -207,7 +216,7 @@
                     <div class="coffeeholic">
                         <div class="title">Coffeeholic</div>
                         <div class="content-list row">
-                            <div class="col-sm-4 col">
+                            <div class="col-lg-4 col-sm-6 col">
                                 <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
                                     alt="Ảnh chuyện nhà">
                                 <p class="date">12/02/2023</p>
@@ -216,7 +225,7 @@
                                     - Biểu
                                     tượng văn hóa cà phê của The Coffee House đã quay trở lại. Một lời...</p>
                             </div>
-                            <div class="col-sm-4 col">
+                            <div class="col-lg-4 col-sm-6 col">
                                 <img src="./assets/img/Chuyen-nha/lan-dau-tien-den-coffee.jpg" alt="Ảnh chuyện nhà">
                                 <p class="date">09/02/2023</p>
                                 <h4 class="title ellipsis">UỐNG GÌ KHI TỚI SIGNATURE BY THE COFFEE HOUSE</h4>
@@ -224,7 +233,20 @@
                                     SIGNATURE by
                                     The Coffee House, chuyên phục vụ cà phê đặc sản, các món ăn đa bản sắc ấy...</p>
                             </div>
-                            <div class="col-sm-4 col">
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                    alt="Ảnh chuyện nhà">
+                                <p class="date">12/02/2023</p>
+                                <h4 class="title ellipsis">CÀ PHÊ SỮA ESPRESSO THE COFFEE HOUSE - BẬT LON BẬT VỊ NGON
+                                </h4>
+                                <p class="text truncate">Cà phê sữa Espresso là một lon cà phê sữa giải khát với hương
+                                    vị cà phê đậm đà từ 100% cà phê Robusta cùng vị sữa béo nhẹ cho bạn một trải nghiệm
+                                    hương vị
+                                    cà phê hoàn toàn mới. Cà phê sữa Espresso là một lon cà phê sữa giải khát với hương
+                                    vị cà phê đậm đà từ 100% cà phê Robusta cùng vị sữa béo nhẹ cho bạn một trải nghiệm
+                                    hương vị cà phê hoàn toàn mới.</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 col des-hidden">
                                 <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
                                     alt="Ảnh chuyện nhà">
                                 <p class="date">12/02/2023</p>
@@ -244,7 +266,7 @@
                     <div class="coffeeholic">
                         <div class="title">Teaholic</div>
                         <div class="content-list row">
-                            <div class="col-sm-4 col">
+                            <div class="col-lg-4 col-sm-6 col">
                                 <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
                                     alt="Ảnh chuyện nhà">
                                 <p class="date">12/02/2023</p>
@@ -253,7 +275,7 @@
                                     - Biểu
                                     tượng văn hóa cà phê của The Coffee House đã quay trở lại. Một lời...</p>
                             </div>
-                            <div class="col-sm-4 col">
+                            <div class="col-lg-4 col-sm-6 col">
                                 <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
                                     alt="Ảnh chuyện nhà">
                                 <p class="date">12/02/2023</p>
@@ -262,7 +284,16 @@
                                     - Biểu
                                     tượng văn hóa cà phê của The Coffee House đã quay trở lại.Một lời...</p>
                             </div>
-                            <div class="col-sm-4 col">
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                    alt="Ảnh chuyện nhà">
+                                <p class="date">12/02/2023</p>
+                                <h4 class="title ellipsis">SIGNATURE - BIỂU TƯỢNG VĂN HÓA CỦA THE COFFEE HOUSE</h4>
+                                <p class="text truncate">Mới đây, các "tín đồ" cà phê đang bàn tán xôn xao về SIGNATURE
+                                    - Biểu
+                                    tượng văn hóa cà phê của The Coffee House đã quay trở lại.Một lời...</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 col des-hidden">
                                 <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
                                     alt="Ảnh chuyện nhà">
                                 <p class="date">12/02/2023</p>
@@ -278,7 +309,7 @@
                     <div class="coffeeholic">
                         <div class="title">Blog</div>
                         <div class="content-list row">
-                            <div class="col-sm-4 col">
+                            <div class="col-lg-4 col-sm-6 col">
                                 <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
                                     alt="Ảnh chuyện nhà">
                                 <p class="date">12/02/2023</p>
@@ -287,7 +318,7 @@
                                     - Biểu
                                     tượng văn hóa cà phê của The Coffee House đã quay trở lại.Một lời...</p>
                             </div>
-                            <div class="col-sm-4 col">
+                            <div class="col-lg-4 col-sm-6 col">
                                 <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
                                     alt="Ảnh chuyện nhà">
                                 <p class="date">12/02/2023</p>
@@ -296,7 +327,16 @@
                                     - Biểu
                                     tượng văn hóa cà phê của The Coffee House đã quay trở lại.Một lời...</p>
                             </div>
-                            <div class="col-sm-4 col">
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                    alt="Ảnh chuyện nhà">
+                                <p class="date">12/02/2023</p>
+                                <h4 class="title ellipsis">SIGNATURE - BIỂU TƯỢNG VĂN HÓA CỦA THE COFFEE HOUSE</h4>
+                                <p class="text truncate">Mới đây, các "tín đồ" cà phê đang bàn tán xôn xao về SIGNATURE
+                                    - Biểu
+                                    tượng văn hóa cà phê của The Coffee House đã quay trở lại.Một lời...</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 col des-hidden">
                                 <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
                                     alt="Ảnh chuyện nhà">
                                 <p class="date">12/02/2023</p>
@@ -319,7 +359,7 @@
     <footer>
         <div class="container-fluid">
             <div class="row-linklist row">
-                <div class="col-sm-3">
+                <div class="col-lg-3 col-sm-6">
                     <h5>Về chúng tôi</h5>
                     <ul class="footer-linklist">
                         <li><a href="#">Đồ uống của chúng tôi</a></li>
@@ -327,7 +367,7 @@
                         <li><a href="#">Dịch vụ chăm sóc khách hàng</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-lg-3 col-sm-6">
                     <h5>Đặt hàng và lấy hàng</h5>
                     <ul class="footer-linklist">
                         <li><a href="#">Đặt hàng trên Web</a></li>
@@ -335,16 +375,16 @@
                         <li><a href="#">Phương thức đặt hàng và giao hàng</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-lg-3 col-sm-6">
                     <h5>Liên hệ</h5>
                     <ul class="footer-linklist">
-                        <li><a href="#"><i class="ti ti-user"></i>0123456789</a></li>
+                        <li><a href="tel:0123456789"><i class="ti ti-user"></i>0123456789</a></li>
                         <li><a href="#"><i class="ti ti-location-pin"></i>182 Lê Duẩn, TP Vinh, Nghệ An</a></li>
-                        <li><a href="#"><i class="ti ti-email"></i>thecoffeehouse@gmail.com</a></li>
+                        <li><a href="mailto:thecoffeehouse@gmail.com"><i class="ti ti-email"></i>thecoffeehouse@gmail.com</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-3 col-image">
-                    <a href="#"><img src="/assets/img/image-footer.jpg" alt="Ảnh quán coffee house"></a>
+                <div class="col-lg-3 col-sm-6 col-image">
+                    <a href="#"><img src="./assets/img/image-footer.jpg" alt="Ảnh quán coffee house"></a>
                 </div>
             </div>
             <div class="row-line">
