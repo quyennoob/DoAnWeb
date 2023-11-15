@@ -1,20 +1,239 @@
 :root {
+    --Baloo-2-Regular: 'Baloo 2 Regular';
+    --Baloo-2-Medium: 'Baloo 2 Medium';
+    --Baloo-2-SemiBold: 'Baloo 2 Semibold';
+    --Baloo-2-Bold: 'Baloo 2 Bold';
+    --Baloo-2-ExtraBold: 'Baloo 2 Extrabold';
+}
+
+:root {
     --brown-s: #FFF6E8;
     --brown-m: #D6BD97;
-    --brown-l: #9F713C;
-    --brown-xl: #744B0D;
-    --text-color-header: #fff;
+    --brown-l: #c59660;
+    --brown-xl: #9F713C;
+    --brown-xxl: #744B0D;
+    --text-color: #fff;
 }
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    font-family: var(--Baloo-2-Regular), sans-serif;
 }
 
-html {
-    font-family: 'Baloo 2', sans-serif;
+/* hiển thị văn bản trên một dòng */
+.ellipsis {
+    text-overflow: ellipsis;
+    /* kích hoạt dấu ba chấm */
+    white-space: nowrap;
+    /* giữ văn bản trên một dòng */
+    overflow: hidden;
+    /* giữ phần tử không tràn ra khỏi phần tử cha */
+    width: 100%;
+    /* phần tử cần có chiều rộng cố định (px, em, %, etc) */
 }
 
-header {
-    background-color: var(--brown-s);
+/* hiển thị văn bản trên 3 dòng */
+.truncate {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    /* số dòng bạn muốn hiển thị */
+    -webkit-box-orient: vertical;
 }
+
+/* Begin Header */
+.header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    background-color: #2d2d2dd6;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header .ti-close,
+.header .ti-menu {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
+    position: absolute;
+    display: none;
+}
+
+.header .home-page {
+    line-height: 55px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Baron Neue';
+    font-size: 22px;
+    margin: 0 40px;
+}
+
+.header .nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.header .navigation {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header .navigation li {
+    padding: 0 10px;
+}
+
+.header .navigation li>a {
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header .navigation li:hover a {
+    color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
+}
+
+.header .navigation li.sign-in-sm,
+.header .navigation li.sign-up-sm {
+    display: none;
+}
+
+.header .sign-in {
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+.header .sign-up {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    padding: 2px 10px;
+}
+
+.header .sign-in a,
+.header .sign-up a {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.header .sign-in:hover a,
+.header .sign-up:hover a {
+    color: var(--brown-l);
+    transition: color 0.1s ease-in-out;
+}
+
+.header .sign-in:hover,
+.header .sign-up:hover {
+    border-color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
+}
+
+/* End Header */
+
+/* Begin Footer */
+footer {
+    background-color: #424242;
+}
+
+footer .row-linklist {
+    line-height: 1.4;
+    padding: 30px 16px;
+}
+
+footer .row-linklist h5 {
+    color: #fff;
+    padding: 8px 0;
+}
+
+footer .row-linklist ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .row-linklist ul li {
+    padding: 8px 0;
+}
+
+footer .row-linklist ul a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+footer .row-linklist ul a:hover {
+    color: #f0f0f0;
+    transition: color 0.2s ease-in-out;
+}
+
+footer .row-linklist ul a i {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+footer .row-linklist .col-image {
+    padding: 0;
+    overflow: hidden;
+}
+
+footer .row-linklist img {
+    width: 100%;
+    height: 14vw;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.07, 1.07);
+    }
+}
+
+footer .row-line {
+    width: 100%;
+    height: 0px;
+    border: 1px solid #ccc;
+}
+
+footer .row-link-contact {
+    padding: 30px 0;
+    display: flex;
+}
+
+footer .row-link-contact a {
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+footer .row-link-contact a i {
+    font-size: 25px;
+    color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    height: 41px;
+}
+
+footer .row-link-contact a:hover i {
+    background-color: #585858;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* End Footer */
