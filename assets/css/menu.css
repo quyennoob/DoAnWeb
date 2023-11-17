@@ -151,6 +151,18 @@
 
 /* End Header */
 
+/* begin menu product */
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+ul>li {
+    list-style: none;
+}
+
+/* end menu product */
 /* Begin Footer */
 footer {
     background-color: #424242;
