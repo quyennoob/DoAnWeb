@@ -18,6 +18,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: var(--Baloo-2-Regular), sans-serif;
 }
 
@@ -151,10 +152,25 @@
 
 /* End Header */
 
+/* begin side bar */
+.side-bar {
+    position: sticky;
+    top: 70px;
+    left: 150px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.scroll-tab-sidebar {
+    padding: 0px 0px 8px 26px;
+}
+
+/* end side bar */
+
 /* begin menu product */
 img {
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 270px;
     border-radius: 10px;
 }
 
@@ -162,7 +178,45 @@ ul>li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.total-product {
+    position: relative;
+    left: 400px;
+    background-color: #744B0D;
+    padding: 0px 15px 0px 72px;
+}
+
+.list-product-coffee ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-product-milkTea ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-product-tea ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-product-vitamin ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-product-cake ul {
+    display: flex;
+    flex-direction: row;
+}
+
 /* end menu product */
+
 /* Begin Footer */
 footer {
     background-color: #424242;
