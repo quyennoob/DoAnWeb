@@ -45,6 +45,7 @@ html {
 
 /* hiển thị văn bản trên 2 dòng */
 .truncate-2 {
+    text-align: justify;
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 2; /* số dòng bạn muốn hiển thị */
@@ -53,15 +54,11 @@ html {
 
 /* hiển thị văn bản trên 3 dòng */
 .truncate-3 {
+    text-align: justify;
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 3; /* số dòng bạn muốn hiển thị */
     -webkit-box-orient: vertical;
-}
-
-/* Chữ in đậm */
-.text-bold {
-    font-weight: bold;
 }
 
 /* Begin Header */
@@ -78,6 +75,16 @@ html {
     z-index: 999;
 }
 
+.header .ti-close,
+.header .ti-menu {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
+    position: absolute;
+    display: none;
+}
+
 .header .home-page {
     line-height: 55px;
     text-decoration: none;
@@ -87,11 +94,12 @@ html {
     margin: 0 40px;
 }
 
-.header .navigation{
+.header .navigation {
     list-style: none;
     display: flex;
     align-items: center;
     margin: 0;
+    padding: 0;
 }
 
 .header .navigation li {
@@ -149,6 +157,10 @@ html {
     border-color: var(--brown-l);
     transition: color 0.2s ease-in-out;
 }
+
+.header-tab {
+    display: none;
+}
 /* End Header */
 
 /* Begin page-header chuyen nha */
@@ -194,12 +206,15 @@ html {
 
 .page-header .page-tabs {
     display: flex;
+    justify-content: center;
+    padding: 0;
     margin-bottom: 40px;
 }
 .page-header .page-tabs li {
     list-style: none;
+    width: auto;
     padding: 7px 15px;
-    margin: 0 15px;
+    margin: 5px 15px;
     border: 1px solid #ccc;
     border-radius: 30px;
     cursor: pointer;
@@ -246,6 +261,7 @@ html {
 }
 
 .cloudfee .creamy img{
+    width: 100%;
     filter: drop-shadow(0 2px 30px #404040);
 }
 
@@ -268,20 +284,20 @@ html {
     color: var(--text-color);
 }
 
-.cloudfee .creamy a,
+.cloudfee .creamy .open-cloudfee-modal,
 .cloudfee .creamy i {
     display: flex;
     align-items: center;
-    text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     line-height: 48px;
     padding-left: 5px;
     color: var(--yellow);
+    cursor: pointer;
 }
 
-.cloudfee .creamy a:hover{
-    color: #ffae0d;
+.cloudfee .creamy .open-cloudfee-modal:hover{
+    color: #ffae0dd6;
     transition: color 0.2s ease-in-out;
 }
 
@@ -294,6 +310,7 @@ html {
 
 .cloudfee .hieu img,
 .cloudfee .thinh img{
+    width: 100%;
     filter: drop-shadow(0 2px 30px #585858);
 }
 
@@ -361,8 +378,9 @@ html {
     font-weight: bold;
     font-size: 24px;
     position: absolute;
-    top: 76px;
-    right: 20px;
+    top: 75px;
+    right: 15px;
+    cursor: pointer;
 }
 
 .video-hieu,
@@ -370,6 +388,70 @@ html {
     width: 1200px;
     max-width: calc(100% - 32px);
     min-height: 300px;
+}
+
+.cloudfee-modal {
+    width: 100%;
+    height: 90%;
+    position: fixed;
+    top: 120%;
+    overflow-y: scroll;
+    background-color: #fff;
+    border-radius: 24px;
+    z-index: 10;
+    box-shadow: 0 -20px 100px #585858;
+}
+
+.close-modal {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 15%;
+    right: 20px;
+    cursor: pointer;
+    z-index: 120;
+    box-shadow: 0 0 10px #585858;
+}
+
+.close-modal.open {
+    display: flex;
+}
+
+.cloudfee-modal .close-modal i {
+    color: #000;
+    font-size: 14px;
+}
+
+
+
+.cloudfee-modal .modal-title {
+    font-size: 60px;
+    color: var(--yellow);
+    font-weight: bold;
+    font-family: 'Montserrat ExtraBold';
+    text-align: center;
+    padding: 32px;
+}
+
+.cloudfee-modal .modal-content {
+    padding: 0 100px;
+}
+
+.cloudfee-modal .modal-content p {
+    text-align: center;
+    margin: 12px 0;
+}
+
+.cloudfee-modal .modal-content h2 {
+    text-align: center;
+    color: var(--yellow);
+    font-family: 'Montserrat Bold';
+    margin: 40px 0 8px;
 }
 
 /* End cloudfee chuyen nha */
@@ -472,6 +554,7 @@ html {
     display: flex;
     justify-content: center;
     margin: 16px 0;
+    cursor: auto;
 }
 
 .coffeeholic-section .col-right .content-list .btn a,
@@ -581,6 +664,7 @@ html {
     display: flex;
     justify-content: center;
     margin: 32px 0;
+    cursor: auto;
 }
 
 .teaholic-section .col-left .content-list .btn a{
@@ -604,7 +688,7 @@ html {
 .teaholic-content .container-fluid,
 .blog-content .container-fluid {
     background-color: #fff;
-    padding: 30px 120px;
+    padding: 30px 80px;
 }
 
 .coffeeholic-content .col-left,
@@ -673,7 +757,7 @@ html {
 .teaholic-content .col-right .item img,
 .blog-content .col-right .item img {
     width: 100%;
-    height: 12vw;
+    height: 14vw;
     border-radius: 8px;
     object-fit: cover;
     transform: scale(1,1);
@@ -744,11 +828,12 @@ footer .row-linklist ul li {
 footer .row-linklist ul a {
     text-decoration: none;
     color: #ccc;
+    transition: color 0.3s ease-in-out;
 }
 
 footer .row-linklist ul a:hover {
     color: #f0f0f0;
-    transition: color 0.2s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 footer .row-linklist ul a i {
@@ -794,10 +879,22 @@ footer .row-link-contact a i {
     padding: 8px;
     display: flex;
     height: 41px;
+    transition: all 0.3s ease-in-out;
 }
 
 footer .row-link-contact a:hover i {
     background-color: #585858;
-    transition: background-color 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 /* End Footer */
+
+
+@keyframes modalIn {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}

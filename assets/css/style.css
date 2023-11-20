@@ -51,6 +51,7 @@
 }
 
 /* Begin Header */
+
 .header {
     width: 100%;
     height: 60px;
@@ -81,11 +82,6 @@
     font-family: 'Baron Neue';
     font-size: 22px;
     margin: 0 40px;
-}
-
-.header .nav-container {
-    display: flex;
-    align-items: center;
 }
 
 .header .navigation {
@@ -157,11 +153,19 @@
     transition: color 0.2s ease-in-out;
 }
 
+.header-tab {
+    display: none;
+}
+
 /* End Header */
 
 /* Begin Slider */
 .slide {
     margin-top: 60px;
+}
+
+.slide.des-hidden {
+    display: none;
 }
 
 /* End Slider */
@@ -171,6 +175,7 @@
 .thu-ngay {
     font-family: var(--Baloo-2-Regular);
     height: 60vw;
+    background-image: url(../img/Thu-Ngay/back-ground.jpg);
     background-repeat: no-repeat;
     background-size: inherit;
     background-position: center;
@@ -336,17 +341,24 @@
     padding-bottom: 20px;
 }
 
-.chuyen-nha .coffeeholic>.title {
-    font-size: 24px;
-    font-weight: bold;
+.chuyen-nha .coffeeholic>.title{
     border-left: 5px solid #e57905;
+    width: fit-content;
     padding-left: 12px;
     margin: 24px 40px;
+    transition: all 0.3s ease-in-out;
 }
 
-.chuyen-nha .coffeeholic>.title:hover {
+.chuyen-nha .coffeeholic>.title>a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.chuyen-nha .coffeeholic>.title:hover>a {
     color: var(--brown-l);
-    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .chuyen-nha .coffeeholic .content-list {
@@ -366,17 +378,17 @@
 .chuyen-nha .coffeeholic .content-list img {
     width: 100%;
     height: 15vw;
-    object-position: center;
+    object-fit: cover;
     border-radius: 10px;
     transform: scale(1, 1);
-    box-shadow: 0 2px 15px #585858;
-    transition: all 0.4s ease-in-out;
+    box-shadow: 0 1px 8px #585858;
+    transition: all 0.3s ease-in-out;
 }
 
 .chuyen-nha .coffeeholic .content-list img:hover {
-    box-shadow: 0 8px 30px #585858;
+    box-shadow: 0 2px 16px #585858;
     transform: scale(1.02, 1.02);
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -427,11 +439,12 @@ footer .row-linklist ul li {
 footer .row-linklist ul a {
     text-decoration: none;
     color: #ccc;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .row-linklist ul a:hover {
     color: #f0f0f0;
-    transition: color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .row-linklist ul a i {
@@ -478,11 +491,12 @@ footer .row-link-contact a i {
     padding: 8px;
     display: flex;
     height: 41px;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .row-link-contact a:hover i {
     background-color: #585858;
-    transition: background-color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 /* End Footer */
