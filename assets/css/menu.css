@@ -230,6 +230,15 @@
     font-size: 20px;
 }
 
+.price-product-coffee,
+.price-product-milkTea,
+.price-product-tea,
+.price-product-vitamin,
+.price-product-cake {
+    font-weight: normal;
+    font-size: 16px;
+}
+
 .product-name-coffee a:hover,
 .product-name-milkTea a:hover,
 .product-name-tea a:hover,
