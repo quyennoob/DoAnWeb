@@ -6,7 +6,7 @@
 
     .header {
         display: block;
-        height: auto;
+        overflow: hidden;
     }
 
     .header .ti-close.open,
@@ -45,6 +45,18 @@
     .header .sign-in,
     .header .sign-up {
         display: none;
+    }
+
+    .header-tab {
+        display: block;
+    }
+
+    .header-des {
+        display: none;
+    }
+
+    footer .row-link-contact a i {
+        font-size: 28px;
     }
 
     @keyframes modalMenuIn {
@@ -91,14 +103,112 @@
 
     footer .row-linklist img {
         width: 72%;
-        height: 20vw;
+        height: auto;
     }
 
-    footer .row-link-contact a i {
-        font-size: 28px;
-    }
-    
 }
 
 /* Mobile width < 740px */
-@media (max-width: 46.24375em) {}
+@media (max-width: 46.24375em) {
+    .slide.mob-hidden {
+        display: none;
+    }
+
+    .slide.des-hidden {
+        display: grid;
+    }
+
+    .thu-ngay {
+        background-size: contain;
+        height: auto;
+    }
+
+    .thu-ngay .container-fluid {
+        padding: 0 12px;
+    }
+
+    .thu-ngay .col-right {
+        padding: 0 12px;
+    }
+
+    .thu-ngay .col-right img {
+        width: 70%;
+    }
+
+    .thu-ngay .col-right>.content>p {
+        color: #000;
+        filter: drop-shadow(1px 1px 0.5px #ffffff);
+    }
+
+    .tim-hieu-them {
+        margin: 0 12px;
+    }
+
+    .tim-hieu-them .container-fluid {
+        height: auto;
+    }
+
+    .tim-hieu-them .col-left {
+        display: grid;
+        justify-items: center;
+    }
+
+
+    .tim-hieu-them .content-tim-hieu-them h3 {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .tim-hieu-them .content-tim-hieu-them p {
+        text-align: center;
+    }
+
+    .tim-hieu-them .content-tim-hieu-them .btn-tim-hieu-them {
+        margin: 0 0 16px;
+    }
+
+    .tim-hieu-them .col-left .btn-next {
+        display: none;
+    }
+
+    .tim-hieu-them .col-right {
+        padding: 0 12px;
+    }
+
+    .tim-hieu-them .col-right .carousel-inner img {
+        height: 56vw;
+    }
+
+    .chuyen-nha .container-fluid {
+        padding: 0;
+    }
+
+    .chuyen-nha .coffeeholic>.title {
+        margin: 12px;
+    }
+
+    .chuyen-nha .coffeeholic .content-list {
+        margin: 0 12px;
+    }
+
+    .chuyen-nha .coffeeholic .content-list .col {
+        margin: 16px 0;
+    }
+
+    .chuyen-nha .coffeeholic .content-list img {
+        height: 48vw;
+    }
+
+    .chuyen-nha .coffeeholic .des-hidden {
+        display: grid;
+    }
+
+    footer .row-linklist img {
+        height: auto;
+    }
+
+    footer .row-link-contact {
+        justify-content: space-around;
+    }
+
+}

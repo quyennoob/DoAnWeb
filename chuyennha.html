@@ -5,8 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- link logo trang web -->
+    <link rel="icon" href="./assets/img/logo-cup-coffee.png">
+
     <!-- link file css -->
     <link rel="stylesheet" href="./assets/css/chuyennha.css" />
+    <link rel="stylesheet" href="./assets/css/chuyennha-responsive.css">
 
     <!-- link font chữ -->
     <link rel="stylesheet" href="./assets/fonts/fonts-Baloo2/stylesheet.css" />
@@ -33,9 +37,9 @@
 
 <body>
     <header>
-        <div class="header">
+        <div class="header header-des">
             <a href="./index.html" class="home-page">THE COFFEE HOUSE</a>
-            <ul class="navigation">
+            <ul class="navigation js-navigation">
                 <li><a href="./assets/html/menu.html">Menu</a></li>
                 <li><a href="#">Chuyện Cà Phê</a></li>
                 <li><a href="#">Giới Thiệu</a></li>
@@ -47,6 +51,22 @@
             <div class="sign-up">
                 <a href="#">Đăng ký</a>
             </div>
+        </div>
+    </header>
+
+    <header>
+        <div class="header header-tab">
+            <i class="ti-close js-close-menu"></i>
+            <i class="ti-menu js-open-menu"></i>
+            <a href="./index.html" class="home-page">THE COFFEE HOUSE</a>
+            <ul class="navigation js-navigation">
+                <li><a href="./assets/html/menu.html">Menu</a></li>
+                <li><a href="#">Chuyện Cà Phê</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+                <li class="sign-in-sm"><a href="#">Đăng nhập</a></li>
+                <li class="sign-up-sm"><a href="#">Đăng ký</a></li>
+            </ul>
         </div>
     </header>
 
@@ -63,18 +83,18 @@
                     bên những tách cà phê, ly trà đượm hương, truyền cảm
                     hứng về lối sống hiện đại.
                 </div>
-                <ul class="page-tabs">
-                    <li class="" id="js-btn-tat-ca"><a>Tất cả</a></li>
-                    <li class="" id="js-btn-coffeeholic"><a>Coffeeholic</a></li>
-                    <li class="" id="js-btn-teaholic"><a>Teaholic</a></li>
-                    <li class="" id="js-btn-blog"><a>Blog</a></li>
+                <ul class="page-tabs row">
+                    <li class="col-md-3" id="js-btn-tat-ca"><a>Tất cả</a></li>
+                    <li class="col-md-3" id="js-btn-coffeeholic"><a>Coffeeholic</a></li>
+                    <li class="col-md-3" id="js-btn-teaholic"><a>Teaholic</a></li>
+                    <li class="col-md-3" id="js-btn-blog"><a>Blog</a></li>
                 </ul>
             </div>
         </div>
         <!-- End page-header -->
 
         <!-- Begin all content -->
-        <div class="all-content" id="js-all-content">  
+        <div class="all-content" id="js-all-content">
 
             <!-- Begin cloudfee -->
             <div class="cloudfee">
@@ -86,11 +106,12 @@
                         <h3>CLOUDFEE</h3>
                         <h1>Creamy</h1>
                         <p>
-                            <span class="text-bold">Thức uống "đánh thức" ngày mới hợp cho những ai mới</span>
+                            <span class="fw-bold">Thức uống "đánh thức" ngày mới hợp cho những ai mới</span>
                             bước vào thế giới cà phê hoặc ghiền cà phê nhưng
                             muốn khám phá thêm nhiều hương vị mới.
                         </p>
-                        <a href="#">Êm mượt như mây, Tươi ngày mới ngay!<i class="ti-solid ti-angle-double-right"></i></a>
+                        <p class="open-cloudfee-modal js-open-cloudfee-modal">Êm mượt như mây, Tươi ngày mới ngay!<i
+                                class="ti-solid ti-angle-double-down"></i></p>
                     </div>
                 </div>
                 <div class="hieu row">
@@ -116,7 +137,7 @@
                     <i class="ti-video ti-close btn-close-video" id="js-btn-close-video"></i>
                     <div class="video-hieu" id="js-video-hieu"></div>
                 </div>
-    
+
                 <div class="thinh row">
                     <div class="col-sm-6 col-left">
                         <img src="./assets/img/Trang-chuyen-nha/thinh-removebg-preview.png" alt="Ảnh Thịnh" />
@@ -140,80 +161,152 @@
                     <div class="video-thinh" id="js-video-thinh"></div>
                 </div>
             </div>
+
+            <div class="close-modal js-close-modal"><i class="ti-close"></i></div>
+            <div class="cloudfee-modal js-cloudfee-modal">
+                <div class="modal-title">
+                    CÀ PHÊ CÓ DÀNH CHO TẤT CẢ MỌI NGƯỜI?
+                </div>
+                <div class="modal-content">
+                    <p class="fw-bold fst-italic">“Cà phê có thể dành cho tất cả mọi người, và
+                        xứng đáng được nhiều người thưởng thức hơn nữa”,
+                        đó là điều mà Edward Teonadi - Giám đốc phát triển sản phẩm của The Coffee House ấp ủ để tạo
+                        nên một Thế hệ cà phê mới.</p>
+                    <p>Sinh ra ở Đài Loan, lớn lên tại Singapore và là một công dân Indonesia, Edward Teonadi còn đi
+                        nhiều nơi trên thế giới để tìm hiểu về cà phê, trước khi dừng chân tại Việt Nam. Đây là lần
+                        đầu tiên, anh chia sẻ về hành trình sáng tạo ra Thế hệ cà phê mới tại The Coffee House.</p>
+                    <h2>Cuộc du ngoạn về cà phê từ Đông sang Tây</h2>
+                    <img src="./assets/img/Trang-chuyen-nha/modal/Edward-Teonadi-du-ngoan.jpg"
+                        alt="Edward-Teonadi-du-ngoan">
+                    <p style="font-style: italic;">Edward Teonadi - Giám đốc phát triển sản phẩm của The Coffee
+                        House</p>
+                    <p>Đến Việt Nam và làm việc tại The Coffee House là một quyết định khá dễ dàng đối với tôi. Bất
+                        kỳ người đam mê cà phê nào cũng sẽ bị cuốn hút bởi văn hoá cà phê đã ngấm sâu vào đời sống
+                        của người Việt Nam. Bởi The Coffee House là một công ty cà phê với tham vọng đưa cà phê Việt
+                        Nam ra thế giới, điều này đồng điệu với giấc mơ mà tôi muốn theo đuổi - mang một phần của
+                        châu Á ra thế giới. </p>
+                    <p>Niềm yêu thích cà phê trong tôi được khơi dậy từ rất sớm. Đó là những kỳ nghỉ hè, tôi đến
+                        thăm bố ở Indonesia và giúp ông xay cà phê mỗi sáng. Mãi sau này, tôi vẫn nhớ như in mùi
+                        hương tuyệt vời đó. </p>
+                    <p>Khi lớn hơn một chút, tôi được học cách pha cà phê từ mẹ - người được đào tạo bài bản về pha
+                        chế cà phê tại Nhật. Dù vậy, kỷ niệm về lần đầu tiên nếm thử tách cà phê do chính mình pha
+                        lại không đẹp đẽ như tôi tưởng tượng. <span class="fst-italic">“Thật đắng. Đắng
+                            khủng khiếp!"</span> - đó là tất cả những gì
+                        tôi bật ra trong đầu vào khoảnh khắc ấy. Lúc đó, tôi không hiểu vì sao bố mẹ lại có thể
+                        thưởng thức đồ uống này, thậm chí nó trở thành một phần không thể thiếu của họ mỗi ngày.</p>
+                    <img src="./assets/img/Trang-chuyen-nha/modal/Edward-Teonadi-nem-ca-phe.jpg"
+                        alt="Edward-Teonadi-nem-ca-phe">
+                    <p>Sau này, khi có cơ hội trải nghiệm nhiều nền văn hóa khác nhau trên thế giới, tôi nhận ra có
+                        vô số cách để thưởng thức cà phê. Ví dụ như người Ailen kết hợp cà phê với rượu whisky, thêm
+                        một chút đường caramel và không thể thiếu một lớp kem béo ngậy trên cùng. Tại Ý, cà phê
+                        thường được pha bằng máy Espresso, sau đó được phục vụ trong một chiếc tách sứ và người ta
+                        uống cạn chỉ trong 3 - 4 hơi. Ở Hy Lạp lại có thêm “kafenio" - một quán cà phê kiểu cũ dành
+                        cho các quý ông lớn tuổi, nơi họ uống cà phê và chơi bài. </p>
+                    <p>Còn đối với người Việt Nam, uống cà phê đúng điệu là phải pha bằng phin, và đợi chờ từng giọt
+                        cà phê sóng sánh rơi xuống đáy ly trở thành thú vui quen thuộc. Một số người khác lại chuộng
+                        cà phê kèm sữa đặc nhưng vẫn giữ hương vị mạnh mẽ, đậm đà khó quên. </p>
+                    <h2>CloudFee - Thế hệ cà phê mới êm mượt như mây</h2>
+                    <p>Không chỉ đam mê khám phá thế giới cà phê, tôi còn có cơ hội tìm hiểu sâu sắc về văn hoá trà
+                        và trà sữa khi lớn lên tại Đài Loan - thiên đường của thức uống này. Hàng trăm loại trà sữa
+                        khác nhau liên tục ra đời, khiến giới trẻ say sưa và chưa bao giờ cảm thấy nhàm chán.</p>
+                    <p>Sự mới mẻ của trà sữa, và những lần quan sát khách hàng ngay tại The Coffee House khiến tôi
+                        suy nghĩ: Liệu cà phê có thể dịu bớt vị đắng và trở hấp dẫn hơn trong mắt những người trẻ?
+                    </p>
+                    <img src="./assets/img/Trang-chuyen-nha/modal/Edward-Teonadi-pha-ca-phe.jpg"
+                        alt="Edward-Teonadi-pha-ca-phe">
+                    <p>Hãy thử tưởng tượng về một ly cà phê thú vị như trà sữa, bạn vừa có thể nhấp từng ngụm vừa có
+                        thể nhâm nhi topping. Hay cà phê vẫn còn đượm hương đặc trưng nhưng có nhiều mùi vị, nhẹ
+                        nhàng hơn đối với người mới thử thức uống này.</p>
+                    <p>Và đó là một phần cảm hứng để tôi sáng tạo nên CloudFee - một Thế hệ cà phê mới. Thức uống
+                        được cách tân từ cà phê truyền thống, vừa giữ vị đậm đà Á Đông, vừa thêm chút ngọt ngào
+                        phương Tây. </p>
+                    <p>Điểm thú vị trong cái tên CloudFee đối với tôi chính là cách ghép giữa Cloud (đám mây) để gợi
+                        mở về thức uống êm mượt như mây, có lớp foam bồng bềnh béo mịn và cofFee (cà phê), chỉ sự
+                        biến tấu vị cà phê đậm đà thành loại thức uống nhẹ nhàng, yêu chiều khẩu vị.</p>
+                    <img src="./assets/img/Trang-chuyen-nha/modal/Creme-Brulee.jpg" alt="Creme-Brulee">
+                    <h2>Tại The Coffee House ai cũng có thể tìm thấy hương vị cà phê cho riêng mình</h2>
+                    <p>Cùng với sự hỗ trợ của Nguyễn Hoàng Hiếu và Phạm Phúc Thịnh - hai cộng sự của tôi tại The
+                        Coffee House, CloudFee dần được hoàn thiện với hai dòng sản phẩm Creamy và Creme Brulee.</p>
+                    <p>Chúng tôi mang đến CloudFee Creamy - một thức uống “đánh thức” sự tỉnh táo ngày mới, với sự
+                        pha trộn giữa cà phê phin truyền thống và Espresso lừng danh nước Ý, kèm một chút biến tấu
+                        độc đáo cùng kem sữa. Còn CloudFee Creme Brulee là gợi ý cho những lúc bạn muốn chiều chuộng
+                        bản thân bằng chút ngọt ngào hay muốn thưởng thức sự kết hợp độc đáo giữa món tráng miệng và
+                        thức uống, giữa hương vị creme brulee đậm chất Pháp và cà phê Việt.</p>
+                    <img src="./assets/img/Trang-chuyen-nha/modal/Edward-Teonadi-Hieu-Thinh.jpg" alt="">
+                    <p>Trải qua 4.300 giờ ấp ủ, Edward Teonadi cùng 2 barista giàu kinh nghiệm tại The Coffee House
+                        đã tạo nên Thế hệ cà phê mới mang tên CloudFee</p>
+                    <p>The Coffee House đã có cả một hành trình dài và chinh phục thành công những người yêu cà phê
+                        tại Việt Nam. Ở chặng đường tiếp theo, chúng tôi muốn mang đến nhiều lựa chọn cho thế hệ
+                        khách hàng mới - những người trẻ, thích trải nghiệm và dám bước qua những giới hạn của mình.
+                    </p>
+                    <p style="margin-bottom: 90px;">Với tôi, cà phê dành cho tất cả mọi người, và xứng đáng được
+                        nhiều người thưởng thức hơn nữa.
+                        Và CloudFee là lời chào đón nồng ấm mà The Coffee House dành cho những ai vừa bước chân vào
+                        thế giới cà phê, lẫn những người ghiền cà phê nhưng muốn khám phá nhiều hương vị mới.</p>
+
+                </div>
+            </div>
             <!-- End cloudfee -->
 
-            <div class="container-fluid">                
+            <div class="container-fluid">
 
                 <!-- Begin coffeeholic -->
                 <div class="coffeeholic-section row">
-                    <div class="col-sm-5 col-left">
+                    <div class="col-lg-5 col-left">
                         <img src="./assets/img/Trang-chuyen-nha/photo-coffeeholic.jpg" alt="" />
                     </div>
-                    <div class="col-sm-7 col-right">
+                    <div class="col-lg-7 col-right">
                         <h3 class="title">Coffeeholic</h3>
                         <div class="content-list">
                             <div class="row item">
                                 <a href="#" class="col-sm-5 image"><img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                        src="./assets/img/Trang-chuyen-nha/coffeeholic/signature-bieu-tuong-van-hoa.jpg"
                                         alt="Ảnh chuyện nhà" /></a>
                                 <div class="col-sm-7 content">
-                                    <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                        PHÊ CỦA THE COFFEE HOUSE</a>
+                                    <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ PHÊ CỦA THE
+                                        COFFEE HOUSE ĐÃ QUAY TRỞ LẠI</a>
                                     <p class="date">12/02/2023</p>
-                                    <p class="text truncate-3">
-                                        Mới đây, các "tín đồ" cà phê đang
-                                        bàn tán xôn xao về SIGNATURE - Biểu
-                                        tượng văn hóa c à phê của The Coffee
-                                        House đã quay trở lại. Một lời hẹn
-                                        làm bao người xao xuyến
-                                    </p>
+                                    <p class="text truncate-3">Mới đây, các "tín đồ" cà phê đang bàn tán xôn xao về
+                                        SIGNATURE
+                                        - Biểu tượng văn hóa cà phê của The Coffee House đã quay trở lại.
+                                        Một lời hẹn làm bao người xao xuyến
+                                        Vừa qua, Fanpage Nhà đã hé mở những thông tin đầu tiên về "SIGNATURE by The
+                                        Coffee
+                                        House" kèm lời hẹn "Hôm nay bạn có hẹn chưa? Mình cà phê nhé!".</p>
                                 </div>
                             </div>
                             <div class="row item">
                                 <a href="#" class="col-sm-5 image"><img
-                                        src="./assets/img/Chuyen-nha/lan-dau-tien-den-coffee.jpg"
+                                        src="./assets/img/Trang-chuyen-nha/coffeeholic/uong-gi-khi-toi-signature.png"
                                         alt="Ảnh chuyện nhà" /></a>
                                 <div class="col-sm-7 content">
-                                    <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                        PHÊ CỦA THE COFFEE HOUSE</a>
+                                    <a href="#" class="title truncate-2">UỐNG GÌ KHI TỚI SIGNATURE BY THE COFFEE
+                                        HOUSE?</a>
                                     <p class="date">09/02/2023</p>
-                                    <p class="text truncate-3">
-                                        Vừa qua, The Coffee House chính thức
-                                        khai trương cửa hàng SIGNATURE by
-                                        The Coffee House, chuyên phục vụ cà
-                                        phê đặc sản, các món ăn đa bản sắc
-                                        ấy ý tưởng từ cà phê và trà và gây
-                                        ấn tượng với không gian cảm hứng bài
-                                        trí hành trình cà phê đặc sắc, làm
-                                        nên một cuộc hẹn tròn đầy.
-                                    </p>
+                                    <p class="text truncate-3">Vừa qua, The Coffee House chính thức khai trương cửa hàng
+                                        SIGNATURE by The Coffee House, chuyên phục vụ cà phê đặc sản, các món ăn đa bản
+                                        sắc
+                                        ấy ý tưởng từ cà phê và trà và gây ấn tượng với không gian cảm hứng bài trí hành
+                                        trình cà phê đặc sắc, làm nên một cuộc hẹn tròn đầy.</p>
                                 </div>
                             </div>
                             <div class="row item">
                                 <a href="#" class="col-sm-5 image"><img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                        src="./assets/img/Trang-chuyen-nha/coffeeholic/ca-phe-sua-espressco.jpg"
                                         alt="Ảnh chuyện nhà" /></a>
                                 <div class="col-sm-7 content">
                                     <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
                                         HOUSE - BẬT LON BẬT VỊ NGON</a>
-                                    <p class="date">12/02/2023</p>
-                                    <p class="text truncate-3">
-                                        Cà phê sữa Espresso là một lon cà
-                                        phê sữa giải khát với hương vị cà
-                                        phê đậm đà từ 100% cà phê Robusta
-                                        cùng vị sữa béo nhẹ cho bạn một trải
-                                        nghiệm hương vị cà phê hoàn toàn
-                                        mới. Cà phê sữa Espresso là một lon
-                                        cà phê sữa giải khát với hương vị cà
-                                        phê đậm đà từ 100% cà phê Robusta
-                                        cùng vị sữa béo nhẹ cho bạn một trải
-                                        nghiệm hương vị cà phê hoàn toàn
-                                        mới.
-                                    </p>
+                                    <p class="date">22/09/2023</p>
+                                    <p class="text truncate-3">Cà phê sữa Espresso là một lon cà phê sữa giải khát với
+                                        hương
+                                        vị cà phê đậm đà từ 100% cà phê Robusta cùng vị sữa béo nhẹ cho bạn một trải
+                                        nghiệm
+                                        hương vị cà phê hoàn toàn mới.</p>
                                 </div>
                             </div>
-                            <div class="btn">
-                                <a href="#">Xem thêm</a>
+                            <div class="button">
+                                <a href="#" id="js-xem-them-coffeeholic">Xem thêm</a>
                             </div>
                         </div>
                     </div>
@@ -221,76 +314,69 @@
                 <!-- End coffeeholic -->
 
                 <!-- Begin teaholic -->
-                <div class="teaholic-section row">
-                    <div class="col-sm-7 col-left">
+                <div class="teaholic-section row js-teaholic-section">
+                    <div class="col-lg-7 col-left">
                         <h3 class="title">Teaholic</h3>
                         <div class="content-list">
                             <div class="row item">
                                 <a href="#" class="col-sm-5 image"><img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                        src="./assets/img/Trang-chuyen-nha/teaholic/bo-suu-tap-toan-keo-thom.jpg"
                                         alt="Ảnh chuyện nhà" /></a>
                                 <div class="col-sm-7 content">
-                                    <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                        PHÊ CỦA THE COFFEE HOUSE</a>
-                                    <p class="date">12/02/2023</p>
-                                    <p class="text truncate-3">
-                                        Mới đây, các "tín đồ" cà phê đang
-                                        bàn tán xôn xao về SIGNATURE - Biểu
-                                        tượng văn hóa c à phê của The Coffee
-                                        House đã quay trở lại. Một lời hẹn
-                                        làm bao người xao xuyến
-                                    </p>
+                                    <a href="#" class="title truncate-2">BỘ SƯU TẬP CẦU TOÀN KÈO THƠM: "VÍA" MAY MẮN
+                                        KHÔNG THỂ BỎ LỠ
+                                        TẾT NÀY</a>
+                                    <p class="date">16/01/2023</p>
+                                    <p class="text truncate-3">Tết nay vẫn giống Tết xưa, không hề mai một nét văn hoá
+                                        truyền
+                                        thống mà còn thêm vào những hoạt động “xin vía” hiện đại, trẻ trung. Ví như giới
+                                        trẻ
+                                        đang lên lịch ghé The Coffee House - “địa điểm xin vía mới nổi” để vừa thưởng
+                                        thức
+                                        bộ sưu tập thức uống dành riêng cho Tết vừa mong năm mới Cầu Toàn Kèo Thơm.</p>
                                 </div>
                             </div>
                             <div class="row item">
                                 <a href="#" class="col-sm-5 image"><img
-                                        src="./assets/img/Chuyen-nha/lan-dau-tien-den-coffee.jpg"
+                                        src="./assets/img/Trang-chuyen-nha/teaholic/khuay-de-thay-trang.jpg"
                                         alt="Ảnh chuyện nhà" /></a>
                                 <div class="col-sm-7 content">
-                                    <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                        PHÊ CỦA THE COFFEE HOUSE</a>
-                                    <p class="date">09/02/2023</p>
-                                    <p class="text truncate-3">
-                                        Vừa qua, The Coffee House chính thức
-                                        khai trương cửa hàng SIGNATURE by
-                                        The Coffee House, chuyên phục vụ cà
-                                        phê đặc sản, các món ăn đa bản sắc
-                                        ấy ý tưởng từ cà phê và trà và gây
-                                        ấn tượng với không gian cảm hứng bài
-                                        trí hành trình cà phê đặc sắc, làm
-                                        nên một cuộc hẹn tròn đầy.
-                                    </p>
+                                    <a href="#" class="title truncate-2">“KHUẤY ĐỂ THẤY TRĂNG" - KHUẤY LÊN NIỀM HẠNH
+                                        PHÚC: TRẢI NGHIỆM
+                                        KHÔNG THỂ BỎ LỠ MÙA TRUNG THU NÀY</a>
+                                    <p class="date">16/08/2023</p>
+                                    <p class="text truncate-3">Năm 2022 là năm đề cao sức khỏe tinh thần nên giới trẻ
+                                        muốn tận
+                                        hưởng một Trung thu với nhiều trải nghiệm mới mẻ, rôm rả cùng bạn bè và người
+                                        thân.
+                                        Và trải nghiệm độc đáo “Khuấy để thấy trăng” của The Coffee House như khuấy lên
+                                        niềm
+                                        hạnh phúc, nao nức về một trung thu đầy thú vị mà không người trẻ nào muốn bỏ
+                                        lỡ.</p>
                                 </div>
                             </div>
                             <div class="row item">
                                 <a href="#" class="col-sm-5 image"><img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                        src="./assets/img/Trang-chuyen-nha/teaholic/uong-tra-hibiscus.png"
                                         alt="Ảnh chuyện nhà" /></a>
                                 <div class="col-sm-7 content">
-                                    <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                        HOUSE - BẬT LON BẬT VỊ NGON</a>
-                                    <p class="date">12/02/2023</p>
-                                    <p class="text truncate-3">
-                                        Cà phê sữa Espresso là một lon cà
-                                        phê sữa giải khát với hương vị cà
-                                        phê đậm đà từ 100% cà phê Robusta
-                                        cùng vị sữa béo nhẹ cho bạn một trải
-                                        nghiệm hương vị cà phê hoàn toàn
-                                        mới. Cà phê sữa Espresso là một lon
-                                        cà phê sữa giải khát với hương vị cà
-                                        phê đậm đà từ 100% cà phê Robusta
-                                        cùng vị sữa béo nhẹ cho bạn một trải
-                                        nghiệm hương vị cà phê hoàn toàn
-                                        mới.
-                                    </p>
+                                    <a href="#" class="title truncate-2">UỐNG TRÀ HIBISCUS CÓ BỊ MẤT NGỦ HAY KHÔNG?</a>
+                                    <p class="date">25/05/2023</p>
+                                    <p class="text truncate-3">Trà hoa Hibiscus luôn nằm trong top những loại trà
+                                        healthy được
+                                        nhiều người ưa chuộng bởi sở hữu nhiều dược tính tốt cho sức khỏe và sắc đẹp.
+                                        Tuy
+                                        thế, nhiều người vẫn băn khoăn không biết Hibiscus có chứa caffeine, gây mất ngủ
+                                        hay
+                                        không?</p>
                                 </div>
                             </div>
-                            <div class="btn">
-                                <a href="#">Xem thêm</a>
+                            <div class="button">
+                                <a href="#" id="js-xem-them-teaholic">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-5 col-right">
+                    <div class="col-lg-5 col-right">
                         <img src="./assets/img/Trang-chuyen-nha/photo-teaholic2.jpg" alt="" />
                     </div>
                 </div>
@@ -298,74 +384,68 @@
 
                 <!-- Begin blog -->
                 <div class="blog-section row">
-                    <div class="col-sm-5 col-left">
+                    <div class="col-lg-5 col-left">
                         <img src="./assets/img/Trang-chuyen-nha/photo-blog.jpg" alt="" />
                     </div>
-                    <div class="col-sm-7 col-right">
+                    <div class="col-lg-7 col-right">
                         <h3 class="title">Blog</h3>
                         <div class="content-list">
                             <div class="row item">
                                 <a href="#" class="col-sm-5 image"><img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                        src="./assets/img/Trang-chuyen-nha/blog/nguoc-len-tay-bac.jpg"
                                         alt="Ảnh chuyện nhà" /></a>
                                 <div class="col-sm-7 content">
-                                    <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                        PHÊ CỦA THE COFFEE HOUSE</a>
-                                    <p class="date">12/02/2023</p>
-                                    <p class="text truncate-3">
-                                        Mới đây, các "tín đồ" cà phê đang
-                                        bàn tán xôn xao về SIGNATURE - Biểu
-                                        tượng văn hóa c à phê của The Coffee
-                                        House đã quay trở lại. Một lời hẹn
-                                        làm bao người xao xuyến
-                                    </p>
+                                    <a href="#" class="title truncate-2">NGƯỢC LÊN TÂY BẮC GÓI VỊ MỘC VỀ XUÔI</a>
+                                    <p class="date">16/08/2023</p>
+                                    <p class="text truncate-3">Những dải ruộng bậc thang, các cô gái Thái với điệu múa
+                                        xòe
+                                        hoa, muôn cung đường ngợp mùa hoa… đó là rẻo cao Tây Bắc luôn làm say lòng lữ
+                                        khách
+                                        miền xuôi. Và nép mình bên dưới núi non hùng vĩ ấy còn có món quà gói trọn vị
+                                        thiên
+                                        nhiên: trà xanh Tây Bắc.</p>
                                 </div>
                             </div>
                             <div class="row item">
                                 <a href="#" class="col-sm-5 image"><img
-                                        src="./assets/img/Chuyen-nha/lan-dau-tien-den-coffee.jpg"
+                                        src="./assets/img/Trang-chuyen-nha/blog/nghe-nha-mach-nho.jpg"
                                         alt="Ảnh chuyện nhà" /></a>
                                 <div class="col-sm-7 content">
-                                    <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                        PHÊ CỦA THE COFFEE HOUSE</a>
-                                    <p class="date">09/02/2023</p>
-                                    <p class="text truncate-3">
-                                        Vừa qua, The Coffee House chính thức
-                                        khai trương cửa hàng SIGNATURE by
-                                        The Coffee House, chuyên phục vụ cà
-                                        phê đặc sản, các món ăn đa bản sắc
-                                        ấy ý tưởng từ cà phê và trà và gây
-                                        ấn tượng với không gian cảm hứng bài
-                                        trí hành trình cà phê đặc sắc, làm
-                                        nên một cuộc hẹn tròn đầy.
-                                    </p>
+                                    <a href="#" class="title truncate-2">NGHE NHÀ MÁCH NHỎ BÍ KÍP HEALTHY GỌN NHẸ, AI
+                                        CŨNG ÁP DỤNG
+                                        ĐƯỢC</a>
+                                    <p class="date">01/07/2023</p>
+                                    <p class="text truncate-3">Sống lành mạnh (healthy) đang là xu hướng được nhiều
+                                        người trẻ
+                                        ưa chuộng. Tuy nhiên, không đơn thuần là việc chăm chút đi theo các chế độ ăn
+                                        uống
+                                        hoặc tập luyện khắt khe, ngày nay healthy phải “easy” để vừa khỏe mạnh, vừa
+                                        thoải
+                                        mái tận hưởng mọi cuộc vui!</p>
                                 </div>
                             </div>
                             <div class="row item">
                                 <a href="#" class="col-sm-5 image"><img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                        src="./assets/img/Trang-chuyen-nha/blog/di-vay-lanh.jpg"
                                         alt="Ảnh chuyện nhà" /></a>
                                 <div class="col-sm-7 content">
-                                    <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                        HOUSE - BẬT LON BẬT VỊ NGON</a>
-                                    <p class="date">12/02/2023</p>
-                                    <p class="text truncate-3">
-                                        Cà phê sữa Espresso là một lon cà
-                                        phê sữa giải khát với hương vị cà
-                                        phê đậm đà từ 100% cà phê Robusta
-                                        cùng vị sữa béo nhẹ cho bạn một trải
-                                        nghiệm hương vị cà phê hoàn toàn
-                                        mới. Cà phê sữa Espresso là một lon
-                                        cà phê sữa giải khát với hương vị cà
-                                        phê đậm đà từ 100% cà phê Robusta
-                                        cùng vị sữa béo nhẹ cho bạn một trải
-                                        nghiệm hương vị cà phê hoàn toàn
-                                        mới.
-                                    </p>
+                                    <a href="#" class="title truncate-2">ĐI "VAY LẠNH" - TỪ VỰNG HẸN HÒ MỚI NỔI, CẬP
+                                        NHẬT NGAY KẺO LỖI
+                                        THỜI</a>
+                                    <p class="date">10/07/2023</p>
+                                    <p class="text truncate-3">Đi “vay lạnh” - từ vựng hẹn hò mới nổi, cập nhật ngay kẻo
+                                        lỗi
+                                        thời Nếu “đi trà sữa”, “đi đu đưa”... đã trở thành những lời rủ rê quen thuộc
+                                        mỗi
+                                        khi hẹn hò của giới trẻ, thì mới đây khái niệm “đi vay lạnh” bất ngờ xuất hiện
+                                        và
+                                        phủ sóng mạng xã hội. Nhanh chóng tạo được sự chú ý, “vay lạnh” là hoạt động
+                                        giới
+                                        thiệu sản phẩm mới đầy ấn tượng từ The Coffee House.</p>
                                 </div>
                             </div>
-                            <div class="btn">
-                                <a href="#">Xem thêm</a>
+                            <div class="button">
+                                <a href="#" id="js-xem-them-blog">Xem thêm</a>
                             </div>
                         </div>
                     </div>
@@ -379,7 +459,7 @@
         <!-- Begin coffeeholic content -->
         <div class="coffeeholic-content" id="js-coffeeholic-content">
             <div class="container-fluid row">
-                <div class="col-left col-sm-4">
+                <div class="col-left col-lg-4">
                     <h3>Chủ đề liên quan</h3>
                     <ul>
                         <a href="#">
@@ -412,116 +492,86 @@
                     </ul>
                 </div>
 
-                <div class="col-right col-sm-8">
+                <div class="col-right col-lg-8">
                     <div class="row item mt-0">
                         <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                src="./assets/img/Trang-chuyen-nha/coffeeholic/nhiet-do-ly-tuong-pha-ca-phe.jpg"
                                 alt="Ảnh chuyện nhà" /></a>
                         <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                PHÊ CỦA THE COFFEE HOUSE</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Mới đây, các "tín đồ" cà phê đang
-                                bàn tán xôn xao về SIGNATURE - Biểu
-                                tượng văn hóa c à phê của The Coffee
-                                House đã quay trở lại. Một lời hẹn
-                                làm bao người xao xuyến
+                            <a href="#" class="title truncate-2">BẬT MÍ NHIỆT ĐỘ LÝ TƯỞNG ĐỂ PHA CÀ PHÊ NGON, ĐẬM ĐÀ
+                                HƯƠNG VỊ</a>
+                            <p class="date">07/03/2023</p>
+                            <p class="text truncate-3">Nhiệt độ nước là một yếu tố quan trọng để có thể tạo nên những
+                                tách cà phê thơm ngon. Bạn đã biết nhiệt độ nước lý tưởng để pha cà phê đúng chuẩn?
+                                Vì sao phải lưu ý nhiệt độ nước khi pha cà phê?</p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <a href="#" class="col-sm-5 image"><img
+                                src="./assets/img/Trang-chuyen-nha/coffeeholic/ca-phe-phin-ngon-tron-vi.jpg"
+                                alt="Ảnh chuyện nhà" /></a>
+                        <div class="col-sm-7 content">
+                            <a href="#" class="title truncate-2">CÁCH PHA CÀ PHÊ PHIN THƠM NGON TRÒN VỊ</a>
+                            <p class="date">04/03/2023</p>
+                            <p class="text truncate-3">Có nhiều cách để pha một ly cà phê ngon, nhưng đối với nhiều
+                                người Việt giây phút đợi chờ những giọt cà phê rơi từ chiếc phin đã trở thành nét văn
+                                hóa ăn sâu trong tiềm thức. Để tạo nên một ly cà phê phin chuẩn vị, không chỉ cần sự
+                                tinh tế trong cách chọn loại cà phê mà còn cả sự tỉ mỉ trong từng bước pha.</p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <a href="#" class="col-sm-5 image"><img
+                                src="./assets/img/Trang-chuyen-nha/coffeeholic/8-loi-ich-bat-ngo.png"
+                                alt="Ảnh chuyện nhà" /></a>
+                        <div class="col-sm-7 content">
+                            <a href="#" class="title truncate-2">8 LỢI ÍCH BẤT NGỜ CỦA CÀ PHÊ COLD BREW</a>
+                            <p class="date">28/02/2023</p>
+                            <p class="text truncate-3">Cold brew là thức uống rất được yêu thích trong thời gian gần
+                                đây. Không chỉ có hương thơm đặc trưng và vị lôi cuốn, nó còn có nhiều lợi ích cho sức
+                                khỏe. Cùng The Coffee House tìm hiểu 8 lợi ích nổi bật của loại cà phê lạnh siêu hot
+                                này.</p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <a href="#" class="col-sm-5 image"><img
+                                src="./assets/img/Trang-chuyen-nha/coffeeholic/vi-sao-ca-phe-co-vi-chua.jpg"
+                                alt="Ảnh chuyện nhà" /></a>
+                        <div class="col-sm-7 content">
+                            <a href="#" class="title truncate-2">TẠI SAO CÀ PHÊ CÓ VỊ CHUA?</a>
+                            <p class="date">18/01/2023</p>
+                            <p class="text truncate-3">Nhiều người khi uống cà phê cảm thấy có vị chua thường e ngại
+                                rằng cà phê hỏng, kém chất lượng hay gặp các vấn đề trong quá trình pha chế và bảo quản.
+                                Tuy nhiên, điều này chưa chính xác. Cả hương vị của Arabica hay Robusta nguyên chất,
+                                trải qua quá trình chế biến, rang xay đều có vị chua nhẹ. Vậy nên, cà phê có vị chua
+                                chua, vẫn giữ được hương thơm đặc trưng vốn có của nó thì bạn có thể yên tâm đó không
+                                phải là cà phê hỏng. The Coffee House sẽ chỉ ra những lý do khiến cà phê có vị chua tự
+                                nhiên. </p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <a href="#" class="col-sm-5 image"><img
+                                src="./assets/img/Trang-chuyen-nha/coffeeholic/gu-thuong-thuc-ca-phe.png"
+                                alt="Ảnh chuyện nhà" /></a>
+                        <div class="col-sm-7 content">
+                            <a href="#" class="title truncate-2">GU THƯỞNG THỨC CÀ PHÊ CỦA NGƯỜI SÀNH ĐIỆU</a>
+                            <p class="date">17/01/2023</p>
+                            <p class="text truncate-3">Người am hiểu cà phê, có gu cà phê tinh tế chính là những vị
+                                khách khó tính nhất. Để có thể làm hài lòng, lấy được sự “tán dương” của những vị khách
+                                thời thượng hiểu rõ về cà phê thì những tách cà phê phải thực sự hảo hạng và đẳng cấp.
                             </p>
                         </div>
                     </div>
                     <div class="row item">
                         <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/lan-dau-tien-den-coffee.jpg" alt="Ảnh chuyện nhà" /></a>
-                        <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                PHÊ CỦA THE COFFEE HOUSE</a>
-                            <p class="date">09/02/2023</p>
-                            <p class="text truncate-3">
-                                Vừa qua, The Coffee House chính thức
-                                khai trương cửa hàng SIGNATURE by
-                                The Coffee House, chuyên phục vụ cà
-                                phê đặc sản, các món ăn đa bản sắc
-                                ấy ý tưởng từ cà phê và trà và gây
-                                ấn tượng với không gian cảm hứng bài
-                                trí hành trình cà phê đặc sắc, làm
-                                nên một cuộc hẹn tròn đầy.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                src="./assets/img/Trang-chuyen-nha/coffeeholic/ky-thuat-trong-cay-ca-phe.png"
                                 alt="Ảnh chuyện nhà" /></a>
                         <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới. Cà phê sữa Espresso là một lon
-                                cà phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                alt="Ảnh chuyện nhà" /></a>
-                        <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                alt="Ảnh chuyện nhà" /></a>
-                        <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới. Cà phê sữa Espresso là một lon
-                                cà phê sữa giải khát với hương vị
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                alt="Ảnh chuyện nhà" /></a>
-                        <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới. Cà phê sữa Espresso là một lon
-                                cà phê sữa giải khát với hương vị
+                            <a href="#" class="title truncate-2">KỸ THUẬT TRỒNG CÂY CÀ PHÊ NĂNG SUẤT, CHẤT LƯỢNG CAO</a>
+                            <p class="date">15/01/2023</p>
+                            <p class="text truncate-3">Cà phê sẽ càng ngon khi được trồng ở vùng đất cao nguyên, nơi có
+                                khí hậu nhiệt đới nóng ẩm, mưa nhiều, đất đai màu mỡ. Nó có khả năng phát triển tốt ở
+                                nơi có nhiều ánh sáng, độ pH lý tưởng ở mức 6 - 6.5, đặc biệt để hạt cà phê cho năng
+                                suất và chất lượng cao, cần phải lưu ý các kỹ thuật trồng trọt sau.</p>
                         </div>
                     </div>
                 </div>
@@ -533,7 +583,7 @@
         <!-- Begin teaholic content -->
         <div class="teaholic-content" id="js-teaholic-content">
             <div class="container-fluid row">
-                <div class="col-left col-sm-4">
+                <div class="col-left col-lg-4">
                     <h3>Chủ đề liên quan</h3>
                     <ul>
                         <a href="#">
@@ -566,116 +616,83 @@
                     </ul>
                 </div>
 
-                <div class="col-right col-sm-8">
+                <div class="col-right col-lg-8">
                     <div class="row item mt-0">
                         <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                src="./assets/img/Trang-chuyen-nha/teaholic/10-loi-ich-khong-ngo-cua-tra-hibiscus.png"
                                 alt="Ảnh chuyện nhà" /></a>
                         <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                PHÊ CỦA THE COFFEE HOUSE</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Mới đây, các "tín đồ" cà phê đang
-                                bàn tán xôn xao về SIGNATURE - Biểu
-                                tượng văn hóa c à phê của The Coffee
-                                House đã quay trở lại. Một lời hẹn
-                                làm bao người xao xuyến
+                            <a href="#" class="title truncate-2">10 LỢI ÍCH KHÔNG NGỜ CỦA TRÀ HOA HIBISCUS</a>
+                            <p class="date">07/06/2023</p>
+                            <p class="text truncate-3">Với rất nhiều lợi ích vượt trội, trà hoa Hibiscus được nhiều chị
+                                em ưu tiên chọn lựa để tăng cường sức khỏe, cải thiện sắc đẹp và giúp tinh thần thêm
+                                hứng khởi.</p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <a href="#" class="col-sm-5 image"><img
+                                src="./assets/img/Trang-chuyen-nha/teaholic/nham-lan-atiso-do-va-atiso-xanh.jpg"
+                                alt="Ảnh chuyện nhà" /></a>
+                        <div class="col-sm-7 content">
+                            <a href="#" class="title truncate-2">BẠN CÓ ĐANG NHẦM LẪN GIỮA ATISO ĐỎ VÀ ATISO XANH?</a>
+                            <p class="date">01/06/2023</p>
+                            <p class="text truncate-3">Trà Atiso vốn là thức uống phổ biến tại Việt Nam và được biết đến
+                                với 2 loại: Atiso đỏ (Hibiscus) và Atiso xanh. Thế nhưng, hai loại này lại có nhiều sự
+                                khác biệt cả về đặc điểm lẫn công dụng dành cho sức khỏe.
                             </p>
                         </div>
                     </div>
                     <div class="row item">
                         <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/lan-dau-tien-den-coffee.jpg" alt="Ảnh chuyện nhà" /></a>
+                                src="./assets/img/Trang-chuyen-nha/teaholic/8-loai-tra-duoc-long-phai-dep.png"
+                                alt="Ảnh chuyện nhà" /></a>
                         <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                PHÊ CỦA THE COFFEE HOUSE</a>
-                            <p class="date">09/02/2023</p>
-                            <p class="text truncate-3">
-                                Vừa qua, The Coffee House chính thức
-                                khai trương cửa hàng SIGNATURE by
-                                The Coffee House, chuyên phục vụ cà
-                                phê đặc sản, các món ăn đa bản sắc
-                                ấy ý tưởng từ cà phê và trà và gây
-                                ấn tượng với không gian cảm hứng bài
-                                trí hành trình cà phê đặc sắc, làm
-                                nên một cuộc hẹn tròn đầy.
-                            </p>
+                            <a href="#" class="title truncate-2">8 LOẠI TRÀ HOA ĐƯỢC LÒNG PHÁI ĐẸP</a>
+                            <p class="date">12/04/2023</p>
+                            <p class="text truncate-3">Đối với phụ nữ, thưởng trà hoa không chỉ để hít hà hương thơm hay
+                                trải nghiệm mùi vị rất riêng, mà còn là cách chăm chút sức khỏe, vỗ về làn da. So với
+                                trà lá, trà hoa có nhiều điểm đặc biệt khiến phái đẹp ưa chuộng. Bắt đầu từ ngoại hình
+                                bắt mắt, với những cánh hoa khô bung nở khi gặp nước nóng đến màu trà đủ sắc rực rỡ. Bên
+                                cạnh đó, trà hoa thường không có caffeine, giúp người dùng có thể thưởng thức bất kỳ
+                                thời điểm nào trong ngày mà chẳng lo mất ngủ hay bị say. Đặc biệt, một số loại trà hoa
+                                còn có nhiều lợi ích cho sức khỏe và sắc đẹp, được nhiều chị em lựa chọn.</p>
                         </div>
                     </div>
                     <div class="row item">
                         <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                src="./assets/img/Trang-chuyen-nha/teaholic/tra-hoa-hibiscus-tu-luc-dia-den.png"
                                 alt="Ảnh chuyện nhà" /></a>
                         <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới. Cà phê sữa Espresso là một lon
-                                cà phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo
-                            </p>
+                            <a href="#" class="title truncate-2">TRÀ HOA HIBISCUS - TỪ LỤC ĐỊA ĐEN BƯỚC RA THẾ GIỚI</a>
+                            <p class="date">15/04/2023</p>
+                            <p class="text truncate-3">Hibiscus là một loài cây bụi với hoa màu đỏ mọc đơn lẻ. Hoa
+                                thường mọc ở nách lá và gần như không có cuống hoa. Mùa hoa nở rộ từ tháng 7 đến tháng
+                                10. Lá, đài hoa và hạt cây Hibiscus được sử dụng để làm dược liệu. Đặc biệt, người ta
+                                thường sử dụng đài hoa phơi khô để chế biến thành trà sử dụng quanh năm với rất nhiều
+                                lợi ích cho sức khỏe và sắc đẹp.</p>
                         </div>
                     </div>
                     <div class="row item">
                         <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                src="./assets/img/Trang-chuyen-nha/teaholic/chon-nhiet-do-nuoc-de-pha-tra.png"
                                 alt="Ảnh chuyện nhà" /></a>
                         <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới.
-                            </p>
+                            <a href="#" class="title truncate-2">CHỌN NHIỆT ĐỘ NƯỚC ĐỂ PHA TRÀ ĐÚNG CHUẨN CHUYÊN GIA</a>
+                            <p class="date">18/03/2023</p>
+                            <p class="text truncate-3">Tùy thuộc vào từng loại trà, cần sử dụng nước sôi với nhiệt độ
+                                tương thích để khi pha chế có thể khơi dậy đầy đủ hương vị thơm ngon của trà. </p>
                         </div>
                     </div>
                     <div class="row item">
                         <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                src="./assets/img/Trang-chuyen-nha/teaholic/vi-sao-phai-trang-tra-truoc-khi-pha.png"
                                 alt="Ảnh chuyện nhà" /></a>
                         <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới. Cà phê sữa Espresso là một lon
-                                cà phê sữa giải khát với hương vị
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                alt="Ảnh chuyện nhà" /></a>
-                        <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới. Cà phê sữa Espresso là một lon
-                                cà phê sữa giải khát với hương vị
+                            <a href="#" class="title truncate-2">VÌ SAO PHẢI TRÁNG TRÀ TRƯỚC KHI PHA</a>
+                            <p class="date">16/03/2023</p>
+                            <p class="text truncate-3">Từ ngàn xưa, tráng trà được xem là bước đầu tiên trong quy trình
+                                pha trà. Tráng trà không chỉ giúp loại bỏ các tạp chất trên bề mặt của lá trà, kích
+                                thích mùi thơm và hương vị trà còn có nhiều tác dụng khác. </p>
                         </div>
                     </div>
                 </div>
@@ -687,7 +704,7 @@
         <!-- Begin blog content -->
         <div class="blog-content" id="js-blog-content">
             <div class="container-fluid row">
-                <div class="col-left col-sm-4">
+                <div class="col-left col-lg-4">
                     <h3>Chủ đề liên quan</h3>
                     <ul>
                         <a href="#">
@@ -720,116 +737,87 @@
                     </ul>
                 </div>
 
-                <div class="col-right col-sm-8">
+                <div class="col-right col-lg-8">
                     <div class="row item mt-0">
                         <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                src="./assets/img/Trang-chuyen-nha/blog/chiec-ly-doi-mau.jpg"
                                 alt="Ảnh chuyện nhà" /></a>
                         <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                PHÊ CỦA THE COFFEE HOUSE</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Mới đây, các "tín đồ" cà phê đang
-                                bàn tán xôn xao về SIGNATURE - Biểu
-                                tượng văn hóa c à phê của The Coffee
-                                House đã quay trở lại. Một lời hẹn
-                                làm bao người xao xuyến
+                            <a href="#" class="title truncate-2">CHIẾC LY ĐỔI MÀU "NGÀN NGƯỜI THEO ĐUỔI" ĐÃ QUAY TRỞ
+                                LẠI, LẸ CHÂN BẮT TREND NGAY KẺO TIẾC</a>
+                            <p class="date">15/12/2023</p>
+                            <p class="text truncate-3">Bộ sản phẩm Trà sữa Merry CloudTea trong chiếc ly đổi màu từ The
+                                Coffee House hiện đang“làm mưa làm gió" từ mạng xã hội tới đời thực, khiến giới trẻ
+                                “đứng ngồi không yên" để tìm cách sở hữu trước khi siêu phẩm cháy hàng một lần nữa. </p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <a href="#" class="col-sm-5 image"><img
+                                src="./assets/img/Trang-chuyen-nha/blog/cung-la-an-banh-thuong-tra-ngam-trang.png"
+                                alt="Ảnh chuyện nhà" /></a>
+                        <div class="col-sm-7 content">
+                            <a href="#" class="title truncate-2">CŨNG LÀ ĂN BÁNH, THƯỞNG TRÀ, NGẮM TRĂNG - GEN Z LÀM GÌ
+                                CHO BỚT NHẠT?</a>
+                            <p class="date">22/08/2023</p>
+                            <p class="text truncate-3">Trung thu là dịp mà bất kỳ ai cũng có thể “bé lại” để niềm háo
+                                hức đón Tết Đoàn viên, ăn bánh, thưởng trà… vẫn đầy ắp trong lòng. Và nếu biết cách, bạn
+                                sẽ nhận ra Trung thu nay vẫn “đậm đà” như những mùa trăng cũ.</p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <a href="#" class="col-sm-5 image"><img
+                                src="./assets/img/Trang-chuyen-nha/blog/le-tinh-nhan-cung-crush-di-dau.jpg"
+                                alt="Ảnh chuyện nhà" /></a>
+                        <div class="col-sm-7 content">
+                            <a href="#" class="title truncate-2">LỄ TÌNH NHÂN, CÙNG CRUSH ĐI ĐÂU?</a>
+                            <p class="date">14/02/2023</p>
+                            <p class="text truncate-3">Tadaaaa, hết Tết thì Valentine đầy yêu thương lại đang đến rồi
+                                nè. Lễ tình nhân, dẫn crush đi quán nào? Nhất định phải cùng người ấy đến Nhà hẹn hò để
+                                giữ nhiệt, vun đắp tình cảm nha!</p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <a href="#" class="col-sm-5 image"><img
+                                src="./assets/img/Trang-chuyen-nha/blog/chai-fresh-luon-ben-ban.jpg"
+                                alt="Ảnh chuyện nhà" /></a>
+                        <div class="col-sm-7 content">
+                            <a href="#" class="title truncate-2">CHAI FRESH LUÔN BÊN BẠN TRONG MỌI KHOẢNH KHẮC</a>
+                            <p class="date">24/01/2023</p>
+                            <p class="text truncate-3">Dù bất kể nơi đâu, bất kể thời điểm nào, với nhiều ưu điểm nổi
+                                bật như: hương vị thơm ngon, đậm đà; thiết kế đơn giản và chắc chắn; dung tích lớn thật
+                                sảng khoái… thì những thức uống từ trà và cà phê được thiết kế dưới dạng chai Fresh tiện
+                                lợi của The Coffee House sẽ luôn tạo cho bạn sự hứng thú. Đồng hành cùng bạn trên những
+                                chặng đường và chinh phục những mục tiêu. </p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <a href="#" class="col-sm-5 image"><img
+                                src="./assets/img/Trang-chuyen-nha/blog/nam-moi-uong-khoi-dau-sung.png"
+                                alt="Ảnh chuyện nhà" /></a>
+                        <div class="col-sm-7 content">
+                            <a href="#" class="title truncate-2">NĂM MỚI, UỐNG "KHỞI ĐẦU SUNG" - NHẬN LÌ XÌ KHỦNG TẠI
+                                THE COFFEE HOUSE</a>
+                            <p class="date">21/01/2023</p>
+                            <p class="text truncate-3">Chia tay năm cũ với quá nhiều nốt trầm, Tết này hãy cùng The
+                                Coffee House nạp cho mình bộ 3 "Sung" gói trọn tình cảm đong đầy, vừa ngon tròn vị vừa
+                                mang đến sự hứng khởi, tươi mới cho những ngày đầu năm để bắt đầu năm Dần đầy năng
+                                lượng, mãnh liệt và đủ sức "công phá" mọi thử thách.</p>
+                        </div>
+                    </div>
+                    <div class="row item">
+                        <a href="#" class="col-sm-5 image"><img
+                                src="./assets/img/Trang-chuyen-nha/blog/nhung-loai-tra-co-huong-va-vi.jpg"
+                                alt="Ảnh chuyện nhà" /></a>
+                        <div class="col-sm-7 content">
+                            <a href="#" class="title truncate-2">NHỮNG LOẠI TRÀ CÓ HƯƠNG VÀ VỊ “ĐỔ GỤC” KHÁCH THĂM XUÂN
+                                NHÀ BẠN</a>
+                            <p class="date">21/01/2023</p>
+                            <p class="text truncate-3">Dòng chảy hiện đại hoà nhịp không ngừng vào cuộc sống, thế nhưng
+                                mỗi dịp Tết cổ truyền đến vẫn là những nét văn hoá quen thuộc, đong đầy tình cảm, thể
+                                hiện được sự trân trọng, hiếu lễ và mến khách trong mỗi gia đình Việt. Đó là hình ảnh
+                                gia đình, họ hàng sum vầy, chuyện trò bên ấm trà và ngắm những sắc hoa. Hình ảnh bạn bè,
+                                xóm giềng ghé thăm nhau, cùng chúc cho một năm mới khởi sự bình an và vạn điều tốt đẹp.
                             </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/lan-dau-tien-den-coffee.jpg" alt="Ảnh chuyện nhà" /></a>
-                        <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ
-                                PHÊ CỦA THE COFFEE HOUSE</a>
-                            <p class="date">09/02/2023</p>
-                            <p class="text truncate-3">
-                                Vừa qua, The Coffee House chính thức
-                                khai trương cửa hàng SIGNATURE by
-                                The Coffee House, chuyên phục vụ cà
-                                phê đặc sản, các món ăn đa bản sắc
-                                ấy ý tưởng từ cà phê và trà và gây
-                                ấn tượng với không gian cảm hứng bài
-                                trí hành trình cà phê đặc sắc, làm
-                                nên một cuộc hẹn tròn đầy.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                alt="Ảnh chuyện nhà" /></a>
-                        <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới. Cà phê sữa Espresso là một lon
-                                cà phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                alt="Ảnh chuyện nhà" /></a>
-                        <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                alt="Ảnh chuyện nhà" /></a>
-                        <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới. Cà phê sữa Espresso là một lon
-                                cà phê sữa giải khát với hương vị
-                        </div>
-                    </div>
-                    <div class="row item">
-                        <a href="#" class="col-sm-5 image"><img
-                                src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                alt="Ảnh chuyện nhà" /></a>
-                        <div class="col-sm-7 content">
-                            <a href="#" class="title truncate-2">CÀ PHÊ SỮA ESPRESSO THE COFFEE
-                                HOUSE - BẬT LON BẬT VỊ NGON</a>
-                            <p class="date">12/02/2023</p>
-                            <p class="text truncate-3">
-                                Cà phê sữa Espresso là một lon cà
-                                phê sữa giải khát với hương vị cà
-                                phê đậm đà từ 100% cà phê Robusta
-                                cùng vị sữa béo nhẹ cho bạn một trải
-                                nghiệm hương vị cà phê hoàn toàn
-                                mới. Cà phê sữa Espresso là một lon
-                                cà phê sữa giải khát với hương vị
                         </div>
                     </div>
                 </div>
@@ -842,34 +830,35 @@
 
 
     <!-- Begin Footer -->
-    <footer>
+    <footer id="footer">
         <div class="container-fluid">
             <div class="row-linklist row">
-                <div class="col-sm-3">
+                <div class="col-lg-3 col-sm-6">
                     <h5>Về chúng tôi</h5>
                     <ul class="footer-linklist">
-                        <li><a href="#">Đồ uống của chúng tôi</a></li>
-                        <li><a href="#">Đồ ăn của chúng tôi</a></li>
-                        <li><a href="#">Dịch vụ chăm sóc khách hàng</a></li>
+                        <li><a href="#footer">Đồ uống của chúng tôi</a></li>
+                        <li><a href="#footer">Đồ ăn của chúng tôi</a></li>
+                        <li><a href="#footer">Dịch vụ chăm sóc khách hàng</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-lg-3 col-sm-6">
                     <h5>Đặt hàng và lấy hàng</h5>
                     <ul class="footer-linklist">
-                        <li><a href="#">Đặt hàng trên Web</a></li>
-                        <li><a href="#">Đặt hàng trên App</a></li>
-                        <li><a href="#">Phương thức đặt hàng và giao hàng</a></li>
+                        <li><a href="#footer">Đặt hàng trên Web</a></li>
+                        <li><a href="#footer">Đặt hàng trên App</a></li>
+                        <li><a href="#footer">Phương thức đặt hàng và giao hàng</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-lg-3 col-sm-6">
                     <h5>Liên hệ</h5>
                     <ul class="footer-linklist">
                         <li><a href="tel:0123456789"><i class="ti ti-user"></i>0123456789</a></li>
-                        <li><a href="#"><i class="ti ti-location-pin"></i>182 Lê Duẩn, TP Vinh, Nghệ An</a></li>
-                        <li><a href="mailto:thecoffeehouse@gmail.com"><i class="ti ti-email"></i>thecoffeehouse@gmail.com</a></li>
+                        <li><a href="#footer"><i class="ti ti-location-pin"></i>182 Lê Duẩn, TP Vinh, Nghệ An</a></li>
+                        <li><a href="mailto:thecoffeehouse@gmail.com"><i
+                                    class="ti ti-email"></i>thecoffeehouse@gmail.com</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-3 col-image">
+                <div class="col-lg-3 col-sm-6 col-image">
                     <a href="#"><img src="./assets/img/image-footer.jpg" alt="Ảnh quán coffee house"></a>
                 </div>
             </div>
@@ -877,10 +866,10 @@
 
             </div>
             <div class="row-link-contact">
-                <a href=""><i class="fi fi-brands-facebook"></i></a>
-                <a href=""><i class="fi fi-brands-instagram"></i></a>
-                <a href=""><i class="fi fi-brands-youtube"></i></a>
-                <a href=""><i class="fi fi-brands-github"></i></a>
+                <a href="#footer"><i class="fi fi-brands-facebook"></i></a>
+                <a href="#footer"><i class="fi fi-brands-instagram"></i></a>
+                <a href="#footer"><i class="fi fi-brands-youtube"></i></a>
+                <a href="#footer"><i class="fi fi-brands-github"></i></a>
             </div>
         </div>
     </footer>
