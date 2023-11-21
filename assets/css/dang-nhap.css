@@ -35,19 +35,39 @@ section {
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  background: url(/assets/img/anhdkdn/coffee2.jpg) no-repeat;
+  background: url('../img/DNhap-DKi/coffee.jpg') no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+h2 {
+  filter: drop-shadow(0 0 10px white);
+  font-weight: bold;
+}
+
+.home-page {
+  position: fixed;
+  top: 20px;
+}
+
+.home-page>a {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  filter: drop-shadow(2px 4px 6px black);
+  font-family: 'Baron Neue';
+
 }
 
 .form-box {
   position: relative;
   width: 400px;
   height: 450px;
-  background: transparent;
+  background-color: #f1f1f17e;
   border: 2px solid rgba(168, 104, 0, 0.589);
   border-radius: 20px;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
