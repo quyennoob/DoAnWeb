@@ -567,7 +567,8 @@ html {
     color: #000;
     background-color: #fff;
     border: 1px solid #ccc;
-    width: auto;
+    width: fit-content;
+    width: -moz-fit-content;
     border-radius: 8px;
     padding: 5px 70px;
     transition: color 0.2s ease-in-out;
@@ -679,6 +680,8 @@ html {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 5px 70px;
+    width: fit-content;
+    width: -moz-fit-content;
 }
 
 .teaholic-section .col-left .content-list .btn a:hover{
