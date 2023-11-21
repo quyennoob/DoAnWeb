@@ -400,6 +400,8 @@ html {
     border-radius: 24px;
     z-index: 10;
     box-shadow: 0 -20px 100px #585858;
+    display: grid;
+    justify-items: center;
 }
 
 .close-modal {
@@ -408,7 +410,7 @@ html {
     border-radius: 50%;
     background-color: #fff;
     display: none;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
     position: fixed;
     top: 15%;
@@ -419,7 +421,7 @@ html {
 }
 
 .close-modal.open {
-    display: flex;
+    display: grid;
 }
 
 .cloudfee-modal .close-modal i {
@@ -439,7 +441,8 @@ html {
 }
 
 .cloudfee-modal .modal-content {
-    padding: 0 100px;
+    min-width: 100px;
+    max-width: 840px;
 }
 
 .cloudfee-modal .modal-content p {
