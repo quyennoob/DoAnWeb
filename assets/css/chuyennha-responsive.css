@@ -121,14 +121,7 @@
         height: 20vw;
     }
 
-    .teaholic-section {
-        position: relative;
-        height: 158vw;
-    }
-
     .teaholic-section .col-left {
-        position: absolute;
-        top: 60vw;
         padding: 0;
     }
 
@@ -149,8 +142,7 @@
     }
 
     .teaholic-section .col-right {
-        position: absolute;
-        top: 0;
+        order: -1;
         padding: 50px;
     }
 
@@ -251,15 +243,12 @@
         margin-top: 8px;
     }
 
-    .teaholic-section {
-        height: 392vw;
-        position: relative;
+    .teaholic-section .col-left {
+        padding: 0;
     }
 
-    .teaholic-section .col-left {
-        position: absolute;
-        top: 56vw;
-        padding: 0;
+    .teaholic-section .col-left .content-list .item {
+        margin: 16px 0;
     }
 
     .teaholic-section .col-left .content-list .item img {
@@ -274,10 +263,17 @@
         margin-top: 8px;
     }
 
+    .teaholic-section .col-left .content-list .item .date {
+        margin: 0;
+    }
+
+    .teaholic-section .col-left .content-list .button {
+        margin: 0;
+    }
+
     .teaholic-section .col-right {
-        position: absolute;
+        order: -1;
         padding: 20px;
-        top: 0;
     }
 
     .teaholic-section .col-right img {

@@ -305,7 +305,7 @@ html {
 .cloudfee .thinh {
     display: flex;
     align-items: center;
-    margin: -30px 100px 0;
+    margin: -8px 100px 0;
 }
 
 .cloudfee .hieu img,
@@ -331,7 +331,7 @@ html {
 
 .cloudfee .hieu .open-video-hieu,
 .cloudfee .thinh .open-video-thinh {
-    width: max-content;
+    width: fit-content;
     font-size: 18px;
     color: #424242;
     font-weight: 600;
@@ -549,22 +549,22 @@ html {
     font-size: 14px;
 }
 
-.coffeeholic-section .col-right .content-list .btn,
-.blog-section .col-right .content-list .btn {
+.coffeeholic-section .col-right .content-list .button,
+.blog-section .col-right .content-list .button {
     display: flex;
     justify-content: center;
     margin: 16px 0;
-    cursor: auto;
 }
 
-.coffeeholic-section .col-right .content-list .btn a,
-.blog-section .col-right .content-list .btn a {
+.coffeeholic-section .col-right .content-list .button a,
+.blog-section .col-right .content-list .button a {
     text-decoration: none;
     font-size: 18px;
     font-family: var(--Baloo-2-SemiBold);
     color: #000;
     background-color: #fff;
     border: 1px solid #ccc;
+    width: auto;
     border-radius: 8px;
     padding: 5px 70px;
     transition: color 0.2s ease-in-out;
@@ -660,14 +660,14 @@ html {
     font-size: 14px;
 }
 
-.teaholic-section .col-left .content-list .btn{
+.teaholic-section .col-left .content-list .button{
     display: flex;
     justify-content: center;
     margin: 32px 0;
     cursor: auto;
 }
 
-.teaholic-section .col-left .content-list .btn a{
+.teaholic-section .col-left .content-list .button a{
     text-decoration: none;
     font-size: 18px;
     font-family: var(--Baloo-2-SemiBold);
