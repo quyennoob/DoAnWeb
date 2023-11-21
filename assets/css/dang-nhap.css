@@ -1,0 +1,193 @@
+/*  Các kiểu font-family:
+    Baloo 2 Regular 
+    Baloo 2 Medium
+    Baloo 2 SemiBold
+    Baloo 2 Bold 
+    Baloo 2 ExtraBold
+*/
+
+:root {
+  --Baloo-2-Regular: 'Baloo 2 Regular';
+  --Baloo-2-Medium: 'Baloo 2 Medium';
+  --Baloo-2-SemiBold: 'Baloo 2 Semibold';
+  --Baloo-2-Bold: 'Baloo 2 Bold';
+  --Baloo-2-ExtraBold: 'Baloo 2 Extrabold';
+}
+
+:root {
+  --brown-s: #FFF6E8;
+  --brown-m: #D6BD97;
+  --brown-l: #c59660;
+  --brown-xl: #9F713C;
+  --brown-xxl: #744B0D;
+  --text-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--Baloo-2-Regular);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url('../img/DNhap-DKi/coffee.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+h2 {
+  filter: drop-shadow(0 0 10px white);
+  font-weight: bold;
+}
+
+.home-page {
+  position: fixed;
+  top: 20px;
+}
+
+.home-page>a {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  filter: drop-shadow(2px 4px 6px black);
+  font-family: 'Baron Neue';
+
+}
+
+.form-box {
+  position: relative;
+  width: 400px;
+  height: 450px;
+  background-color: #f1f1f17e;
+  border: 2px solid rgba(168, 104, 0, 0.589);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2em;
+  color: black;
+  ;
+  text-align: center;
+}
+
+.inputbox {
+  position: relative;
+  margin: 30px 0;
+  width: 310px;
+}
+
+.inputbox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 1em;
+  pointer-events: none;
+  transition: .5s;
+}
+
+input:focus~label,
+input:valid~label,
+input:not(:placeholder-shown)~label {
+  top: -5px;
+  font-size: 0.8em;
+}
+
+.inputbox input {
+  width: 90%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 35px 0 5px;
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.inputbox ion-icon {
+  position: absolute;
+  right: 8px;
+  color: black;
+  font-size: 1.2em;
+  top: 20px;
+}
+
+.forget {
+  margin: -15px 0 15px;
+  font-size: .9em;
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.forget label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forget label span {
+  display: flex;
+  align-items: center;
+}
+
+.forget label input {
+  margin-right: 3px;
+}
+
+.forget label a {
+  color: black;
+  text-decoration: none;
+}
+
+.forget label a:hover {
+  text-decoration: underline;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  background: rgba(168, 104, 0, 0.589);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: var(--brown-xl);
+  transition: all 0.3s ease-in-out;
+}
+
+.register {
+  font-size: .9em;
+  color: black;
+  text-align: center;
+  margin: 25px 0 10px;
+
+}
+
+.register p a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+
+.register p a:hover {
+  color: var(--brown-xl);
+  transition: all 0.3s ease-in-out;
+}
