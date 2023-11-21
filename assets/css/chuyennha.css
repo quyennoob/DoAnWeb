@@ -17,7 +17,7 @@
 :root {
     --brown-s: #FFF6E8;
     --brown-m: #D6BD97;
-    --brown-l: #ca893f;
+    --brown-l: #c59660;
     --brown-xl: #9F713C;
     --brown-xxl: #744B0D;
     --yellow: #febf3e;
@@ -27,39 +27,12 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: var(--Baloo-2-Regular), sans-serif;
+    
 }
 
 html {
-    font-family: var(--Baloo-2-Regular), sans-serif;
     scroll-behavior: smooth;
-}
-
-.row {
-    width: 100%;
-}
-
-.col {
-    margin: 0 20px;
-}
-
-.col-third {
-    width: 33.33333%;
-    box-sizing: border-box;
-}
-
-.col-half {
-    width: 50%;
-    box-sizing: border-box;
-}
-
-.col-full {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.col-fourth {
-    width: 25%;
 }
 
 /* hiển thị văn bản trên một dòng */
@@ -72,6 +45,7 @@ html {
 
 /* hiển thị văn bản trên 2 dòng */
 .truncate-2 {
+    text-align: justify;
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 2; /* số dòng bạn muốn hiển thị */
@@ -80,15 +54,11 @@ html {
 
 /* hiển thị văn bản trên 3 dòng */
 .truncate-3 {
+    text-align: justify;
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 3; /* số dòng bạn muốn hiển thị */
     -webkit-box-orient: vertical;
-}
-
-/* Chữ in đậm */
-.text-bold {
-    font-weight: bold;
 }
 
 /* Begin Header */
@@ -96,22 +66,27 @@ html {
     width: 100%;
     height: 60px;
     display: flex;
-    background-color: #383838d6;
+    background-color: #2d2d2dd6;
     backdrop-filter: blur(20px);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
-    
+    z-index: 999;
 }
 
-.header.active {
-    opacity: 1;
+.header .ti-close,
+.header .ti-menu {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
+    position: absolute;
+    display: none;
 }
 
 .header .home-page {
-    line-height: 60px;
+    line-height: 55px;
     text-decoration: none;
     color: var(--text-color);
     font-family: 'Baron Neue';
@@ -119,18 +94,19 @@ html {
     margin: 0 40px;
 }
 
-.header .navigation{
+.header .navigation {
     list-style: none;
     display: flex;
     align-items: center;
-    
+    margin: 0;
+    padding: 0;
 }
 
 .header .navigation li {
     padding: 0 10px;
 }
 
-.header .navigation li a{
+.header .navigation li>a{
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
@@ -139,7 +115,7 @@ html {
 
 .header .navigation li:hover a {
     color: var(--brown-l);
-    transition: color 0.2s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
 .header .sign-in {
@@ -173,7 +149,7 @@ html {
 .header .sign-in:hover a,
 .header .sign-up:hover a {
     color: var(--brown-l);
-    transition: color 0.2s ease-in-out;
+    transition: color 0.1s ease-in-out;
 }
 
 .header .sign-in:hover,
@@ -181,25 +157,29 @@ html {
     border-color: var(--brown-l);
     transition: color 0.2s ease-in-out;
 }
+
+.header-tab {
+    display: none;
+}
 /* End Header */
 
 /* Begin page-header chuyen nha */
 .chuyen-nha {
     margin-top: 60px;
     padding-top: 30px;
-    background-image: url('/assets/img/repeat-background.png');
+    background-image: url('../img/repeat-background.png');
     background-size: 700px;
     background-color: rgba(255, 255, 255, 0.95);
     background-blend-mode: overlay;
 }
 
-.page-header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.page-header .container-fluid {
+    display: grid;
+    justify-items: center;
 }
 
 .page-header h2 {
+    font-weight: bold;
     text-align: center;
     padding-bottom: 8px;
     position: relative;
@@ -226,14 +206,18 @@ html {
 
 .page-header .page-tabs {
     display: flex;
+    justify-content: center;
+    padding: 0;
     margin-bottom: 40px;
 }
 .page-header .page-tabs li {
     list-style: none;
+    width: auto;
     padding: 7px 15px;
-    margin: 0 15px;
+    margin: 5px 15px;
     border: 1px solid #ccc;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 .page-header .page-tabs li a {
@@ -245,14 +229,14 @@ html {
     text-decoration: none;
 }
 
-.page-header .page-tabs li a:hover {
+.page-header .page-tabs li:hover a {
     color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
 }
 
-.page-header .page-tabs .selection {
+.page-header .page-tabs li.selection {
     background-color: var(--brown-s);
     border: none;
-
 }
 
 .page-header .page-tabs .selection a {
@@ -262,7 +246,7 @@ html {
 
 /* Begin cloudfee chuyen nha */
 .cloudfee {
-    background-image: linear-gradient( 0, #8b8b8b8d, #1e1e1eaf);
+    background-image: linear-gradient( 0, #6f6355ab, #4e3c2eaf);
 }
 
 .cloudfee .creamy {
@@ -271,10 +255,14 @@ html {
     margin: 0 100px;
 }
 
-.cloudfee .cream img{
-    width: 100%;
-    background-color: #58585882;
+.cloudfee .creamy .col-left {
+    display: grid;
+    justify-content: end;
+}
 
+.cloudfee .creamy img{
+    width: 100%;
+    filter: drop-shadow(0 2px 30px #404040);
 }
 
 .cloudfee .creamy h3 {
@@ -296,27 +284,34 @@ html {
     color: var(--text-color);
 }
 
-.cloudfee .creamy a,
+.cloudfee .creamy .open-cloudfee-modal,
 .cloudfee .creamy i {
     display: flex;
     align-items: center;
-    text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     line-height: 48px;
     padding-left: 5px;
     color: var(--yellow);
+    cursor: pointer;
 }
 
-.cloudfee .creamy a:hover{
-    color: #ffae0d;
+.cloudfee .creamy .open-cloudfee-modal:hover{
+    color: #ffae0dd6;
+    transition: color 0.2s ease-in-out;
 }
 
 .cloudfee .hieu,
 .cloudfee .thinh {
     display: flex;
     align-items: center;
-    margin: -72px 100px 0;
+    margin: -8px 100px 0;
+}
+
+.cloudfee .hieu img,
+.cloudfee .thinh img{
+    width: 100%;
+    filter: drop-shadow(0 2px 30px #585858);
 }
 
 .cloudfee .hieu h1,
@@ -334,8 +329,9 @@ html {
     font-size: 18px;
 }
 
-.cloudfee .hieu a,
-.cloudfee .thinh a {
+.cloudfee .hieu .open-video-hieu,
+.cloudfee .thinh .open-video-thinh {
+    width: fit-content;
     font-size: 18px;
     color: #424242;
     font-weight: 600;
@@ -345,269 +341,160 @@ html {
     border-radius: 8px;
 }
 
-.cloudfee .hieu a:hover,
-.cloudfee .thinh a:hover {
+.cloudfee .hieu .open-video-hieu:hover,
+.cloudfee .thinh .open-video-thinh:hover {
     color: #575757;
     background-color: #ffc756;
+    transition: color 1s ease-in-out;
+    cursor: pointer;
 }
 
-.cloudfee .hieu img,
-.cloudfee .thinh img {
-    
+.cloudfee .thinh .col-left {
+    display: grid;
+    justify-content: end;
 }
 
+.video-hieu-container,
+.video-thinh-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.607);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.video-hieu-container.open,
+.video-thinh-container.open {
+    display: flex;
+}
+
+.btn-close-video {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    position: absolute;
+    top: 75px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.video-hieu,
+.video-thinh {
+    width: 1200px;
+    max-width: calc(100% - 32px);
+    min-height: 300px;
+}
+
+.cloudfee-modal {
+    width: 100%;
+    height: 90%;
+    position: fixed;
+    top: 120%;
+    overflow-y: scroll;
+    background-color: #fff;
+    border-radius: 24px;
+    z-index: 10;
+    box-shadow: 0 -20px 100px #585858;
+}
+
+.close-modal {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 15%;
+    right: 20px;
+    cursor: pointer;
+    z-index: 120;
+    box-shadow: 0 0 10px #585858;
+}
+
+.close-modal.open {
+    display: flex;
+}
+
+.cloudfee-modal .close-modal i {
+    color: #000;
+    font-size: 14px;
+}
+
+
+
+.cloudfee-modal .modal-title {
+    font-size: 60px;
+    color: var(--yellow);
+    font-weight: bold;
+    font-family: 'Montserrat ExtraBold';
+    text-align: center;
+    padding: 32px;
+}
+
+.cloudfee-modal .modal-content {
+    padding: 0 100px;
+}
+
+.cloudfee-modal .modal-content p {
+    text-align: center;
+    margin: 12px 0;
+}
+
+.cloudfee-modal .modal-content h2 {
+    text-align: center;
+    color: var(--yellow);
+    font-family: 'Montserrat Bold';
+    margin: 40px 0 8px;
+}
 
 /* End cloudfee chuyen nha */
 
 
 /* Begin all-content chuyen nha */
-.all-content {
 
-}
-
-.coffeeholic-section {
-    background-color: var(--brown-s);
-    display: flex;
-}
-
-.coffeeholic-section .col-left {
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-}
-
-.coffeeholic-section .col-left img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.coffeeholic-section .col-right {
-    width: 55%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 20px;
-}
-
-.coffeeholic-section .col-right>h2 {
-    position: relative;
-    padding-left: 15px;
-    margin-top: 10px;
-}
-
-.coffeeholic-section .col-right>h2::after {
-    position: absolute;
-    content: '';
-    width: 4px;
-    height: 100%;
-    bottom: 50%;
-    transform: translateY(50%);
-    left: 0;
-    background: var(--brown-l);
-}
-
-.coffeeholic-section .col-right .content-list .item{
-    display: flex;
-    margin: 3vw 0;
-    align-items: center;
-}
-
-.coffeeholic-section .col-right .content-list .item .image{
-    width: 40%;
-    margin-right: 24px;
-}
-
-.coffeeholic-section .col-right .content-list .item img{
-    width: 100%;
-    height: 12vw;
-    border-radius: 8px;
-    object-fit: cover;
-
-}
-
-.coffeeholic-section .col-right .content-list .item .content{
-    width: 60%;
-}
-
-.coffeeholic-section .col-right .content-list .item a{
-    line-height: 28px;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #000;
-}
-
-.coffeeholic-section .col-right .content-list .item a:hover{
-    color: var(--brown-l);
-}
-
-.coffeeholic-section .col-right .content-list .item .date{
-    color: #8c8c8c;
-    font-size: 14px;
-}
-
-.coffeeholic-section .col-right .content-list .btn{
-    display: flex;
-    justify-content: center;
-}
-
-.coffeeholic-section .col-right .content-list .btn a{
-    text-decoration: none;
-    font-size: 18px;
-    font-family: var(--Baloo-2-SemiBold);
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 5px 70px;
-}
-
-.coffeeholic-section .col-right .content-list .btn a:hover{
-    color: var(--brown-l);
-}
-
-.teaholic-section {
-
-}
-
-.teaholic-section {
-    display: flex;
-}
-
-.teaholic-section .col-left {
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    padding: 50px 30px 50px 0;
-}
-
-.teaholic-section .col-left img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.teaholic-section .col-right {
-    width: 65%;
-    margin: 0 40px 0 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.teaholic-section .col-right>h2 {
-    position: relative;
-    padding-left: 15px;
-    margin-top: 10px;
-}
-
-.teaholic-section .col-right>h2::after {
-    position: absolute;
-    content: '';
-    width: 4px;
-    height: 100%;
-    bottom: 50%;
-    transform: translateY(50%);
-    left: 0;
-    background: var(--brown-l);
-}
-
-.teaholic-section .col-right .content-list .item{
-    display: flex;
-    margin: 3vw 0;
-    align-items: center;
-}
-
-.teaholic-section .col-right .content-list .item .image{
-    width: 40%;
-    margin-right: 24px;
-}
-
-.teaholic-section .col-right .content-list .item img{
-    width: 100%;
-    height: 12vw;
-    border-radius: 8px;
-    object-fit: cover;
-
-}
-
-.teaholic-section .col-right .content-list .item .content{
-    width: 60%;
-}
-
-.teaholic-section .col-right .content-list .item a{
-    line-height: 28px;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #000;
-}
-
-.teaholic-section .col-right .content-list .item a:hover{
-    color: var(--brown-l);
-}
-
-.teaholic-section .col-right .content-list .item .date{
-    color: #8c8c8c;
-    font-size: 14px;
-}
-
-.teaholic-section .col-right .content-list .btn{
-    display: flex;
-    justify-content: center;
-}
-
-.teaholic-section .col-right .content-list .btn a{
-    text-decoration: none;
-    font-size: 18px;
-    font-family: var(--Baloo-2-SemiBold);
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 5px 70px;
-}
-
-.teaholic-section .col-right .content-list .btn a:hover{
-    color: var(--brown-l);
-}
-
+/* Begin coffeeholic anh blog */
+.coffeeholic-section,
 .blog-section {
-
-}
-
-.blog-section {
+    padding: 16px 0;
     background-color: var(--brown-s);
-    display: flex;
 }
 
+.coffeeholic-section .col-left,
 .blog-section .col-left {
-    width: 44%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    align-items: center;
     padding: 50px;
 }
 
+.coffeeholic-section .col-left img,
 .blog-section .col-left img {
     width: 100%;
     object-fit: cover;
+    box-shadow: 0 2px 15px #585858;
 }
 
+.coffeeholic-section .col-right,
 .blog-section .col-right {
-    width: 56%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 20px;
+    padding: 0;
 }
 
-.blog-section .col-right>h2 {
+.coffeeholic-section .col-right>h3,
+.blog-section .col-right>h3 {
+    font-weight: bold;
     position: relative;
     padding-left: 15px;
-    margin-top: 10px;
+    margin: 16px 0;
 }
 
-.blog-section .col-right>h2::after {
+.coffeeholic-section .col-right>h3::after,
+.blog-section .col-right>h3::after {
     position: absolute;
     content: '';
     width: 4px;
@@ -618,52 +505,169 @@ html {
     background: var(--brown-l);
 }
 
-.blog-section .col-right .content-list .item{
-    display: flex;
-    margin: 3vw 0;
-    align-items: center;
+.coffeeholic-section .col-right .content-list .item,
+.blog-section .col-right .content-list .item {
+    margin: 32px 0;
 }
 
-.blog-section .col-right .content-list .item .image{
-    width: 40%;
-    margin-right: 24px;
-
-}
-
-.blog-section .col-right .content-list .item img{
+.coffeeholic-section .col-right .content-list .item img,
+.blog-section .col-right .content-list .item img {
     width: 100%;
-    height: 12vw;
+    height: 14vw;
     border-radius: 8px;
     object-fit: cover;
+    transform: scale(1, 1);
+    transition: all 0.3s ease-in-out;
 }
 
-.blog-section .col-right .content-list .item .content{
-    width: 60%;
+.coffeeholic-section .col-right .content-list .item img:hover,
+.blog-section .col-right .content-list .item img:hover {
+    box-shadow: 0 4px 10px #585858;
+    transform: scale(1.03, 1.03);
+    transition: all 0.3s ease-in-out;
 }
 
-.blog-section .col-right .content-list .item a{
+.coffeeholic-section .col-right .content-list .item .content a,
+.blog-section .col-right .content-list .item .content a {
     line-height: 28px;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
     color: #000;
+    transition: color 0.2s ease-in-out;
 }
 
-.blog-section .col-right .content-list .item a:hover{
+.coffeeholic-section .col-right .content-list .item .content a:hover,
+.blog-section .col-right .content-list .item .content a:hover {
     color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
 }
 
-.blog-section .col-right .content-list .item .date{
+.coffeeholic-section .col-right .content-list .item .date,
+.blog-section .col-right .content-list .item .date {
     color: #8c8c8c;
     font-size: 14px;
 }
 
-.blog-section .col-right .content-list .btn{
+.coffeeholic-section .col-right .content-list .button,
+.blog-section .col-right .content-list .button {
     display: flex;
     justify-content: center;
+    margin: 16px 0;
 }
 
-.blog-section .col-right .content-list .btn a{
+.coffeeholic-section .col-right .content-list .button a,
+.blog-section .col-right .content-list .button a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: var(--Baloo-2-SemiBold);
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: auto;
+    border-radius: 8px;
+    padding: 5px 70px;
+    transition: color 0.2s ease-in-out;
+}
+
+.coffeeholic-section .col-right .content-list .btn a:hover,
+.blog-section .col-right .content-list .btn a:hover {
+    color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
+}
+/* End coffeeholic anh blog */
+
+/* Begin teaholic */
+.teaholic-section {
+    display: flex;
+    padding: 16px 0;
+}
+
+.teaholic-section .col-right {
+    padding: 40px 30px 40px 30px;
+    display: grid;
+    align-items: center;
+}
+
+.teaholic-section .col-right img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 2px 15px #585858;
+}
+
+.teaholic-section .col-left {
+   padding:0 0 0 20px;
+}
+
+.teaholic-section .col-left>h3 {
+    font-weight: bold;
+    position: relative;
+    padding-left: 15px;
+    margin: 16px 0;
+}
+
+.teaholic-section .col-left>h3::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 100%;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 0;
+    background: var(--brown-l);
+}
+
+.teaholic-section .col-left .content-list .item{
+    margin: 32px 0;
+}
+
+.teaholic-section .col-left .content-list .item img{
+    width: 100%;
+    height: 14vw;
+    border-radius: 8px;
+    object-fit: cover;
+    transform: scale(1,1);
+    transition: all 0.3s ease-in-out;
+}
+
+.teaholic-section .col-left .content-list .item img:hover{
+    transform: scale(1.03,1.03);
+    box-shadow: 0 3px 10px #585858;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.teaholic-section .col-left .content-list .item .content{
+    padding: 0;
+}
+
+.teaholic-section .col-left .content-list .item .content a{
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.2s ease-in-out;
+}
+
+.teaholic-section .col-left .content-list .item .content a:hover{
+    color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
+}
+
+.teaholic-section .col-left .content-list .item .date{
+    color: #8c8c8c;
+    font-size: 14px;
+}
+
+.teaholic-section .col-left .content-list .button{
+    display: flex;
+    justify-content: center;
+    margin: 32px 0;
+    cursor: auto;
+}
+
+.teaholic-section .col-left .content-list .button a{
     text-decoration: none;
     font-size: 18px;
     font-family: var(--Baloo-2-SemiBold);
@@ -674,35 +678,147 @@ html {
     padding: 5px 70px;
 }
 
-.blog-section .col-right .content-list .btn a:hover{
+.teaholic-section .col-left .content-list .btn a:hover{
+    color: var(--brown-l);
+}
+/* End teaholic */
+
+/* Begin coffeeholic - teaholic - blog content */
+.coffeeholic-content .container-fluid,
+.teaholic-content .container-fluid,
+.blog-content .container-fluid {
+    background-color: #fff;
+    padding: 30px 80px;
+}
+
+.coffeeholic-content .col-left,
+.teaholic-content .col-left,
+.blog-content .col-left {
+    display: grid;
+    justify-content: center;
+    flex: 0 0 30%;
+    align-self: flex-start;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 80px;
+}
+
+.coffeeholic-content .col-left h3,
+.teaholic-content .col-left h3,
+.blog-content .col-left h3 {
+    margin-top: 18px;
+    font-size: 20px;
+    font-weight: bold;
     color: var(--brown-l);
 }
 
+.coffeeholic-content .col-left ul,
+.teaholic-content .col-left ul,
+.blog-content .col-left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.coffeeholic-content .col-left ul a,
+.teaholic-content .col-left ul a,
+.blog-content .col-left ul a {
+    text-decoration: none;
+}
+
+.coffeeholic-content .col-left ul a li,
+.teaholic-content .col-left ul a li,
+.blog-content .col-left ul a li {
+    font-family: var(--Baloo-2-Medium);
+    color: #575757;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.coffeeholic-content .col-left ul a:hover li,
+.teaholic-content .col-left ul a:hover li,
+.blog-content .col-left ul a:hover li {
+    color: var(--brown-l);
+    transition: color 0.3s ease-in-out; 
+}
+
+.coffeeholic-content .col-right,
+.teaholic-content .col-right,
+.blog-content .col-right {
+    padding: 0;
+}
+
+.coffeeholic-content .col-right .item,
+.teaholic-content .col-right .item,
+.blog-content .col-right .item {
+    margin: 32px 0;
+}
+
+.coffeeholic-content .col-right .item img,
+.teaholic-content .col-right .item img,
+.blog-content .col-right .item img {
+    width: 100%;
+    height: 14vw;
+    border-radius: 8px;
+    object-fit: cover;
+    transform: scale(1,1);
+    transition: all 0.3s ease-in-out;
+}
+
+.coffeeholic-content .col-right .item img:hover,
+.teaholic-content .col-right .item img:hover,
+.blog-content .col-right .item img:hover {
+    transform: scale(1.02, 1.02);
+    box-shadow: 0 2px 15px #585858;
+    transition: all 0.3s ease-in-out;
+}
+
+.coffeeholic-content .col-right .item .content a,
+.teaholic-content .col-right .item .content a,
+.blog-content .col-right .item .content a {
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+}
+
+.coffeeholic-content .col-right .item .content a:hover,
+.teaholic-content .col-right .item .content a:hover,
+.blog-content .col-right .item .content a:hover {
+    color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
+}
+
+.coffeeholic-content .col-right .item .date,
+.teaholic-content .col-right .item .date,
+.blog-content .col-right .item .date {
+    color: #8c8c8c;
+    font-size: 14px;
+}
+/* End coffeeholic content */
+
 /* End all-content chuyen nha */
+
+
 
 /* Begin Footer */
 footer {
     background-color: #424242;
 }
 
-footer .container {
-    margin: 0 50px;
-}
-
 footer .row-linklist {
-    display: flex;
     line-height: 1.4;
-    /* align-items: center; */
-    padding: 30px 0;
+    padding: 30px 16px;
 }
 
-footer .row-linklist h3 {
+footer .row-linklist h5 {
     color: #fff;
     padding: 8px 0;
 }
 
 footer .row-linklist ul {
     list-style: none;
+    padding: 0;
 }
 
 footer .row-linklist ul li {
@@ -712,12 +828,12 @@ footer .row-linklist ul li {
 footer .row-linklist ul a {
     text-decoration: none;
     color: #ccc;
-    display: flex;
-    align-items: center;
+    transition: color 0.3s ease-in-out;
 }
 
 footer .row-linklist ul a:hover {
     color: #f0f0f0;
+    transition: color 0.3s ease-in-out;
 }
 
 footer .row-linklist ul a i {
@@ -726,13 +842,18 @@ footer .row-linklist ul a i {
 }
 
 footer .row-linklist .col-image {
-    display: flex;
+    padding: 0;
+    overflow: hidden;
 }
 
 footer .row-linklist img {
     width: 100%;
     height: 14vw;
     border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.07, 1.07);
+    }
 }
 
 footer .row-line {
@@ -743,11 +864,12 @@ footer .row-line {
 
 footer .row-link-contact {
     padding: 30px 0;
+    display: flex;
 }
 
 footer .row-link-contact a {
     text-decoration: none;
-    padding: 0 15px;
+    margin: 0 15px;
 }
 
 footer .row-link-contact a i {
@@ -755,9 +877,24 @@ footer .row-link-contact a i {
     color: #fff;
     border-radius: 50%;
     padding: 8px;
+    display: flex;
+    height: 41px;
+    transition: all 0.3s ease-in-out;
 }
 
 footer .row-link-contact a:hover i {
     background-color: #585858;
+    transition: all 0.3s ease-in-out;
 }
 /* End Footer */
+
+
+@keyframes modalIn {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}

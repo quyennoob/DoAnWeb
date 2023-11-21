@@ -1,596 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <link
-            rel="stylesheet"
-            href="./assets/fonts/fonts-Baloo2/stylesheet.css"
-        />
-        <link
-            rel="stylesheet"
-            href="./assets/fonts/fonts-Baron/stylesheet.css"
-        />
-        <link
-            rel="stylesheet"
-            href="./assets/fonts/themify-icons/themify-icons.css"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <title>The Coffee House</title>
-    </head>
 
-    <body>
-        <header>
-            <div class="header">
-                <a href="#" class="home-page">THE COFFEE HOUSE</a>
-                <ul class="navigation">
-                    <li><a href="./assets/html/menu.html">Menu</a></li>
-                    <li>
-                        <a href="./assets/html/chuyennha.html">Chuyện Cà Phê</a>
-                    </li>
-                    <li><a href="#">Giới Thiệu</a></li>
-                    <li><a href="#">Liên Hệ</a></li>
-                </ul>
-                <div class="sign-in">
-                    <a href="#">Đăng nhập</a>
-                </div>
-                <div class="sign-up">
-                    <a href="#">Đăng ký</a>
-                </div>
-            </div>
-        </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Begin Slider -->
-        <div
-            id="carouselExampleInterval"
-            class="carousel slide"
-            data-bs-ride="carousel"
-        >
-            <div class="carousel-indicators">
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide-to="3"
-                    aria-label="Slide 4"
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleInterval"
-                    data-bs-slide-to="4"
-                    aria-label="Slide 5"
-                ></button>
+    <!-- link logo trang web -->
+    <link rel="icon" href="./assets/img/logo-cup-coffee.png">
+
+    <!-- link file css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style-responsive.css">
+
+    <!-- link font chữ -->
+    <link rel="stylesheet" href="./assets/fonts/fonts-Baloo2/stylesheet.css">
+    <link rel="stylesheet" href="./assets/fonts/fonts-Baron/stylesheet.css">
+
+    <!-- link icon -->
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css'>
+
+    <!-- link bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- link jQuery -->
+    <script src="./assets/jQuery/jquery-3.7.1.min.js"></script>
+
+    <!-- link file js -->
+    <script src="./assets/js/style.js"></script>
+
+    <title>The Coffee House</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="header header-des">
+            <a href="#" class="home-page">THE COFFEE HOUSE</a>
+            <ul class="navigation js-navigation">
+                <li><a href="./assets/html/menu.html">Menu</a></li>
+                <li><a href="./chuyennha.html">Chuyện Cà Phê</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+            <div class="sign-in">
+                <a href="#">Đăng nhập</a>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="8000">
-                    <img
-                        src="./assets/img/Slider/slide1.jpg"
-                        class="d-block w-100"
-                        alt="slide1"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="./assets/img/Slider/slide2.jpg"
-                        class="d-block w-100"
-                        alt="slide2"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="./assets/img/Slider/slide3.jpg"
-                        class="d-block w-100"
-                        alt="slide3"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="./assets/img/Slider/slide4.jpg"
-                        class="d-block w-100"
-                        alt="slide4"
-                    />
-                </div>
-                <div class="carousel-item">
-                    <img
-                        src="./assets/img/Slider/slide5.jpg"
-                        class="d-block w-100"
-                        alt="slide5"
-                    />
-                </div>
+            <div class="sign-up">
+                <a href="#">Đăng ký</a>
             </div>
-            <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev"
-            >
-                <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next"
-            >
-                <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-        <!-- End Slider -->
+    </header>
 
-        <!-- Begin main-content -->
-        <div class="home-content justify-content-sm-center">
-            <!-- Begin menu -->
-            <div class="menu-home"></div>
-            <!-- End menu -->
+    <header>
+        <div class="header header-tab">
+            <i class="ti-close js-close-menu"></i>
+            <i class="ti-menu js-open-menu"></i>
+            <a href="#" class="home-page">THE COFFEE HOUSE</a>
+            <ul class="navigation js-navigation">
+                <li><a href="./assets/html/menu.html">Menu</a></li>
+                <li><a href="./chuyennha.html">Chuyện Cà Phê</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+                <li class="sign-in-sm"><a href="#">Đăng nhập</a></li>
+                <li class="sign-up-sm"><a href="#">Đăng ký</a></li>
+            </ul>
+        </div>
+    </header>
 
-            <!-- Begin thu ngay -->
-            <div class="thu-ngay">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6 col-left"></div>
-                        <div class="col-sm-6 col-right">
-                            <div class="img-tra-xanh text-center">
-                                <img
-                                    src="./assets/img/Thu-Ngay/tagline.jpg"
-                                    alt="Trà xanh Tây Bắc"
-                                />
+    <!-- Begin Slider -->
+    <div id="carouselExampleInterval" class="carousel slide mob-hidden" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="./assets/img/Slider/slide1.jpg" class="d-block w-100" alt="slide1" />
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/Slider/slide2.jpg" class="d-block w-100" alt="slide2" />
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/Slider/slide3.jpg" class="d-block w-100" alt="slide3" />
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/Slider/slide4.jpg" class="d-block w-100" alt="slide4" />
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/Slider/slide5.jpg" class="d-block w-100" alt="slide5" />
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div id="carouselExampleAutoplaying" class="carousel slide des-hidden" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/img/Slider/slide1-mobile.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/Slider/slide2-mobile.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/Slider/slide3-mobile.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/Slider/slide4-mobile.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/Slider/slide5-mobile.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- End Slider -->
+
+    <!-- Begin main-content -->
+    <div class="home-content justify-content-sm-center">
+        <!-- Begin menu -->
+        <div class="menu-home"></div>
+        <!-- End menu -->
+
+        <!-- Begin thu ngay -->
+        <div class="thu-ngay">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-left"></div>
+                    <div class="col-sm-6 col-right">
+                        <div class="img-tra-xanh text-center">
+                            <img src="./assets/img/Thu-Ngay/tagline.jpg" alt="Trà xanh Tây Bắc" />
+                        </div>
+                        <div class="content">
+                            <p>
+                                Được trồng trọt và chăm chút kỹ lưỡng, nuôi
+                                dưỡng từ thổ nhưỡng phì nhiêu, nguồn nước
+                                mát lành, bao bọc bởi mây và sương cùng nền
+                                nhiệt độ mát mẻ quanh năm, những búp trà ở
+                                Tây Bắc mập mạp và xanh mướt, hội tụ đầy đủ
+                                dưỡng chất, sinh khí, và tinh hoa đất trời.
+                                Chính khí hậu đặc trưng cùng phương pháp
+                                canh tác của đồng bào dân tộc nơi đây đã tạo
+                                ra Trà Xanh vị mộc dễ uống, dễ yêu, không
+                                thể trộn lẫn với bất kỳ vùng miền nào khác.
+                            </p>
+                        </div>
+                        <button class="btn-thu-ngay">
+                            <p>Thử ngay</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End thu ngay -->
+
+        <!-- Begin tim-hieu-them -->
+        <div class="tim-hieu-them">
+            <div class="container-fluid m-0">
+                <div class="row">
+                    <div class="content-tim-hieu-them col-md-5 col-left">
+                        <h3>SIGNATURE<br />By The Coffee House</h3>
+                        <p>
+                            Nơi cuộc hẹn hò đầy với Cà phê đặc sản, món ăn
+                            đa bản và không gian cảm hứng
+                        </p>
+                        <button class="btn-tim-hieu-them">
+                            Tìm hiểu thêm
+                        </button>
+                        <div class="btn-next">
+                            <i class="ti-solid ti-arrow-circle-left"></i>
+                            <i class="ti-solid ti-arrow-circle-right"></i>
+                        </div>
+                    </div>
+                    <div id="carouselExampleAutoplaying" class="carousel slide col-md-7 col-right p-0"
+                        data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="4000">
+                                <img src="./assets/img/Tim-hieu-them/SIGNATURE/slide1.jpg" class="d-block w-100"
+                                    alt="slide1" />
                             </div>
-                            <div class="content">
-                                <p>
-                                    Được trồng trọt và chăm chút kỹ lưỡng, nuôi
-                                    dưỡng từ thổ nhưỡng phì nhiêu, nguồn nước
-                                    mát lành, bao bọc bởi mây và sương cùng nền
-                                    nhiệt độ mát mẻ quanh năm, những búp trà ở
-                                    Tây Bắc mập mạp và xanh mướt, hội tụ đầy đủ
-                                    dưỡng chất, sinh khí, và tinh hoa đất trời.
-                                    Chính khí hậu đặc trưng cùng phương pháp
-                                    canh tác của đồng bào dân tộc nơi đây đã tạo
-                                    ra Trà Xanh vị mộc dễ uống, dễ yêu, không
-                                    thể trộn lẫn với bất kỳ vùng miền nào khác.
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="./assets/img/Tim-hieu-them/SIGNATURE/slide2.jpg" class="d-block w-100"
+                                    alt="slide2" />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="./assets/img/Tim-hieu-them/SIGNATURE/slide3.jpg" class="d-block w-100"
+                                    alt="slide3" />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="./assets/img/Tim-hieu-them/SIGNATURE/slide4.jpg" class="d-block w-100"
+                                    alt="slide4" />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="4000">
+                                <img src="./assets/img/Tim-hieu-them/SIGNATURE/slide5.jpg" class="d-block w-100"
+                                    alt="slide5" />
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End tim-hieu-them -->
+
+        <!-- Begin chuyen ca phe -->
+        <div class="chuyen-nha">
+            <div class="container-fluid">
+                <div class="header-chuyen-nha row">
+                    <img src="./assets/img/Chuyen-nha/coffee_32x32.png" alt="Logo Cà phê" class="col-md-6">
+                    <h2 class="col-md-6">Chuyện Cà Phê</h2>
+                </div>
+                <div class="content-chuyen-nha">
+                    <div class="coffeeholic">
+                        <div class="title"><a href="./chuyennha.html" class="text-decoration-none">Coffeeholic</a></div>
+                        <div class="content-list row">
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
+                                    alt="Ảnh chuyện nhà">
+                                <p class="date">12/02/2023</p>
+                                <h4 class="title ellipsis">SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ PHÊ CỦA THE COFFEE HOUSE ĐÃ
+                                    QUAY TRỞ LẠI</h4>
+                                <p class="text truncate">Mới đây, các "tín đồ" cà phê đang bàn tán xôn xao về SIGNATURE
+                                    - Biểu tượng văn hóa cà phê của The Coffee House đã quay trở lại.
+                                    Một lời hẹn làm bao người xao xuyến
+                                    Vừa qua, Fanpage Nhà đã hé mở những thông tin đầu tiên về "SIGNATURE by The Coffee
+                                    House" kèm lời hẹn "Hôm nay bạn có hẹn chưa? Mình cà phê nhé!".</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/uong-gi-khi-toi-signature.png" alt="Ảnh chuyện nhà">
+                                <p class="date">09/02/2023</p>
+                                <h4 class="title ellipsis">UỐNG GÌ KHI TỚI SIGNATURE BY THE COFFEE HOUSE?</h4>
+                                <p class="text truncate">Vừa qua, The Coffee House chính thức khai trương cửa hàng
+                                    SIGNATURE by The Coffee House, chuyên phục vụ cà phê đặc sản, các món ăn đa bản sắc
+                                    ấy ý tưởng từ cà phê và trà và gây ấn tượng với không gian cảm hứng bài trí hành
+                                    trình cà phê đặc sắc, làm nên một cuộc hẹn tròn đầy.</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/ca-phe-sua-espressco.jpg" alt="Ảnh chuyện nhà">
+                                <p class="date">22/09/2023</p>
+                                <h4 class="title ellipsis">CÀ PHÊ SỮA ESPRESSO THE COFFEE HOUSE - BẬT LON BẬT VỊ NGON
+                                </h4>
+                                <p class="text truncate">Cà phê sữa Espresso là một lon cà phê sữa giải khát với hương
+                                    vị cà phê đậm đà từ 100% cà phê Robusta cùng vị sữa béo nhẹ cho bạn một trải nghiệm
+                                    hương vị cà phê hoàn toàn mới.</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 col des-hidden">
+                                <img src="./assets/img/Chuyen-nha/cach-nhan-biet-huong-vi-ca-phe.jpg"
+                                    alt="Ảnh chuyện nhà">
+                                <p class="date">15/12/2023</p>
+                                <h4 class="title ellipsis">CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ ROBUSTA NGUYÊN CHẤT DỄ DÀNG
+                                    NHẤT</h4>
+                                <p class="text truncate">Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử
+                                    dụng phổ biến ở Việt Nam và nhiều nước khác trên thế giới. Với nhiều đặc điểm riêng,
+                                    không quá khó để có thể nhận ra hương vị của loại cà phê trứ danh này.
+                                    Đặc điểm cà phê Robusta
+                                    Về hình dạng, hạt cà phê Robusta có hình tròn, đường kính khoảng 10 - 13 mm. Hạt
+                                    Robusta có màu nâu đậm và hàm lượng caffeine từ 3 - 4%, trong khi đó Arabica chỉ
+                                    chiếm từ 1 - 2%. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-chuyen-nha">
+                    <div class="coffeeholic">
+                        <div class="title"><a href="./chuyennha.html" class="text-decoration-none">Teaholic</a></div>
+                        <div class="content-list row">
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/bo-suu-tap-toan-keo-thom.jpg" alt="Ảnh chuyện nhà">
+                                <p class="date">16/01/2023</p>
+                                <h4 class="title ellipsis">BỘ SƯU TẬP CẦU TOÀN KÈO THƠM: "VÍA" MAY MẮN KHÔNG THỂ BỎ LỠ
+                                    TẾT NÀY</h4>
+                                <p class="text truncate">Tết nay vẫn giống Tết xưa, không hề mai một nét văn hoá truyền
+                                    thống mà còn thêm vào những hoạt động “xin vía” hiện đại, trẻ trung. Ví như giới trẻ
+                                    đang lên lịch ghé The Coffee House - “địa điểm xin vía mới nổi” để vừa thưởng thức
+                                    bộ sưu tập thức uống dành riêng cho Tết vừa mong năm mới Cầu Toàn Kèo Thơm.</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/khuay-de-thay-trang.jpg" alt="Ảnh chuyện nhà">
+                                <p class="date">16/08/2023</p>
+                                <h4 class="title ellipsis">“KHUẤY ĐỂ THẤY TRĂNG" - KHUẤY LÊN NIỀM HẠNH PHÚC: TRẢI NGHIỆM
+                                    KHÔNG THỂ BỎ LỠ MÙA TRUNG THU NÀY</h4>
+                                <p class="text truncate">Năm 2022 là năm đề cao sức khỏe tinh thần nên giới trẻ muốn tận
+                                    hưởng một Trung thu với nhiều trải nghiệm mới mẻ, rôm rả cùng bạn bè và người thân.
+                                    Và trải nghiệm độc đáo “Khuấy để thấy trăng” của The Coffee House như khuấy lên niềm
+                                    hạnh phúc, nao nức về một trung thu đầy thú vị mà không người trẻ nào muốn bỏ lỡ.
                                 </p>
                             </div>
-                            <button class="btn-thu-ngay">
-                                <p>Thử ngay</p>
-                            </button>
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/uong-tra-hibiscus.png" alt="Ảnh chuyện nhà">
+                                <p class="date">25/05/2023</p>
+                                <h4 class="title ellipsis">UỐNG TRÀ HIBISCUS CÓ BỊ MẤT NGỦ HAY KHÔNG?</h4>
+                                <p class="text truncate">Trà hoa Hibiscus luôn nằm trong top những loại trà healthy được
+                                    nhiều người ưa chuộng bởi sở hữu nhiều dược tính tốt cho sức khỏe và sắc đẹp. Tuy
+                                    thế, nhiều người vẫn băn khoăn không biết Hibiscus có chứa caffeine, gây mất ngủ hay
+                                    không?</p>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 col des-hidden">
+                                <img src="./assets/img/Chuyen-nha/khuay-de-thay-trang-hot-trend.jpg"
+                                    alt="Ảnh chuyện nhà">
+                                <p class="date">12/08/2023</p>
+                                <h4 class="title ellipsis">“KHUẤY ĐỂ THẤY TRĂNG” - HOT TREND MỞ MÀN MÙA TRUNG THU HẤP
+                                    DẪN ĐÔNG ĐẢO GIỚI TRẺ</h4>
+                                <p class="text truncate">“Khuấy để thấy trăng” - trải nghiệm “ có 1 không 2” được The
+                                    Coffee House tung ra cho mùa trung thu năm nay, hứa hẹn làm giới trẻ háo hức rủ nhau
+                                    thử.
+                                    Nếu các dịp Tết Đoàn viên trước, niềm mong đợi của nhiều người chỉ là bánh trung thu
+                                    có vị gì mới thì năm nay The Coffee House lại tạo cho khách hàng một bất ngờ thú vị.
+                                    Và chiếc “hint” mà Nhà Cà phê nhá hàng là “Khuấy để thấy trăng” khiến dân tình bàn
+                                    tán rôm rả. </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- End thu ngay -->
-
-            <!-- Begin tim-hieu-them -->
-            <div class="tim-hieu-them">
-                <div class="container-fluid m-0">
-                    <div class="row">
-                        <div class="content-tim-hieu-them col-sm-5 col-left">
-                            <h3>SIGNATURE<br />By The Coffee House</h3>
-                            <p>
-                                Nơi cuộc hẹn hò đầy với Cà phê đặc sản, món ăn
-                                đa bản và không gian cảm hứng
-                            </p>
-                            <button class="btn-tim-hieu-them">
-                                Tìm hiểu thêm
-                            </button>
-                            <div class="btn-next">
-                                <i class="ti-solid ti-arrow-circle-left"></i>
-                                <i class="ti-solid ti-arrow-circle-right"></i>
+                <div class="content-chuyen-nha">
+                    <div class="coffeeholic">
+                        <div class="title"><a href="./chuyennha.html" class="text-decoration-none">Blog</a></div>
+                        <div class="content-list row">
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/nguoc-len-tay-bac.jpg" alt="Ảnh chuyện nhà">
+                                <p class="date">16/08/2023</p>
+                                <h4 class="title ellipsis">NGƯỢC LÊN TÂY BẮC GÓI VỊ MỘC VỀ XUÔI</h4>
+                                <p class="text truncate">Những dải ruộng bậc thang, các cô gái Thái với điệu múa xòe
+                                    hoa, muôn cung đường ngợp mùa hoa… đó là rẻo cao Tây Bắc luôn làm say lòng lữ khách
+                                    miền xuôi. Và nép mình bên dưới núi non hùng vĩ ấy còn có món quà gói trọn vị thiên
+                                    nhiên: trà xanh Tây Bắc.</p>
                             </div>
-                        </div>
-                        <div
-                            id="carouselExampleAutoplaying"
-                            class="carousel slide col-sm-7 col-right p-0"
-                            data-bs-ride="carousel"
-                        >
-                            <div class="carousel-indicators">
-                                <button
-                                    type="button"
-                                    data-bs-target="#carouselExampleAutoplaying"
-                                    data-bs-slide-to="0"
-                                    class="active"
-                                    aria-current="true"
-                                    aria-label="Slide 1"
-                                ></button>
-                                <button
-                                    type="button"
-                                    data-bs-target="#carouselExampleAutoplaying"
-                                    data-bs-slide-to="1"
-                                    aria-label="Slide 2"
-                                ></button>
-                                <button
-                                    type="button"
-                                    data-bs-target="#carouselExampleAutoplaying"
-                                    data-bs-slide-to="2"
-                                    aria-label="Slide 3"
-                                ></button>
-                                <button
-                                    type="button"
-                                    data-bs-target="#carouselExampleAutoplaying"
-                                    data-bs-slide-to="3"
-                                    aria-label="Slide 4"
-                                ></button>
-                                <button
-                                    type="button"
-                                    data-bs-target="#carouselExampleAutoplaying"
-                                    data-bs-slide-to="4"
-                                    aria-label="Slide 5"
-                                ></button>
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/nghe-nha-mach-nho.jpg" alt="Ảnh chuyện nhà">
+                                <p class="date">01/07/2023</p>
+                                <h4 class="title ellipsis">NGHE NHÀ MÁCH NHỎ BÍ KÍP HEALTHY GỌN NHẸ, AI CŨNG ÁP DỤNG
+                                    ĐƯỢC</h4>
+                                <p class="text truncate">Sống lành mạnh (healthy) đang là xu hướng được nhiều người trẻ
+                                    ưa chuộng. Tuy nhiên, không đơn thuần là việc chăm chút đi theo các chế độ ăn uống
+                                    hoặc tập luyện khắt khe, ngày nay healthy phải “easy” để vừa khỏe mạnh, vừa thoải
+                                    mái tận hưởng mọi cuộc vui!</p>
                             </div>
-                            <div class="carousel-inner">
-                                <div
-                                    class="carousel-item active"
-                                    data-bs-interval="5000"
-                                >
-                                    <img
-                                        src="./assets/img/Tim-hieu-them/SIGNATURE/slide1.jpg"
-                                        class="d-block w-100"
-                                        alt="slide1"
-                                    />
-                                </div>
-                                <div
-                                    class="carousel-item"
-                                    data-bs-interval="5000"
-                                >
-                                    <img
-                                        src="./assets/img/Tim-hieu-them/SIGNATURE/slide2.jpg"
-                                        class="d-block w-100"
-                                        alt="slide2"
-                                    />
-                                </div>
-                                <div
-                                    class="carousel-item"
-                                    data-bs-interval="5000"
-                                >
-                                    <img
-                                        src="./assets/img/Tim-hieu-them/SIGNATURE/slide3.jpg"
-                                        class="d-block w-100"
-                                        alt="slide3"
-                                    />
-                                </div>
-                                <div
-                                    class="carousel-item"
-                                    data-bs-interval="5000"
-                                >
-                                    <img
-                                        src="./assets/img/Tim-hieu-them/SIGNATURE/slide4.jpg"
-                                        class="d-block w-100"
-                                        alt="slide4"
-                                    />
-                                </div>
-                                <div
-                                    class="carousel-item"
-                                    data-bs-interval="5000"
-                                >
-                                    <img
-                                        src="./assets/img/Tim-hieu-them/SIGNATURE/slide5.jpg"
-                                        class="d-block w-100"
-                                        alt="slide5"
-                                    />
-                                </div>
+                            <div class="col-lg-4 col-sm-6 col">
+                                <img src="./assets/img/Chuyen-nha/di-vay-lanh.jpg" alt="Ảnh chuyện nhà">
+                                <p class="date">10/07/2023</p>
+                                <h4 class="title ellipsis">ĐI "VAY LẠNH" - TỪ VỰNG HẸN HÒ MỚI NỔI, CẬP NHẬT NGAY KẺO LỖI
+                                    THỜI</h4>
+                                <p class="text truncate">Đi “vay lạnh” - từ vựng hẹn hò mới nổi, cập nhật ngay kẻo lỗi
+                                    thời Nếu “đi trà sữa”, “đi đu đưa”... đã trở thành những lời rủ rê quen thuộc mỗi
+                                    khi hẹn hò của giới trẻ, thì mới đây khái niệm “đi vay lạnh” bất ngờ xuất hiện và
+                                    phủ sóng mạng xã hội. Nhanh chóng tạo được sự chú ý, “vay lạnh” là hoạt động giới
+                                    thiệu sản phẩm mới đầy ấn tượng từ The Coffee House.</p>
                             </div>
-                            <button
-                                class="carousel-control-prev"
-                                type="button"
-                                data-bs-target="#carouselExampleAutoplaying"
-                                data-bs-slide="prev"
-                            >
-                                <span
-                                    class="carousel-control-prev-icon"
-                                    aria-hidden="true"
-                                ></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button
-                                class="carousel-control-next"
-                                type="button"
-                                data-bs-target="#carouselExampleAutoplaying"
-                                data-bs-slide="next"
-                            >
-                                <span
-                                    class="carousel-control-next-icon"
-                                    aria-hidden="true"
-                                ></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End tim-hieu-them -->
-
-            <!-- Begin chuyen ca phe -->
-            <div class="chuyen-nha">
-                <div class="container-fluid">
-                    <div class="header-chuyen-nha">
-                        <i class="ti ti-wallet"></i>
-                        <h2>Chuyện Cà Phê</h2>
-                    </div>
-                    <div class="content-chuyen-nha">
-                        <div class="coffeeholic">
-                            <div class="title">Coffeeholic</div>
-                            <div class="content-list row">
-                                <div class="col-sm-4">
-                                    <img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                        alt="Ảnh chuyện nhà"
-                                    />
-                                    <p class="date">12/02/2023</p>
-                                    <h2 class="title ellipsis">
-                                        SIGNATURE - BIỂU TƯỢNG VĂN HÓA CỦA THE
-                                        COFFEE HOUSE
-                                    </h2>
-                                    <p class="text truncate">
-                                        Mới đây, các "tín đồ" cà phê đang bàn
-                                        tán xôn xao về SIGNATURE - Biểu tượng
-                                        văn hóa cà phê của The Coffee House đã
-                                        quay trở lại. Một lời...
-                                    </p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <img
-                                        src="./assets/img/Chuyen-nha/lan-dau-tien-den-coffee.jpg"
-                                        alt="Ảnh chuyện nhà"
-                                    />
-                                    <p class="date">09/02/2023</p>
-                                    <h2 class="title ellipsis">
-                                        UỐNG GÌ KHI TỚI SIGNATURE BY THE COFFEE
-                                        HOUSE
-                                    </h2>
-                                    <p class="text truncate">
-                                        Vừa qua, The Coffee House chính thức
-                                        khai trương cửa hàng SIGNATURE by The
-                                        Coffee House, chuyên phục vụ cà phê đặc
-                                        sản, các món ăn đa bản sắc ấy...
-                                    </p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                        alt="Ảnh chuyện nhà"
-                                    />
-                                    <p class="date">12/02/2023</p>
-                                    <h2 class="title ellipsis">
-                                        CÀ PHÊ SỮA ESPRESSO THE COFFEE HOUSE -
-                                        BẬT LON BẬT VỊ NGON
-                                    </h2>
-                                    <p class="text truncate">
-                                        Cà phê sữa Espresso là một lon cà phê
-                                        sữa giải khát với hương vị cà phê đậm đà
-                                        từ 100% cà phê Robusta cùng vị sữa béo
-                                        nhẹ cho bạn một trải nghiệm hương vị cà
-                                        phê hoàn toàn mới. Cà phê sữa Espresso
-                                        là một lon cà phê sữa giải khát với
-                                        hương vị cà phê đậm đà từ 100% cà phê
-                                        Robusta cùng vị sữa béo nhẹ cho bạn một
-                                        trải nghiệm hương vị cà phê hoàn toàn
-                                        mới.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-chuyen-nha">
-                        <div class="coffeeholic">
-                            <div class="title">Teaholic</div>
-                            <div class="content-list row">
-                                <div class="col-sm-4">
-                                    <img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                        alt="Ảnh chuyện nhà"
-                                    />
-                                    <p class="date">12/02/2023</p>
-                                    <h2 class="title ellipsis">
-                                        SIGNATURE - BIỂU TƯỢNG VĂN HÓA CỦA THE
-                                        COFFEE HOUSE
-                                    </h2>
-                                    <p class="text truncate">
-                                        Mới đây, các "tín đồ" cà phê đang bàn
-                                        tán xôn xao về SIGNATURE - Biểu tượng
-                                        văn hóa cà phê của The Coffee House đã
-                                        quay trở lại. Một lời...
-                                    </p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                        alt="Ảnh chuyện nhà"
-                                    />
-                                    <p class="date">12/02/2023</p>
-                                    <h2 class="title ellipsis">
-                                        SIGNATURE - BIỂU TƯỢNG VĂN HÓA CỦA THE
-                                        COFFEE HOUSE
-                                    </h2>
-                                    <p class="text truncate">
-                                        Mới đây, các "tín đồ" cà phê đang bàn
-                                        tán xôn xao về SIGNATURE - Biểu tượng
-                                        văn hóa cà phê của The Coffee House đã
-                                        quay trở lại.Một lời...
-                                    </p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                        alt="Ảnh chuyện nhà"
-                                    />
-                                    <p class="date">12/02/2023</p>
-                                    <h2 class="title ellipsis">
-                                        SIGNATURE - BIỂU TƯỢNG VĂN HÓA CỦA THE
-                                        COFFEE HOUSE
-                                    </h2>
-                                    <p class="text truncate">
-                                        Mới đây, các "tín đồ" cà phê đang bàn
-                                        tán xôn xao về SIGNATURE - Biểu tượng
-                                        văn hóa cà phê của The Coffee House đã
-                                        quay trở lại.Một lời...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content-chuyen-nha">
-                        <div class="coffeeholic">
-                            <div class="title">Blog</div>
-                            <div class="content-list row">
-                                <div class="col-sm-4">
-                                    <img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                        alt="Ảnh chuyện nhà"
-                                    />
-                                    <p class="date">12/02/2023</p>
-                                    <h2 class="title ellipsis">
-                                        SIGNATURE - BIỂU TƯỢNG VĂN HÓA CỦA THE
-                                        COFFEE HOUSE
-                                    </h2>
-                                    <p class="text truncate">
-                                        Mới đây, các "tín đồ" cà phê đang bàn
-                                        tán xôn xao về SIGNATURE - Biểu tượng
-                                        văn hóa cà phê của The Coffee House đã
-                                        quay trở lại.Một lời...
-                                    </p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                        alt="Ảnh chuyện nhà"
-                                    />
-                                    <p class="date">12/02/2023</p>
-                                    <h2 class="title ellipsis">
-                                        SIGNATURE - BIỂU TƯỢNG VĂN HÓA CỦA THE
-                                        COFFEE HOUSE
-                                    </h2>
-                                    <p class="text truncate">
-                                        Mới đây, các "tín đồ" cà phê đang bàn
-                                        tán xôn xao về SIGNATURE - Biểu tượng
-                                        văn hóa cà phê của The Coffee House đã
-                                        quay trở lại.Một lời...
-                                    </p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <img
-                                        src="./assets/img/Chuyen-nha/signature-bieu-tuong-van-hoa.jpg"
-                                        alt="Ảnh chuyện nhà"
-                                    />
-                                    <p class="date">12/02/2023</p>
-                                    <h2 class="title ellipsis">
-                                        SIGNATURE - BIỂU TƯỢNG VĂN HÓA CỦA THE
-                                        COFFEE HOUSE
-                                    </h2>
-                                    <p class="text truncate">
-                                        Mới đây, các "tín đồ" cà phê đang bàn
-                                        tán xôn xao về SIGNATURE - Biểu tượng
-                                        văn hóa cà phê của The Coffee House đã
-                                        quay trở lại.Một lời...
-                                    </p>
-                                </div>
+                            <div class="col-lg-4 col-sm-6 col des-hidden">
+                                <img src="./assets/img/Chuyen-nha/chiec-ly-doi-mau.jpg"
+                                    alt="Ảnh chuyện nhà">
+                                <p class="date">15/12/2023</p>
+                                <h4 class="title ellipsis">CHIẾC LY ĐỔI MÀU "NGÀN NGƯỜI THEO ĐUỔI" ĐÃ QUAY TRỞ LẠI, LẸ
+                                    CHÂN BẮT TREND NGAY KẺO TIẾC</h4>
+                                <p class="text truncate">Bộ sản phẩm Trà sữa Merry CloudTea trong chiếc ly đổi màu từ
+                                    The Coffee House hiện đang“làm mưa làm gió" từ mạng xã hội tới đời thực, khiến giới
+                                    trẻ “đứng ngồi không yên" để tìm cách sở hữu trước khi siêu phẩm cháy hàng một lần
+                                    nữa.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End chuyen ca phe -->
         </div>
-        <!-- End main-content -->
+        <!-- End chuyen ca phe -->
 
-        <!-- Begin Footer -->
-        <footer>
-            <div class="container-fluid">
-                <div class="row-linklist row">
-                    <div class="col-sm-3">
-                        <h5>Về chúng tôi</h5>
-                        <ul class="footer-linklist">
-                            <li><a href="#">Đồ uống của chúng tôi</a></li>
-                            <li><a href="#">Đồ ăn của chúng tôi</a></li>
-                            <li><a href="#">Dịch vụ chăm sóc khách hàng</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3">
-                        <h5>Đặt hàng và lấy hàng</h5>
-                        <ul class="footer-linklist">
-                            <li><a href="#">Đặt hàng trên Web</a></li>
-                            <li><a href="#">Đặt hàng trên App</a></li>
-                            <li>
-                                <a href="#"
-                                    >Phương thức đặt hàng và giao hàng</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3">
-                        <h5>Liên hệ</h5>
-                        <ul class="footer-linklist">
-                            <li>
-                                <a href="#"
-                                    ><i class="ti ti-user"></i>0123456789</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><i class="ti ti-location-pin"></i>182 Lê
-                                    Duẩn, TP Vinh, Nghệ An</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#"
-                                    ><i class="ti ti-email"></i
-                                    >thecoffeehouse@gmail.com</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3 col-image">
-                        <a href="#head-page"
-                            ><img
-                                src="./assets/img/image-footer.jpg"
-                                alt="Ảnh quán coffee house"
-                        /></a>
-                    </div>
+    </div>
+    <!-- End main-content -->
+
+    <!-- Begin Footer -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row-linklist row">
+                <div class="col-lg-3 col-sm-6">
+                    <h5>Về chúng tôi</h5>
+                    <ul class="footer-linklist">
+                        <li><a href="#footer">Đồ uống của chúng tôi</a></li>
+                        <li><a href="#footer">Đồ ăn của chúng tôi</a></li>
+                        <li><a href="#footer">Dịch vụ chăm sóc khách hàng</a></li>
+                    </ul>
                 </div>
-                <div class="row-line"></div>
-                <div class="row-link-contact">
-                    <a href=""><i class="ti ti-facebook"></i></a>
-                    <a href=""><i class="ti ti-instagram"></i></a>
-                    <a href=""><i class="ti ti-youtube"></i></a>
-                    <a href=""><i class="ti ti-github"></i></a>
+                <div class="col-lg-3 col-sm-6">
+                    <h5>Đặt hàng và lấy hàng</h5>
+                    <ul class="footer-linklist">
+                        <li><a href="#footer">Đặt hàng trên Web</a></li>
+                        <li><a href="#footer">Đặt hàng trên App</a></li>
+                        <li><a href="#footer">Phương thức đặt hàng và giao hàng</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <h5>Liên hệ</h5>
+                    <ul class="footer-linklist">
+                        <li><a href="tel:0123456789"><i class="ti ti-user"></i>0123456789</a></li>
+                        <li><a href="#footer"><i class="ti ti-location-pin"></i>182 Lê Duẩn, TP Vinh, Nghệ An</a></li>
+                        <li><a href="mailto:thecoffeehouse@gmail.com"><i
+                                    class="ti ti-email"></i>thecoffeehouse@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 col-image">
+                    <a href="#"><img src="./assets/img/image-footer.jpg" alt="Ảnh quán coffee house"></a>
                 </div>
             </div>
-        </footer>
-        <!-- End Footer -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+            <div class="row-line">
+
+            </div>
+            <div class="row-link-contact">
+                <a href="#footer"><i class="fi fi-brands-facebook"></i></a>
+                <a href="#footer"><i class="fi fi-brands-instagram"></i></a>
+                <a href="#footer"><i class="fi fi-brands-youtube"></i></a>
+                <a href="#footer"><i class="fi fi-brands-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>
