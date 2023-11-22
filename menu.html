@@ -14,32 +14,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <!-- link jQuery -->
-    <link rel="stylesheet" href="./assets/jQuery/jquery-3.7.1.min.js" />
+    <script src="./assets/jQuery/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/menu.js"></script>
     <!-- link css -->
     <link rel="stylesheet" href="./assets/css/menu.css" />
+    <link rel="stylesheet" href="./assets/css/menu-responsive.css">
     <title>Menu</title>
 </head>
 
 <body>
     <header>
-        <div class="header">
-            <i class="ti-close js-close-menu"></i>
-            <i class="ti-menu js-open-menu"></i>
-            <a href="./index.html" class="home-page">THE COFFEE HOUSE</a>
+        <div class="header header-des">
+            <a href="" class="home-page">THE COFFEE HOUSE</a>
             <ul class="navigation js-navigation">
                 <li><a href="./menu.html">Menu</a></li>
                 <li><a href="./chuyennha.html">Chuyện Cà Phê</a></li>
-                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="./gioi-thieu.html">Giới Thiệu</a></li>
                 <li><a href="#">Liên Hệ</a></li>
-                <li class="sign-in-sm"><a href="#">Đăng nhập</a></li>
-                <li class="sign-up-sm"><a href="#">Đăng ký</a></li>
             </ul>
             <div class="sign-in">
-                <a href="#">Đăng nhập</a>
+                <a href="./dang-nhap.html">Đăng nhập</a>
             </div>
             <div class="sign-up">
-                <a href="#">Đăng ký</a>
+                <a href="./dang-ky.html">Đăng ký</a>
             </div>
+        </div>
+    </header>
+
+    <header>
+        <div class="header header-tab">
+            <i class="ti-close js-close-menu"></i>
+            <i class="ti-menu js-open-menu"></i>
+            <a href="" class="home-page">THE COFFEE HOUSE</a>
+            <ul class="navigation js-navigation">
+                <li><a href="./menu.html">Menu</a></li>
+                <li><a href="./chuyennha.html">Chuyện Cà Phê</a></li>
+                <li><a href="./gioi-thieu.html">Giới Thiệu</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+                <li class="sign-in-sm"><a href="./dang-nhap.html">Đăng nhập</a></li>
+                <li class="sign-up-sm"><a href="./dang-ky.html">Đăng ký</a></li>
+            </ul>
+        </div>
     </header>
 
     <div class="container-fluid row product-container">
@@ -61,7 +76,7 @@
             <div id="list-product-coffee">
                 <h3 class="title-coffee">Cà Phê</h3>
                 <ul class="row p-0">
-                    <li class="product-coffee col-lg-4">
+                    <li class="product-coffee col-lg-4 col-sm-6 col-half">
                         <div class="product-item-coffee">
                             <a href=""><img src="./assets/img/menu/caphe-capuchino.jpg" alt="Capuchino"></a>
                         </div>
@@ -70,7 +85,7 @@
                             <div class="price-product-coffee">30.000đ</div>
                         </div>
                     </li>
-                    <li class="product-coffee col-lg-4">
+                    <li class="product-coffee col-lg-4 col-sm-6 col-half">
                         <div class="product-item-coffee">
                             <a href=""><img src="./assets/img/menu/caphe-den-da-khong-duong.jpg"
                                     alt="Đen đá không đường"></a>
@@ -80,7 +95,7 @@
                             <div class="price-product-coffee">25.000đ</div>
                         </div>
                     </li>
-                    <li class="product-coffee col-lg-4">
+                    <li class="product-coffee col-lg-4 col-sm-6 col-half">
                         <div class="product-item-coffee">
                             <a href=""><img src="./assets/img/menu/caphe-kem-muoi.jpg" alt="Cà phê kem muối"></a>
                         </div>
@@ -94,7 +109,7 @@
             <div id="list-product-milkTea">
                 <h3 class="title-milkTea">Trà Sữa</h3>
                 <ul class="row p-0">
-                    <li class="product-milkTea col-lg-4">
+                    <li class="product-milkTea col-lg-4 col-sm-6 col-half">
                         <div class="product-item-milkTea">
                             <a href=""><img src="./assets/img/menu/tra-sua-kem-trung.jpg" alt="Trà sữa kem trứng"></a>
                         </div>
@@ -103,7 +118,7 @@
                             <div class="price-product-milkTea">30.000đ</div>
                         </div>
                     </li>
-                    <li class="product-milkTea col-lg-4">
+                    <li class="product-milkTea col-lg-4 col-sm-6 col-half">
                         <div class="product-item-milkTea">
                             <a href=""><img src="./assets/img/menu/tra-sua-matcha.jpg" alt="Trà sữa matcha"></a>
                         </div>
@@ -112,7 +127,7 @@
                             <div class="price-product-milkTea">30.000đ</div>
                         </div>
                     </li>
-                    <li class="product-milkTea col-lg-4">
+                    <li class="product-milkTea col-lg-4 col-sm-6 col-half">
                         <div class="product-item-milkTea">
                             <a href=""><img src="./assets/img/menu/tra-sua-socola.jpg" alt="Trà sữa socola"></a>
                         </div>
@@ -126,7 +141,7 @@
             <div id="list-product-tea">
                 <h3 class="title-tea">Trà</h3>
                 <ul class="row p-0">
-                    <li class="product-tea col-lg-4">
+                    <li class="product-tea col-lg-4 col-sm-6 col-half">
                         <div class="product-item-tea">
                             <a href=""><img src="./assets/img/menu/tra-gung.jpg" alt="Trà gừng"></a>
                         </div>
@@ -135,7 +150,7 @@
                             <div class="price-product-tea">25.000đ</div>
                         </div>
                     </li>
-                    <li class="product-tea col-lg-4">
+                    <li class="product-tea col-lg-4 col-sm-6 col-half">
                         <div class="product-item-tea">
                             <a href=""><img src="./assets/img/menu/tra-chanh.jpg" alt="Trà chanh"></a>
                         </div>
@@ -144,7 +159,7 @@
                             <div class="price-product-tea">20.000đ</div>
                         </div>
                     </li>
-                    <li class="product-tea col-lg-4">
+                    <li class="product-tea col-lg-4 col-sm-6 col-half">
                         <div class="product-item-tea">
                             <a href=""><img src="./assets/img/menu/tra-dao.jpg" alt="Trà đào"></a>
                         </div>
@@ -158,7 +173,7 @@
             <div id="list-product-vitamin">
                 <h3 class="title-vitamin">Sinh Tố</h3>
                 <ul class="row p-0">
-                    <li class="product-vitamin col-lg-4">
+                    <li class="product-vitamin col-lg-4 col-sm-6 col-half">
                         <div class="product-item-vitamin">
                             <a href="./sinhtoluamach.html"><img src="./assets/img/menu/sinh-to-lua-mach.jpg"
                                     alt="Sinh tố lúa mạch"></a>
@@ -168,7 +183,7 @@
                             <div class="price-product-vitamin">15.000đ</div>
                         </div>
                     </li>
-                    <li class="product-vitamin col-lg-4">
+                    <li class="product-vitamin col-lg-4 col-sm-6 col-half">
                         <div class="product-item-vitamin">
                             <a href=""><img src="./assets/img/menu/sinh-to-dua-hau.jpg" alt="Sinh tố dưa hấu"></a>
                         </div>
@@ -177,7 +192,7 @@
                             <div class="price-product-vitamin">30.000đ</div>
                         </div>
                     </li>
-                    <li class="product-vitamin col-lg-4">
+                    <li class="product-vitamin col-lg-4 col-sm-6 col-half">
                         <div class="product-item-vitamin">
                             <a href=""><img src="./assets/img/menu/sinh-to-viet-quat.jpg" alt="Sinh tố việt quất"></a>
                         </div>
@@ -191,7 +206,7 @@
             <div id="list-product-cake">
                 <h3 class="title-cake">Bánh</h3>
                 <ul class="row p-0">
-                    <li class="product-cake col-lg-4">
+                    <li class="product-cake col-lg-4 col-sm-6 col-half">
                         <div class="product-item-cake">
                             <a href=""><img src="./assets/img/menu/banh-snack-khoai-tay.jpg" alt="Snack khoai tây"></a>
                         </div>
@@ -200,7 +215,7 @@
                             <div class="price-product-cake">20.000đ</div>
                         </div>
                     </li>
-                    <li class="product-cake col-lg-4">
+                    <li class="product-cake col-lg-4 col-sm-6 col-half">
                         <div class="product-item-cake">
                             <a href=""><img src="./assets/img/menu/banh-bo.jpg" alt="Bánh bò"></a>
                         </div>
@@ -209,7 +224,7 @@
                             <div class="price-product-cake">30.000đ</div>
                         </div>
                     </li>
-                    <li class="product-cake col-lg-4">
+                    <li class="product-cake col-lg-4 col-sm-6 col-half">
                         <div class="product-item-cake">
                             <a href=""><img src="./assets/img/menu/banh-cudo.jpg" alt="Cu đơ Hà Tĩnh"></a>
                         </div>

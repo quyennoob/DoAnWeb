@@ -1,117 +1,95 @@
 :root {
+    --Baloo-2-Regular: 'Baloo 2 Regular';
+    --Baloo-2-Medium: 'Baloo 2 Medium';
+    --Baloo-2-SemiBold: 'Baloo 2 Semibold';
+    --Baloo-2-Bold: 'Baloo 2 Bold';
+    --Baloo-2-ExtraBold: 'Baloo 2 Extrabold';
+}
+
+:root {
     --brown-s: #FFF6E8;
     --brown-m: #D6BD97;
-    --brown-l: #ca893f;
+    --brown-l: #c59660;
     --brown-xl: #9F713C;
     --brown-xxl: #744B0D;
     --text-color: #fff;
 }
 
-:root {
-    --Baloo-2-Regular: 'Baloo 2 Regular'; 
-    --Baloo-2-Medium: 'Baloo 2 Medium'; 
-    --Baloo-2-SemiBold: 'Baloo 2 Semibold'; 
-    --Baloo-2-Bold: 'Baloo 2 Bold'; 
-    --Baloo-2-ExtraBold: 'Baloo 2 Extrabold'; 
-}
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: var(--Baloo-2-Regular), sans-serif;
-    scroll-behavior: smooth;
-}
-
-.row {
-    width: 100%;
-}
-
-.col {
-    margin: 0 20px;
-}
-
-.col-third {
-    width: 33.33333%;
-    box-sizing: border-box;
-}
-
-.col-half {
-    width: 50%;
-    box-sizing: border-box;
-}
-
-.col-full {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.col-fourth {
-    width: 25%;
 }
 
 /* hiển thị văn bản trên một dòng */
 .ellipsis {
-    text-overflow: ellipsis; /* kích hoạt dấu ba chấm */
-    white-space: nowrap; /* giữ văn bản trên một dòng */
-    overflow: hidden; /* giữ phần tử không tràn ra khỏi phần tử cha */
-    width: 100%; /* phần tử cần có chiều rộng cố định (px, em, %, etc) */
-}
-
-/* hiển thị văn bản trên 2 dòng */
-.truncate-2 {
-    display: -webkit-box;
+    text-overflow: ellipsis;
+    /* kích hoạt dấu ba chấm */
+    white-space: nowrap;
+    /* giữ văn bản trên một dòng */
     overflow: hidden;
-    -webkit-line-clamp: 2; /* số dòng bạn muốn hiển thị */
-    -webkit-box-orient: vertical;
+    /* giữ phần tử không tràn ra khỏi phần tử cha */
+    width: 100%;
+    /* phần tử cần có chiều rộng cố định (px, em, %, etc) */
 }
 
 /* hiển thị văn bản trên 3 dòng */
-.truncate-3 {
+.truncate {
     display: -webkit-box;
     overflow: hidden;
-    -webkit-line-clamp: 3; /* số dòng bạn muốn hiển thị */
+    -webkit-line-clamp: 3;
+    /* số dòng bạn muốn hiển thị */
     -webkit-box-orient: vertical;
 }
 
-/* Chữ in đậm */
-.text-bold {
-    font-weight: bold;
-}
+/* Begin Header */
 
-.header{
+.header {
     width: 100%;
     height: 60px;
     display: flex;
-    background-color: #4d4d4d9c;
+    background-color: #2d2d2dd6;
+    backdrop-filter: blur(20px);
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header .ti-close,
+.header .ti-menu {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
+    position: absolute;
+    display: none;
 }
 
 .header .home-page {
-    line-height: 60px;
+    line-height: 55px;
     text-decoration: none;
     color: var(--text-color);
-    font-family: 'Baloo 2 ExtraBold';
-    font-size: 16px;
+    font-family: 'Baron Neue';
+    font-size: 22px;
     margin: 0 40px;
 }
 
-.header .navigation{
+.header .navigation {
     list-style: none;
     display: flex;
     align-items: center;
-    
+    margin: 0;
+    padding: 0;
 }
 
 .header .navigation li {
     padding: 0 10px;
 }
 
-.header .navigation li a{
-    font-size: 14px;
+.header .navigation li>a {
+    font-size: 18px;
     font-weight: 700;
     text-decoration: none;
     color: var(--text-color);
@@ -119,6 +97,12 @@ body {
 
 .header .navigation li:hover a {
     color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
+}
+
+.header .navigation li.sign-in-sm,
+.header .navigation li.sign-up-sm {
+    display: none;
 }
 
 .header .sign-in {
@@ -143,6 +127,7 @@ body {
 
 .header .sign-in a,
 .header .sign-up a {
+    font-size: 16px;
     text-decoration: none;
     font-weight: 800;
     color: var(--text-color);
@@ -151,69 +136,62 @@ body {
 .header .sign-in:hover a,
 .header .sign-up:hover a {
     color: var(--brown-l);
+    transition: color 0.1s ease-in-out;
 }
 
 .header .sign-in:hover,
 .header .sign-up:hover {
     border-color: var(--brown-l);
+    transition: color 0.2s ease-in-out;
 }
 
-.product-total{
-    display: flex;
-}
-.product-image-view{
-    width: 500px;
-    height: 500px;
-    border-radius: 10px;
-    margin-left: 15%;
-    margin-top: 100px;
+.header-tab {
+    display: none;
 }
 
-.content-total .content{
-    font-family: 'baloo 2 bold', sans-serif;
-    margin-right: 50px;
-    margin-top: 100px;
+/* end header */
+.container-fluid {
+    margin-top: 70px;
 }
 
-.product-small{
-    width: 100px;
-    height: 100px;
+.product-total img {
+    width: 100%;
+    height: 44vw;
+    border-radius: 15px;
 }
 
-.list-product-relate{
-    display: flex;
-    text-decoration: none;
+.product-related ul>li {
     list-style: none;
-    justify-content: flex-start;
 }
-.image-product-relate img{
-    width: 100px;
-    height: 100px;
-    border-radius: 20px;
+
+.product-related img {
+    width: 100%;
+    height: 14vw;
+    border-radius: 15px;
 }
-/* footer */
+
+.content-total {
+    padding: 0 40px 0 40px;
+}
+
+/* Begin Footer */
 footer {
     background-color: #424242;
 }
 
-footer .container {
-    margin: 0 50px;
-}
-
 footer .row-linklist {
-    display: flex;
     line-height: 1.4;
-    /* align-items: center; */
-    padding: 30px 0;
+    padding: 30px 16px;
 }
 
-footer .row-linklist h3 {
+footer .row-linklist h5 {
     color: #fff;
     padding: 8px 0;
 }
 
 footer .row-linklist ul {
     list-style: none;
+    padding: 0;
 }
 
 footer .row-linklist ul li {
@@ -223,12 +201,12 @@ footer .row-linklist ul li {
 footer .row-linklist ul a {
     text-decoration: none;
     color: #ccc;
-    display: flex;
-    align-items: center;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .row-linklist ul a:hover {
     color: #f0f0f0;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .row-linklist ul a i {
@@ -237,13 +215,19 @@ footer .row-linklist ul a i {
 }
 
 footer .row-linklist .col-image {
-    display: flex;
+    padding: 0;
+    overflow: hidden;
 }
 
 footer .row-linklist img {
     width: 100%;
     height: 14vw;
     border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.07, 1.07);
+    }
 }
 
 footer .row-line {
@@ -254,6 +238,7 @@ footer .row-line {
 
 footer .row-link-contact {
     padding: 30px 0;
+    display: flex;
 }
 
 footer .row-link-contact a {
@@ -266,8 +251,14 @@ footer .row-link-contact a i {
     color: #fff;
     border-radius: 50%;
     padding: 8px;
+    display: flex;
+    height: 41px;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .row-link-contact a:hover i {
     background-color: #585858;
+    transition: all 0.2s ease-in-out;
 }
+
+/* End Footer */
