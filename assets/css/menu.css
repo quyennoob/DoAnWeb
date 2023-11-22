@@ -189,6 +189,7 @@
     margin-bottom: 20px;
     padding-left: 30px;
     font-weight: bold;
+    max-width: 800px;
 }
 
 .total-product ul>li {
