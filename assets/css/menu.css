@@ -44,6 +44,7 @@
 }
 
 /* Begin Header */
+
 .header {
     width: 100%;
     height: 60px;
@@ -74,11 +75,6 @@
     font-family: 'Baron Neue';
     font-size: 22px;
     margin: 0 40px;
-}
-
-.header .nav-container {
-    display: flex;
-    align-items: center;
 }
 
 .header .navigation {
@@ -150,6 +146,10 @@
     transition: color 0.2s ease-in-out;
 }
 
+.header-tab {
+    display: none;
+}
+
 /* End Header */
 
 .product-container {
@@ -202,9 +202,18 @@
 
 .total-product img {
     width: 100%;
-    height: 22vw;
+    aspect-ratio: 1 / 1;
     border-radius: 15px;
     box-shadow: 0 0 10px #585858;
+}
+
+.title-coffee,
+.title-milkTea,
+.title-tea,
+.title-vitamin,
+.title-cake {
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .title-milkTea,
