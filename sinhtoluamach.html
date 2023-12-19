@@ -21,9 +21,7 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css'>
 
     <!-- link bootstrap 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <!-- link jQuery -->
     <script src="./assets/jQuery/jquery-3.7.1.min.js"></script>
 
@@ -77,13 +75,18 @@
             <div class="content col-lg-6">
                 <div class="product-name">Sinh Tố Lúa Mạch</div>
                 <div class="product-price">15.000 đ</div>
-                <div class="choose-size">Chọn Size(bắt buộc)</div>
-                <ul>
-                    <li class="size-product">Nhỏ</li>
-                    <li class="size-product">Vừa</li>
-                    <li class="size-product">Lớn</li>
-                </ul>
-                <button class=".button-order">Đặt Hàng</button>
+                <div class="choose-size col-lg-12">
+                    <h6 class="input-size">Chọn size(Bắt buộc)</h5>
+                        <select name="size-select" id="form-select">
+                            <option selected>Size</option>
+                            <option value="1" class="size-product">Nhỏ</option>
+                            <option value="2" class="size-product">Vừa + 5.000đ</option>
+                            <option value="3" class="size-product">Lớn + 10.000đ</option>
+                        </select>
+                </div>
+                <div class="button">
+                    <button class="button-order">Đặt Hàng</button>
+                </div>
             </div>
         </div>
         <div class="product-description">
@@ -100,32 +103,44 @@
             <ul class="list-product-relate row p-0">
                 <li class="image-product-relate col-lg-2 col-sm-6">
                     <a href=""><img src="./assets/img/menu/caphe-den-da-khong-duong.jpg" alt="Đen Đá Không Đường" /></a>
-                    <div class="name-product-relate">Đen Đá Không Đường</div>
+                    <div class="name-product-relate">
+                        <a href="">Đen Đá Không Đường</a>
+                    </div>
                     <div class="price-product-relate">30.000đ</div>
                 </li>
                 <li class="image-product-relate col-lg-2 col-sm-6">
                     <a href=""><img src="/assets/img/menu/sinh-to-dua-hau.jpg" alt="Sinh Tố Dưa Hấu" /></a>
-                    <div class="name-product-relate">Sinh Tố Dưa Hấu</div>
+                    <div class="name-product-relate">
+                        <a href="">Sinh Tố Dưa Hấu</a>
+                    </div>
                     <div class="price-product-relate">30.000đ</div>
                 </li>
                 <li class="image-product-relate col-lg-2 col-sm-6">
                     <a href=""><img src="/assets/img/menu/sinh-to-viet-quat.jpg" alt="Sinh Tố Việt Quất" /></a>
-                    <div class="name-product-relate">Sinh Tố Việt Quất</div>
+                    <div class="name-product-relate">
+                        <a href="">Sinh Tố Việt Quất</a>
+                    </div>
                     <div class="price-product-relate">30.000đ</div>
                 </li>
                 <li class="image-product-relate col-lg-2 col-sm-6">
                     <a href=""><img src="./assets/img/menu/tra-chanh.jpg" alt="Trà Chanh" /></a>
-                    <div class="name-product-relate">Trà Chanh</div>
+                    <div class="name-product-relate">
+                        <a href="">Trà Chanh</a>
+                    </div>
                     <div class="price-product-relate">30.000đ</div>
                 </li>
                 <li class="image-product-relate col-lg-2 col-sm-6">
                     <a href=""><img src="./assets/img/menu/tra-sua-kem-trung.jpg" alt="Trà Sữa Kem Trứng" /></a>
-                    <div class="name-product-relate">Trà Sữa Kem Trứng</div>
+                    <div class="name-product-relate">
+                        <a href="">Trà Sữa Kem Trứng</a>
+                    </div>
                     <div class="price-product-relate">30.000đ</div>
                 </li>
                 <li class="image-product-relate col-lg-2 col-sm-6">
                     <a href=""><img src="./assets/img/menu/tra-gung.jpg" alt="Trà Gừng" /></a>
-                    <div class="name-product-relate">Trà Gừng</div>
+                    <div class="name-product-relate">
+                        <a href="">Trà Gừng</a>
+                    </div>
                     <div class="price-product-relate">30.000đ</div>
                 </li>
             </ul>
@@ -177,10 +192,7 @@
         </div>
     </footer>
     <!-- End Footer -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <script src="./assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
