@@ -19,3 +19,31 @@ $(document).ready(function () {
         });
     });
 });
+
+// Cập nhật giá tiền trang product-details
+$(function () {
+
+    let size = "";
+
+    let price = 0;
+
+    $("#form-select").on("change", function () {
+
+        size = $(this).val();
+
+        switch (size) {
+            case "small":
+                price = "15.000" + "đ";
+                break;
+            case "medium":
+                price = "20.000" + "đ";
+                break;
+            case "large":
+                price = "25.000" + "đ";
+                break;
+        }
+
+        // Cập nhật giá tiền
+        $(".product-price").text(price);
+    });
+});
