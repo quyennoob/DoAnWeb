@@ -213,6 +213,16 @@
     transition: color 0.1s;
 }
 
+.product-item-home a img {
+    display: block;
+    box-shadow: 0 0 10px #585858;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-item-home img:hover {
+    transform: scale(1.05);
+}
+
 /* end menu home */
 /* Begin Thu ngay */
 .thu-ngay {
