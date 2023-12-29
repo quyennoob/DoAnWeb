@@ -232,6 +232,24 @@
     padding-top: 15px;
 }
 
+.product-item-coffee a img,
+.product-item-milkTea a img,
+.product-item-tea a img,
+.product-item-vitamin a img,
+.product-item-cake a img {
+    display: block;
+    box-shadow: 0 0 10px #585858;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-item-coffee img:hover,
+.product-item-milkTea img:hover,
+.product-item-tea img:hover,
+.product-item-vitamin img:hover,
+.product-item-cake img:hover {
+    transform: scale(1.05);
+}
+
 .product-name-coffee,
 .product-name-milkTea,
 .product-name-tea,
