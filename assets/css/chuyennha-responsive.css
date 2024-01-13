@@ -209,6 +209,10 @@
         width: 100%;
     }
 
+    .cloudfee .hieu .col-right {
+        order: -1;
+    }
+
     .cloudfee-modal .modal-title {
         font-size: 32px;
         padding: 12px;

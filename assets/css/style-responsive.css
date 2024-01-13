@@ -55,6 +55,10 @@
         display: none;
     }
 
+    .product-menu-home {
+        padding-top: 20px;
+    }
+
     footer .row-link-contact a i {
         font-size: 28px;
     }
@@ -68,6 +72,8 @@
             transform: translateY(0px);
         }
     }
+
+
 }
 
 /* Tablet 740px <= width < 1024px */
@@ -110,6 +116,14 @@
 
 /* Mobile width < 740px */
 @media (max-width: 46.24375em) {
+    .col-half {
+        width: 50% !important;
+    }
+
+    .menu-home {
+        padding: 0;
+    }
+
     .slide.mob-hidden {
         display: none;
     }
@@ -181,6 +195,11 @@
 
     .chuyen-nha .container-fluid {
         padding: 0;
+    }
+
+    .chuyen-nha .header-chuyen-nha {
+        margin: 0;
+        width: 100%;
     }
 
     .chuyen-nha .coffeeholic>.title {

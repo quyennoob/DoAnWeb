@@ -18,7 +18,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: var(--Baloo-2-Regular), sans-serif;
 }
 
@@ -150,133 +149,138 @@
     display: none;
 }
 
-/* End Header */
+/* end header */
 
-.product-container {
+/* begin content */
+.container-fluid {
     margin-top: 70px;
 }
 
-/* begin side bar */
-.sidebar ul>li {
-    list-style: none;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #000;
-}
-
-.sidebar {
-    font-size: 20px;
-    font-weight: var(--Baloo-2-Medium);
-    height: fit-content;
-    position: sticky;
-    top: 70px;
+.content-total {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
-.sidebar a:hover {
-    color: var(--brown-xl);
-    transition: color 0.1s;
+.product-total {
+    width: 80%;
 }
 
-/* end side bar */
-
-/* begin menu product */
-.total-product {
-    border-left: 4px solid #ccc;
-    margin-bottom: 20px;
-    padding-left: 30px;
-    font-weight: bold;
-    max-width: 800px;
+.product-img-view {
+    display: flex;
+    justify-content: center;
 }
 
-.total-product ul>li {
-    list-style: none;
-}
-
-.total-product a {
-    text-decoration: none;
-    color: #000;
-}
-
-.total-product img {
+.product-total img {
     width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 15px;
-    box-shadow: 0 0 10px #585858;
 }
 
-.title-coffee,
-.title-milkTea,
-.title-tea,
-.title-vitamin,
-.title-cake {
-    font-size: 40px;
+.product-name {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--brown-xl);
+}
+
+#form-select {
+    display: block;
+    width: 29%;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.button {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-order {
+    width: 70%;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: var(--brown-m);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-order:hover {
+    background-color: #424242;
+    color: #fff;
+    transition-duration: 0.5s;
+}
+
+.describe {
     font-weight: bold;
 }
 
-.title-milkTea,
-.title-tea,
-.title-vitamin,
-.title-cake {
-    padding-top: 20px;
+.product-description {
+    width: 80%;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
-.product-info-coffee,
-.product-info-milkTea,
-.product-info-tea,
-.product-info-vitamin,
-.product-info-cake {
+.relate {
+    font-weight: bold;
+}
+
+.product-related {
+    width: 80%;
+}
+
+.product-related ul>li {
+    list-style: none;
+    overflow: hidden;
+}
+
+.product-related img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+}
+
+.list-product-relate li {
+    max-width: 100%;
     padding-top: 15px;
 }
 
-.product-item-coffee a img,
-.product-item-milkTea a img,
-.product-item-tea a img,
-.product-item-vitamin a img,
-.product-item-cake a img {
+.image-product-relate a img {
     display: block;
     box-shadow: 0 0 10px #585858;
     transition: all 0.3s ease-in-out;
 }
 
-.product-item-coffee img:hover,
-.product-item-milkTea img:hover,
-.product-item-tea img:hover,
-.product-item-vitamin img:hover,
-.product-item-cake img:hover {
+.image-product-relate img:hover {
     transform: scale(1.05);
 }
 
-.product-name-coffee,
-.product-name-milkTea,
-.product-name-tea,
-.product-name-vitamin,
-.product-name-cake {
-    font-size: 20px;
-}
-
-.price-product-coffee,
-.price-product-milkTea,
-.price-product-tea,
-.price-product-vitamin,
-.price-product-cake {
-    font-weight: normal;
+.name-product-relate a {
+    text-decoration: none;
+    color: #000;
     font-size: 16px;
 }
 
-.product-name-coffee a:hover,
-.product-name-milkTea a:hover,
-.product-name-tea a:hover,
-.product-name-vitamin a:hover,
-.product-name-cake a:hover {
-    color: var(--brown-xl);
-    transition: color 0.1s;
+.name-product-relate {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-/* end menu product */
+.name-product-relate a:hover {
+    color: var(--brown-xl);
+    transition: all 0.3s ease-in-out;
+}
+
+/* end content */
 
 /* Begin Footer */
 footer {
@@ -305,11 +309,12 @@ footer .row-linklist ul li {
 footer .row-linklist ul a {
     text-decoration: none;
     color: #ccc;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .row-linklist ul a:hover {
     color: #f0f0f0;
-    transition: color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .row-linklist ul a i {
@@ -356,11 +361,12 @@ footer .row-link-contact a i {
     padding: 8px;
     display: flex;
     height: 41px;
+    transition: all 0.2s ease-in-out;
 }
 
 footer .row-link-contact a:hover i {
     background-color: #585858;
-    transition: background-color 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 /* End Footer */
