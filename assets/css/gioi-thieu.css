@@ -144,7 +144,7 @@
 /* Banner */
 
 .coffeehouse-store {
-    background-color: #D6BD97;
+    background-color: var(--brown-s);
     padding-bottom: 40px;
 }
 
@@ -159,8 +159,9 @@
     object-fit: cover
 }
 
-.coffeehouse-store div {
+.coffeehouse-store>div {
     align-items: center;
+    width: 100%;
 }
 
 .coffeehouse-store div>img {
