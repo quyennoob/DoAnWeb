@@ -1,0 +1,11 @@
+
+/* Fit with every screen*/
+@media (max-width:64em){
+    .form-box {
+        margin: 10px;
+    }
+    .effect:hover{
+        transform: translateY(5px);
+    }
+
+}
