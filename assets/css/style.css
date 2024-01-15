@@ -459,7 +459,7 @@
 
 .chuyen-nha .coffeeholic .content-list .title:hover {
     color: var(--brown-l);
-    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
 /* End Chuyen nha */

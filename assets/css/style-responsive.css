@@ -96,7 +96,7 @@
     }
 
     .chuyen-nha .coffeeholic .des-hidden {
-        display: grid;
+        display: block;
     }
 
     .chuyen-nha .coffeeholic .content-list .col {
@@ -219,7 +219,7 @@
     }
 
     .chuyen-nha .coffeeholic .des-hidden {
-        display: grid;
+        display: block;
     }
 
     footer .row-linklist img {
